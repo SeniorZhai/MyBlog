@@ -1,10 +1,8 @@
 title: 常用git命令
 date: 2014-08-27 08:36:56
-categories: 杂文
+categories: Prose
 tags: [git]
 ---
-git的常用命令并不多，熟记之
-<!--more-->
 ##常用配置
 ```git
 --- system #系统级别

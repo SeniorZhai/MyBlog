@@ -1,7 +1,7 @@
 title: Shutdown
 date: 2014-04-08 14:56:32
-categories: 杂文
-tags: [mac,关机]
+categories: Prose
+tags: [Prose]
 ---
 Shutdown命令，h/r/s分别代表关机、重启、睡眠，再加上执行时间（yymmddhhmm）即可
 

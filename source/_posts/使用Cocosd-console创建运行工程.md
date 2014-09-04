@@ -1,7 +1,7 @@
 title: 使用Cocosd-console创建运行工程
 date: 2014-03-19 11:31:51
 categories: Cocos2d-X
-tags: [Cocos2d-X]
+tags: [console]
 ---
 ##运行环境
 

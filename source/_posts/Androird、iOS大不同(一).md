@@ -1,9 +1,10 @@
 title: Androird、iOS大不同(一)
 date: 2014-08-09 13:54:07
 categories: Android
-tags: [Android]
+tags: [Android,iOS,Java,Objective-C,大不同]
 ---
 长夜漫漫，无心睡眠，定一个小目标吧，写一下自己对android、iOS开发区别的见解。
+<!--more-->
 ##Java、OC大不同
 本人先会的Java，所以比较都会以Java、Android入手开始比较。
 ##1. 类的定义

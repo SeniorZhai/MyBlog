@@ -1,7 +1,7 @@
 title: Cocos2d-X 常用的数学函数、常用宏
 date: 2014-08-12 17:30:59
 categories: Cocos2d-X
-tags: [Cocos2d-X]
+tags: [Cocos2d-X,数学，宏]
 ---
 - `ccp(x,y)` 创建一个向量
 - `ccpFromSize(s)` 以size s的width为x，height为y创建一个向量

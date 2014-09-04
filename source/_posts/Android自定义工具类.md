@@ -1,7 +1,7 @@
 title: Android自定义工具类
 date: 2014-04-16 13:19:40
 categories: Android
-tags: [Android]
+tags: [Android,工具类,自定义]
 ---
 ##CommonUtil
 
@@ -14,7 +14,7 @@ tags: [Android]
 ##FileHelper
 
 - boolean fileIsExist(String filePath)	判断文件是否存在
-- InputStream readFile(String filePath)	获取文件的input流
-- boolean createDirectory(String filePath)	创建文件目录
-- boolean deleteDirectroy(String filePath)	删除文件目录
-- boolean writeFile(String filePath,InputStream inputStream)	写入字符串到某文件
+- InputStream readFile(String filePath) 获取文件的input流
+- boolean createDirectory(String filePath) 创建文件目录
+- boolean deleteDirectroy(String filePath) 删除文件目录
+- boolean writeFile(String filePath,InputStream inputStream) 写入字符串到某文件

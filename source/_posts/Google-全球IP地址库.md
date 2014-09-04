@@ -1,7 +1,7 @@
 title: Google 全球IP地址库
 date: 2014-06-12 11:06:55
-categories: 杂文
-tags: [host,google]
+categories: Prose
+tags: [Prose]
 ---
 <table>
  <tbody>

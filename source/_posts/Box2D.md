@@ -1,7 +1,7 @@
 title: Box2D
 date: 2014-08-19 11:31:33
 categories: Cocos2d-X
-tags: [Cocos2d-X]
+tags: [Box2D,物理引擎]
 ---
 一款功能强大、性能强劲的物理引擎。它能都维持在一个独立的运行空间。
 ##概述

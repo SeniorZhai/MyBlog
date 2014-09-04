@@ -1,7 +1,7 @@
 title: Cocos2d-X 坐标系详解
 date: 2014-03-31 11:32:49
 categories: Cocos2d-X
-tags: [Cocos2d-X]
+tags: [坐标系]
 ---
 Cocos2d-x坐标系和Open GL坐标系相同，都是起源于笛卡尔坐标系。
 

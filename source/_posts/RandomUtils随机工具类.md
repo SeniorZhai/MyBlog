@@ -1,7 +1,7 @@
 title: RandomUtils随机工具类
 date: 2014-08-08 13:51:27
 categories: Android
-tags: [Android]
+tags: [Android,工具类,Random,随机]
 ---
 ```java
 public class RandomUtils {

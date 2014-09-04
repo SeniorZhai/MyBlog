@@ -1,7 +1,7 @@
 title: Cocos2d-X V3.0 如何在Android上运行Cpp-tests
 date: 2014-03-18 11:30:15
 categories: Cocos2d-X
-tags: [Cocos2d-X]
+tags: [Cocos2d-X,Android,Demo]
 ---
 ##环境要求
 Mac OSX

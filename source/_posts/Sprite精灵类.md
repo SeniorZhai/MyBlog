@@ -1,7 +1,7 @@
 title: Sprite精灵类
 date: 2014-08-18 11:38:05
 categories: Cocos2d-X
-tags: [Cocos2d-X]
+tags: [精灵,Sprite]
 ---
 常用创建方法
 ```c++

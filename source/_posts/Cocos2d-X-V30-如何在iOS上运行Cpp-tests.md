@@ -1,7 +1,7 @@
 title: Cocos2d-X V3.0 如何在iOS上运行Cpp-tests
 date: 2014-03-18 11:29:08
 categories: Cocos2d-X
-tags: [Cocos2d-X]
+tags: [Cocos2d-X,iOS,Demo]
 ---
 ##环境要求
 - Mac OS X 10.8以上版本

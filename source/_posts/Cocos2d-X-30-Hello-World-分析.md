@@ -1,7 +1,7 @@
 title: Cocos2d-X 3.0 Hello World 分析
 date: 2014-06-23 11:35:39
 categories: Cocos2d-X
-tags: [Cocos2d-X]
+tags: [Cocos2d-X,Hello World]
 ---
 ##AppDelegate.h与AppDelegate.cpp文件
 这两个文件时Cocos2d-x游戏的入口文件，控制着游戏的生命周期,除去构造函数和析构函数外，共有 3 个方法。
