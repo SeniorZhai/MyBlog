@@ -1,7 +1,7 @@
 title: Android、iOS大不同(五)
 date: 2014-09-05 23:01:31
-categories:
-tags:
+categories: iOS
+tags: [Android,iOS,Java,Objective-C,大不同]
 ---
 Objective-C特殊的键指编码(KOC)与监值兼听(KVO)
 <!--more-->

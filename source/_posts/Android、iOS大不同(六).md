@@ -1,6 +1,6 @@
 title: Android、iOS大不同(六)
 date: 2014-09-06 09:32:06
-categories: Android
+categories: iOS
 tags: [Android,iOS,Java,Objective-C,大不同]
 ---
 协议或者接口，用于多个类应该遵守的规范。不需要提供实现，不关心内部的状态数据，体现了规范和实现分离的设计哲学。

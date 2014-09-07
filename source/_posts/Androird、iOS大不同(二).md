@@ -1,6 +1,6 @@
 title: Androird、iOS大不同(二)
 date: 2014-09-01 19:04:07
-categories: Android
+categories: iOS
 tags: [Android,iOS,Java,Objective-C,大不同]
 ---
 面向对象的一些知识点

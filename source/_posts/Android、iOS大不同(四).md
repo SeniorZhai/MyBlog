@@ -1,6 +1,6 @@
 title: Android、iOS大不同(四)
 date: 2014-09-04 19:01:55
-categories: Android
+categories: iOS
 tags: [Android,iOS,Java,Objective-C,大不同]
 ---
 存取方法，Java没有明确限定Class要由固定的存取方法，但是符合JavaBean格式的类，都应该提供setter、getter存取方法。而Objective-C 2.0开始，自动合成setter、getter方法。

@@ -1,6 +1,6 @@
 title: Androird、iOS大不同(三)
 date: 2014-09-03 21:54:57
-categories: Android
+categories: iOS
 tags: [Android,iOS,Java,Objective-C,大不同]
 ---
 隐藏和封装
