@@ -12,7 +12,7 @@ language: zh-CN #语言，用中文啦
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://SeniorsZhai.github.io/
+url: http://seniorzhai.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
@@ -89,5 +89,5 @@ plugins:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: github
-  repository: https://github.com/SeniorsZhai/SeniorsZhai.github.io.git
+  repository: https://github.com/SeniorZhai/SeniorZhai.github.io.git
   branch: master
