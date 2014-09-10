@@ -67,10 +67,10 @@ author:
   intro_line2:  "This is my blog,I hope you will enjoy them."  ## eg: "This is my blog,believe it or not."
   weibo: 2292032577     ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
   twitter:    ## e.g. wuchong for https://twitter.com/wuchong
-  github: zt1991616    ## e.g. wuchong for https://github.com/wuchong
+  github: seniorzhai    ## e.g. wuchong for https://github.com/wuchong
   facebook:   ## e.g. wuchong for https://facebook.com/wuchong
   douban:     ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
-  tsina:      ## e.g. 2176287895  Your weibo ID,It will be used in share button.
+  tsina: 	  ## e.g. 2176287895  Your weibo ID,It will be used in share button.
   email: developer.zhaitao@gmail.com     ## e.g. wuchong1014@gmail.com
   google_plus:    ## eg:111190881341800841449 for https://plus.google.com/u/0/111190881341800841449
   stackoverflow:  ##3222790   ##e.g. 3222790 for http://stackoverflow.com/users/3222790/jark
@@ -106,8 +106,8 @@ google_cse:
   
 #### Analytics
 google_analytics:
-  enable: false
-  id:        ## e.g. UA-46321946-2 your google analytics ID.
+  enable: true
+  id: UA-54646832-1       ## e.g. UA-46321946-2 your google analytics ID.
   site:      ## e.g. wuchong.me your google analytics site or set the value as auto.
 ## You MUST upgrade to Universal Analytics first!
 ## https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN
