@@ -1,20 +1,21 @@
 title: CursorLoader
 date: 2014-08-07 13:48:36
 categories: Android
-tags: [Android]
+tags: [ContentProvider,CursorLoader]
 ---
 从`ContentProvider`查询数据比较耗时，在UI线程中查询可能会ANR，通过`CursorLoader`来实现，异步查询数据。
+<!--more-->
 ##使用
 `CursorLoader`依靠`ContentProvider`在后台执行一个异步的查询操作，并且返回数据给调用它的Activity或者Fragment。
 1. 定义使用CursorLoader的Activity
-    必须实现`LoaderCallbacks`接口，`CursorLoader`会触发这些回调方法。
+必须实现`LoaderCallbacks`接口，`CursorLoader`会触发这些回调方法。
 ```java
 public class OtherFragment extends FragmentActivity implements LoaderManager.LoaderCallback<Cursor>{
     ...
 }
 ```
 2. 初始化查询
-    为了初始化查询，需要执行`LoaderManager.initLoader()`初始化后台任务。可以在`onCreate()`或者`onCreateView()`中触发这个方法。
+为了初始化查询，需要执行`LoaderManager.initLoader()`初始化后台任务。可以在`onCreate()`或者`onCreateView()`中触发这个方法。
 ```java
     getLoaderManager().initLoader(1,null,this); // 第一个参数为标志 第二个为可选的参数供Loader构造 第三个为Loader接口
 ```
@@ -39,7 +40,7 @@ public Loader<Cursor> onCreateLoader(int loaderId,Bundle bundle){
 ```java
 @Override
 public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-    // 通知Adapter梗概数据
+    // 通知Adapter更改数据
     mAdapter.changeCursor(data);
 }
 ```
