@@ -3,6 +3,7 @@ date: 2014-08-27 18:51:44
 categories: Android
 tags: [Android]
 ---
+<!--more-->
 实现单选必须要设置ListView为CHOICE_MODE_SINGLE(listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE)或android:choiceMode="singleChoice")
 ```java
   private int cur_pos = 0;// 当前显示的一行

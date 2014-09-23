@@ -3,6 +3,7 @@ date: 2014-08-17 14:05:00
 categories: Android
 tags: [Android]
 ---
+<!--more-->
 - ui_print(msg1,...,msgN) 用于在Recovery界面输出字符串，不定参数。
 - run_program(prog,arg1,...,argN) 用于执行程序，其中prog参数表示执行的程序文件(要写完整路径)，arg1,...argN表示执行程序的参数，prog是必须的，arg是可选的
 - delete(file1,...fileN) 用于删除一个或多个文件

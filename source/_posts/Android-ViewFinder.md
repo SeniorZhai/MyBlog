@@ -3,6 +3,7 @@ date: 2014-08-26 14:09:32
 categories: Android
 tags: [Android]
 ---
+<!--more-->
 在基类BaseActivity中加入如下函数
 ```java
 public final <E extends View> E getView (int id) {

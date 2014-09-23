@@ -3,6 +3,7 @@ date: 2014-08-26 13:53:22
 categories: Android
 tags: [Android]
 ---
+<!--more-->
 ##显示行号
 General -> Editors -> Text Editors -> Show line numbers
 ##使用快捷键新建Android工程

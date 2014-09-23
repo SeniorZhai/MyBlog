@@ -3,6 +3,7 @@ date: 2014-08-20 14:06:59
 categories: Android
 tags: [Android]
 ---
+<!--more-->
 SwipeView提供了同级屏幕中的横向导航。
 适配器
 ```java

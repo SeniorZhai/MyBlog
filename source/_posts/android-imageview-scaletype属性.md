@@ -3,6 +3,7 @@ date: 2014-08-21 14:07:47
 categories: Android
 tags: [Android]
 ---
+<!--more-->
 scaletype决定了图片在View上显示的方式，可以通过xml中定义`android:scale=`或者代码中调用`imageView.setScaleType()`
 
 示例的原图

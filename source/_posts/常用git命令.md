@@ -3,6 +3,7 @@ date: 2014-08-27 08:36:56
 categories: Prose
 tags: [git]
 ---
+<!--more-->
 ##常用配置
 ```git
 --- system #系统级别
