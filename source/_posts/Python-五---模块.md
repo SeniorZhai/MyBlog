@@ -56,7 +56,8 @@ try: import json # python >= 2.6 except ImportError: import simplejson as json #
 类似`_xxx`和`__xxx`这样的函数或变量就是非公开的(private)，不应该被直接饮用。
 
 ##安装第三方模块
-首先需要安装`setuptools`工具，Mac和Linux自带了此工具，可以在https://pypi.python.org/pypi/setuptools#window下载安装Windows版本。
+首先需要安装`setuptools`工具，Mac和Linux自带了此工具，Windows
+下载[get-pip](https://gist.github.com/SeniorZhai/f7812658908ae5096c87)文件，运行`Python get-pip.py`命令，并将`\Python27\Spripts`路径添加到`Path`中
 安装第三方模块`easy_install XXX`即可
 安装一个第三方库——Python Imaging Library，这是Python下非常强大的处理图像的工具库。一般来说，第三方库都会在Python官方的pypi.python.org网站注册，要安装一个第三方库，必须先知道该库的名称，可以在官网或者pypi上搜索，比如Python Imaging Library的名称叫PIL，因此，安装Python Imaging Library的命令就是：
 ```
