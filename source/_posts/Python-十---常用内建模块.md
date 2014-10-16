@@ -96,3 +96,125 @@ base64.urlsafe_b64decode('abcd--__')	# 'i\xb7\x1d\xfb\xef\xff'
 ```
 由于`=`字符会出现在`Base64`编码中，但`=`用在URL、Cookie里面会造成歧义，很多Base64编码后会把`=`去掉
 因为Base64是把3个字节变成4个字节，所以Base64编码的长度永远是4的倍数，去掉`=`后，解码时增加`=`到4的倍数，再正常解码
+
+##struct
+Python的`struct`模块用来处理`str`和其他二进制数据类型的转换
+```python
+import struct
+struct.pack('>I',10240099)	# '\x00\x9c@c' 把任意数据类型变成字符串
+```
+`pack`第一个参数是处理指令，`>`表示字节顺序是big-endian(网络序)，`I`表示4字节无符号整数
+```python
+struct.unpack('>IH','\xf0\xf0\xf0\xf0\x80\x80')	# (4042322160,32896)
+```
+`H`表示2字节无符号整数
+Windows的位图文件（.bmp）是一种非常简单的文件格式，我们来用struct分析一下。
+首先找一个bmp文件，没有的话用“画图”画一个。
+读入前30个字节来分析：
+```python
+>>> s = '\x42\x4d\x38\x8c\x0a\x00\x00\x00\x00\x00\x36\x00\x00\x00\x28\x00\x00\x00\x80\x02\x00\x00\x68\x01\x00\x00\x01\x00\x18\x00'
+BMP格式采用小端方式存储数据，文件头的结构按顺序如下：
+```
+两个字节：'BM'表示Windows位图，'BA'表示OS/2位图； 一个4字节整数：表示位图大小； 一个4字节整数：保留位，始终为0； 一个4字节整数：实际图像的偏移量； 一个4字节整数：Header的字节数； 一个4字节整数：图像宽度； 一个4字节整数：图像高度； 一个2字节整数：始终为1； 一个2字节整数：颜色数。
+所以，组合起来用unpack读取：
+```python
+>>> struct.unpack('<ccIIIIIIHH', s)
+('B', 'M', 691256, 0, 54, 40, 640, 360, 1, 24)
+```
+结果显示，'B'、'M'说明是Windows位图，位图大小为640x360，颜色数为24。
+
+##hashlib
+hashlib提供了常见的摘要算法，如MD5，SHA1等
+摘要算法又称为哈希算法、散列算法，通过函数把任意长度的数据转换成为一个长度固定的数据串(通常用16进制的字符串表示)
+摘要算法是单向的，反向推导十分困难，原始数据有一点改动，都会导致计算出的摘要完全不同
+```python
+import hashlib
+
+md5 = hashlib.md5()
+md5.update('how to use md5 in python hashlib?')
+print md5.hexdugest()	# d26a53750bc40b38b65a520292f69306
+# 如果数据量很大，可以多次调用update()
+md5.update('how to use md5 in')
+md5.update('python hashlib?')
+```
+MD5是最常见的摘要算法，速度很快，生成结果是固定的128bit字节，通常用一个32位的16进制字符串表示
+常见的摘要算法还有SHA1:
+```python
+import hashlib
+
+sha1 = hashlib.sha1()
+sha1.update('how to use sha1 in ')
+sha1.update('python hashlib?')
+print sha1.hexdigest()
+```
+SHA1的结果是160bit字节，通常用一个40位的16进制字符串表示
+比SHA1更安全的算法是SHA256和SHA512，不过越安全的算法越慢，而且摘要长度更长
+
+###摘要算法的应用
+比如用户的密码，使用明文保存十分的不安全，可以使用摘要算法保存摘要
+一些常用口令的MD5值容易被计算出来，所以可以在用户口令基础上加复杂的字符串实现`加盐算法`
+```python
+def calc_md5(password):
+	return get_md5(password + 'the-Salt')
+```
+只要Salt(盐)不泄露，即使再简单的MD5反推明文也是很难实现的
+
+##XML
+XML作为一种包装数据的形式，使用的范围越来越小，远远不及JSON，但是还是有必要了解
+操作XML有两种方法：DOM和SAX，DOM会把整个XML读入到内存，因此占用内存大，解析慢，但是可以访问任意树的节点。SAX是流模式，边读边解析，占用内存小，解析快，但是要处理事件
+```python
+# 解析<a href="/">python</a>
+from xml.parsers.expat import ParseCreate
+
+class DefaultSaxHandler(object):
+	def start_element(self,name,attrs):
+		print('sax:start_element:%s,attrs:%s' % (name,str(attrs)))
+
+	def end_elemnet(self,name):
+		print('sax:end_element:%s' % name)
+
+	def char_data(self,text):
+		print('sax:char_data:%s' % text)
+
+handler = DefaultSaxHandler()
+parser = ParserCreate()
+parser.returns_unicode = True	# 返回element名称和char_data都是unicode
+parser.StartElementHandler = handler.start_element
+parser.EndElementHandler = handler.end_element
+parser.CharacterDataHandler = handler.char_data
+parser.Parse(xml)
+```
+
+##HTMLParser
+HTML是XML子集，语法不如XML严格，解析时可以使用HTMLParser
+```python
+from HTMLParser import HTMLParser
+from htmlentitydefs import name2codepoint
+
+class MyHTMLParser(HTMLParser):
+	
+	def handle_starttag(self,tag,attrs):
+		print('<%s>' % tag)
+
+	def handle_endtag(self,tag):
+		print('</%s>' % tag)
+
+	def handle_startendtag(self,tag,attrs):
+		print('<%s/>' % tag)
+
+	def handle_data(self,data):
+		print('data')
+
+	def handle_comment(self,data):
+		print('<!-- -->')
+
+	def handle_entityref(self,name):
+		print('&%s;' % name)
+
+	def handle_charref(self,name):
+		print('&#%s;' % name)
+
+parser = MyHTMLParser()
+parser.feed('<html><head></head><body><p>Some <a href=\"#\">html</a> tutorial...<br>END</p></body></html>')
+```
+`feed`可以调用多次，不一定要一次性把HTML字符串都塞进去

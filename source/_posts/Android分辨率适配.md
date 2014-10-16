@@ -20,6 +20,36 @@ tags: [分辨率]
         320dpi下，1sp=2px
         480dpi下，1sp=3px
 
+##常见分辨率
+- 4:3
+    VGA     640*480
+    QVGA    320*240
+    HVGA    480*320
+    SVGA    800*600
+- 5:3
+    WVGA    800*480
+- 16:9
+    FWVGA   854*480
+    HD      1920*1080
+    QHD     960*540
+    720p    1280*720
+    1080p   1920*1080
+- Apple
+    iPhone4/4s      960*640
+    iPhone5/5s      1136*640
+    iPhone6         1334*750
+    iPhone6Plus     1920*1080
+    小米1           854*480
+    小米2           1280*720
+    红米1/1s/note   1280*720  
+
+###对应的DPI
+- HVGA  mdpi
+- WVGA  hdpi
+- FWVGA hdpi
+- QHD   hdpi
+- 720p  xhdpi
+- 1080p xxhdpi
 ##最佳方案
 1. 选取320dpi下(720*1280)进行设计，此分辨率下1dp=2px
 2. 对于一切切图资源特殊处理
