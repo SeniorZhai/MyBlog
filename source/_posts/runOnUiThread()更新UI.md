@@ -1,4 +1,4 @@
-title: runonUiThread()更新UI
+title: runOnUiThread()更新UI
 date: 2014-10-26 18:41:35
 categories: Android
 tags: [线程,Thread,Ui]
