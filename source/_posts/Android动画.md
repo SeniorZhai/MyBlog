@@ -11,6 +11,7 @@ Android 3.0之后的动画框架
 - View Animation
     + Tween Animation 补间动画 应用于View可以定义一系列位置、大小、旋转和透明度的改变
     + Frame Animation 帧动画 基于单元格的动画，每一帧显示一个不同的Drawable。帧动画可以在一个View中显示，并使用它的Canvas作为投影屏幕
+
 ###Property Animation
 在Android 3.0(API level 11)引入，通过一个属性动画生成器，在一个给定时间内使用设定的差值算法将属性从一个值转换到另一个值。
 属性动画设定了规定时间内修改对象的属性，比如背景色和alpha值等，从简单的View效果，如移动、缩放、View的淡入淡出，到复杂的动画，如运行时的布局改变、曲线变换。
@@ -58,7 +59,6 @@ TypeEvaluator<MyClass> evaluator = new TypeEvaluator<MyClass>() {
     return result;
   }  
 };
-
 //
 ValueAnimator oa = ObjectAnimator.ofObject(evaluator,myClassFromInstance,myClassToInstance);
 oa.setTarget(myClassInstance);
