@@ -1,0 +1,65 @@
+title: TextView属性详解
+date: 2014-11-16 19:37:48
+categories: Android
+tags: [TextView,EditView]
+---
+<!--more-->
+- android:autoLink 设置是否当文本为URL链接/email/电话号码/map时，显示为可点击的链接，可选值(none/web/email/phone/map/all)
+- android:bufferType 指定`getTexy()`方式取得的文本类型，选项editable类似StringBuilder可追加字符，也就是说getText后可调用append方法设置文本内容。
+- android:capitalize 设置英文字母大写类型
+- android:cursorVisible 设置光标为显示/隐藏，默认显示
+- android:digits 设置允许输入哪些字符
+- android:drawableBottom在text的下方输入一个drawable
+- android:drawableLeft 在左边输出一个drawable
+- android:drawablePadding 设置text与drawable的间隔
+- android:drawbaleRight 在右边输出一个drawable
+- android:drawbaleTop 在上方输出一个drawable
+- android:editable 设置是否可编辑
+- android:editorExtras 设置文本的额外输入数据
+- android:ellipsize 设置文字过长时，该控件该如何显示，可选值设置`start`省略号显示在开头，`end`省略号显示在结尾，`middle`省略号显示在中间，`marquee`以跑马灯的方式显示
+- android:freezesText 设置保存文本的内容以及光标位置
+- android:gravity 设置文本位置
+- android:hintText 为空时显示的文本提示信息
+- android:imeOptions 附加功能，设置右下角IME动作与编辑框相关的动作，如actionDone右下角显示“完成”，而不设置显示默认是一个回车
+- android:imeActionId 设置IME动作ID
+- android:imeActionLabel 设置IME动作标签
+- android:inputMethod 为文本指定输入法
+- android:inputType 设置文本的类型，用于帮助输入法显示合适的键盘类型
+- android:linksClickable 设置连接是否可以dianji
+- android:marqueeRepeatLimit在ellipsize指定marquee的情况下，设置重复滚动的次数，marquee_forever时表示无限次
+- android:ems设置TextView的宽度为N个字符的宽度
+- android:maxEms 设置TextView的宽度为最长为N个字符的宽度
+- android:minEms 设置TextView的宽度为最短为N个字符的宽度
+- android:maxLength 限制显示的文本长度，超出部分不显示
+- android:lines 设置文本的行数，设置两行就显示两行，即使第二行没有数据
+- android:maxLines 设置文本的最大显示行数，与width或者layout_width结合使用，超出部分自定换行，超出行数将不显示
+- android:minLines 设置文本的最小行数
+- android:lineSpacingExtra设置行间距
+- android:lineSpacingMultiplier设置行间距的倍数
+- android:numeric 设置后TextView有点击效果
+- android:password 以`.`显示文本
+- android:phoneNumber 设置为电话号码的输入方式
+- android:privateImeOptions 设置输入法选项
+- android:scorllHorizontally 设置文本超出宽度的情况下，是否出现横拉条
+- android:selectAllOnFocus 如果文本是可选择的，让他获取焦点而不是将光标移动为文本的开始位置或者末尾位置。 TextView中设置后无效果
+- android:shadowColor 指定文本阴影的颜色，需要与shadowRadius一起使用
+- android:shadowDx设置阴影横向坐标开始位置
+- android:shadowDy设置阴影纵向坐标开始位置
+- android:shadowRadius设置阴影的半径。设置为0.1就变成字体的颜色了，一般设置为3.0的效果比较好
+- android:singleLine设置单行显示
+- android:singleLine="true"显示单行
+- android:textAppearance设置文字外观。如 “?android:attr/textAppearanceLargeInverse”这里引用的是系统自带的一个外观，?表示系统是否有这种外观，否则使用默认的外观。可设置的值如下：textAppearanceButton/textAppearanceInverse/textAppearanceLarge/textAppearanceLargeInverse/textAppearanceMedium/textAppearanceMediumInverse/textAppearanceSmall/textAppearanceSmallInverse
+- android:textColor 设置文本颜色
+- android:textColorHighlight 被选中文字的底色，默认为蓝色
+- android:textColorLink 文字连接的颜色
+- android:textColorHint 设置提示信息的颜色，默认是灰色
+- android:textScaleX 设置文字自检间隔，默认为1.0f
+- android:textSize 设置文字大小，推荐度量单位`sp`
+- android:textStyle 设置字形[bold(粗体)，italic(斜体)，bolditalic(又粗又斜)]
+- android:typeface 设置字体，必须是以下常量值之一：normal 0，sans 1，serif 2，monospace(等宽字体) 3
+- android:height 设置文本区域的高度，支持度量单位 px/dp/sp/in/mm
+- android:maxHeight 设置文本区域的最大高度
+- android:minHeight 设置文本区域的最小高度
+- android:width 设置文本区域的宽度
+- android:maxWidth 设置文本区域的最大宽度
+- android:minWidth 设置文本区域的最小宽度
