@@ -3,7 +3,7 @@ date: 2014-03-26 13:00:34
 categories: iOS
 tags: [iOS]
 ---
-![](https://github.com/SeniorZhai/blog/blob/master/Image/14032601.png)
+![](https://raw.githubusercontent.com/SeniorZhai/blog/master/Image/14032601.png)
 AFNetworking是一个非常流行的网络库，适用于iOS以及Mac OS X，具有良好的架构，丰富的api，以及模块化化构建方式，使得使用起来非常轻松。
 
 ##使用CocoaPods安装
@@ -72,7 +72,7 @@ NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:reques
 [downloadTask resume];
 ```
 
-创建下载任务
+创建上传任务
 ```Objective-C
 NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
 AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
