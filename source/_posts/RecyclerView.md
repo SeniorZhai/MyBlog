@@ -84,3 +84,4 @@ item的布局
 </LinearLayout>
 ```
 RecyclerView默认情况下就有动画，在删除或者增加Ite的时候。如果需要自定义动画，继承RecyclerView.ItemAnimator类，并且使用RecyclerView.setItemAnimator()方法将定义的动画设置到我们的视图中。
+[Demo](https://github.com/SeniorZhai/RecyclerViewDemo)
