@@ -89,5 +89,5 @@ plugins:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: github
-  repository: https://github.com/SeniorZhai/SeniorZhai.github.io.git
+  repository: ssh://github.com/SeniorZhai/SeniorZhai.github.io.git
   branch: master
