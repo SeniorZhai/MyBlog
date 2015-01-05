@@ -1,0 +1,1 @@
+在使用storyboard和xib时，我们经常要用到ScrollView，还有自动布局AutoLayout，但是ScrollView和AutoLayout 结合使用，相对来说有点复杂。根据实践，我说一下我的理解，在故事板或xib中，ScrollView是根据其下面的一个View的大小来确定ContentSize的大小。
