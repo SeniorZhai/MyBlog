@@ -195,3 +195,5 @@ NSString* string = [pm toJSONString];
 
 @end
 ```
+
+	注：关于名字为id的属性，可以使用id命名，而且需要使用NSNumber或者NSString的类型来定义
