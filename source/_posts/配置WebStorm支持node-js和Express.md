@@ -9,3 +9,9 @@ tags: [WebStorm,node.js,Express]
 - 之后可以在下面的Packages中管理模块，可以选择安装各个模块，包括`express`
 - 之后在`Libraies`中选择Node.js的支撑
 ![](/img/15011902.png)
+
+- 运行Express项目
+由于Express 4.0采用了scripts的启动方式，所以`node app.js`不能启动应用
+采用`npm start`可以启动应用
+在`WebStorm`上可以这么设置
+![](/img/15011903.png)
