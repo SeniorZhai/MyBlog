@@ -9,7 +9,13 @@ typeof和instanceof都可以用来将值分类，typeof主要用于原始值，i
 ```js
 typeof <value>
 ```
-typeof返回描述value'类型'的字符串
+typeof返回描述value'数据类型'的字符串
+- undefined未定义
+- boolean布尔值
+- string字符串
+- number数组 
+- object对象或者null
+- function函数
 ```js
 typeof true 	// 'boolean'
 typeof 'abc'	// 'string'
@@ -27,6 +33,7 @@ typeof []		// 'object'
 |Function|'function'|
 |All other value|'object'|
 ##instanceof
+判断变量是否属于某个类型
 ```js
 value instanceof <Constr>
 var b = new Bar();
