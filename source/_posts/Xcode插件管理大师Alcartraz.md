@@ -28,7 +28,7 @@ rm -rf ~/Library/Application\ Support/Alcatraz
 点击“Package Manager”，即可启动插件列表页面，如下所示
 ![](https://github.com/zt1991616/blog/raw/master/Image/14031203.png)
 之后你可以在右上角搜索插件，对于想安装的插件，点击其左边的图标，即可下载安装，如下所示，我正在安装KImageNamed插件：
-![](https://github.com/zt1991616/blog/raw/master/Image/14031204.png)
+![](https://github.com/zt1991616/blog/raw/master/Image/14031204.jpg)
 安装完成后，再次点击插件左边的图标，可以将该插件删除。
 
 ##插件路径
