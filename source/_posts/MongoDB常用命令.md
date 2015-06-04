@@ -4,6 +4,13 @@ categories: node.js
 tags: [MongoDB]
 ---
 <!--more-->
+##启动MongoDB
+指定数据库路径启动
+```shell
+mongod --dbpath 
+```
+添加`--port`也可以指定端口
+
 ##数据库操作
 ---
 - 切换、创建数据库	`use yourDB`
