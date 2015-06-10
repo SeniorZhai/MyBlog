@@ -1,8 +1,9 @@
-title: [转]json实体类快速生成插件
+title: "[转]json实体类快速生成插件"
 date: 2015-05-28 20:27:33
 categories: Android
 tags: [插件,Android Studio]
 ---
+
 转至 <http://www.jianshu.com/p/b83ea5e32ee1>
 **写在前头:本插件只适用 android studio和 Intellij IDEA 工具,eclipse 的少年无视我吧!!!**
 <!--more-->
