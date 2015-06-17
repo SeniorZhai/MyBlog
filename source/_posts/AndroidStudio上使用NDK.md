@@ -18,8 +18,6 @@ export PATH=$NDK_ROOT:$PATH
 创建一个`MathKit`类
 ![](/img/15031901.png)
 ```java
-
-**示例**：<https://github.com/SeniorZhai/NdkDemo>
 public class MathKit {
 	public static native int square(int num);
 
@@ -64,3 +62,4 @@ ndk {
     textView.setText("2*2="+ MathKit.square(2));
  }
 ```
+**示例**：<https://github.com/SeniorZhai/NdkDemo>
