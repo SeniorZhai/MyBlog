@@ -59,6 +59,7 @@ public class User {
     }
 }
 ```
+<https://github.com/SeniorZhai/DataBindingDemo/blob/master/app/src/main/java/io/github/seniorzhai/databindingdemo/model/StaticUser.java>
 然后创建View，使用Data Binding，布局的跟标签为layout
 ```xml 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
@@ -93,6 +94,7 @@ public class User {
     </LinearLayout>
 </layout>
 ```
+<https://github.com/SeniorZhai/DataBindingDemo/blob/master/app/src/main/res/layout/activity_static.xml>
 最后在Activity中建立联系
 ```java
 	StaticUser user;
@@ -105,6 +107,7 @@ public class User {
         binding.setUser(user);
     }
 ```
+<https://github.com/SeniorZhai/DataBindingDemo/blob/master/app/src/main/java/io/github/seniorzhai/databindingdemo/StaticActivity.java>
 ###动态数据
 首先需要完成我们的Model，这时候Model需要继承BaseObservable，并且通过制定一个`Bindable`注解给getter以及setter内通知实现属性改变时发出通知。
 ```java
@@ -130,9 +133,10 @@ public class ObservableUser extends BaseObservable {
             type="io.github.seniorzhai.databindingdemo.model.ObservableUser" />
 </data>
 ```
+<https://github.com/SeniorZhai/DataBindingDemo/blob/master/app/src/main/res/layout/activity_observale.xml>
 最后在Activity中添加代码，建立联系
-```xml
+```java
 ActivityObservaleBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_observale);
 binding.setUser(user);
 ```
-
+<https://github.com/SeniorZhai/DataBindingDemo/blob/master/app/src/main/java/io/github/seniorzhai/databindingdemo/ObservaleActivity.java>
