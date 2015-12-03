@@ -7,7 +7,7 @@ tags: [ndk,AndroidStudio]
 在AS 1.3版本后，NDK终于可以在AndroidStudio正式支持了，不过还在实验阶段，后续可能还会有些许不同，但至少能管中窥豹了。
 <!--more-->
 ##环境
-- Android Studio 1.3+ 
+- Android Studio 1.3+
 - Gradle 2.5
 - NDK r10e
 - Build Tools 19.0.0+
