@@ -1,6 +1,6 @@
 title: AsyncStorage的使用
 date: 2016-01-17 21:50:50
-categories: ReactNa
+categories: ReactNative
 tags: [缓存,持久化]
 ---
 AsyncStorage是一个Key-Value存储系统，对于App是全局的。
