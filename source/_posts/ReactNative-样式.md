@@ -1,6 +1,6 @@
 title: ReactNative-样式
 date: 2015-11-24 19:57:26
-categories: React Native
+categories: ReactNative
 tags: [样式,Style,Android,iOS]
 ---
 <!--more-->

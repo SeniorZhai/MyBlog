@@ -1,6 +1,6 @@
 title: ReactNative-如何开始
 date: 2015-09-24 17:00:31
-categories: React Native
+categories: ReactNative
 tags: [React,开始,Android,iOS]
 ---
 <!--more-->
@@ -12,7 +12,7 @@ tags: [React,开始,Android,iOS]
 5. watchman和flow
 ##安装
 ```shell
-npm install -g react-native-cli 
+npm install -g react-native-cli
 ```
 ##初始化
 ```shell
