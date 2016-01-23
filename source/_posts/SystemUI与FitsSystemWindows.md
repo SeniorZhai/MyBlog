@@ -42,8 +42,11 @@ decorView.setSystemUiVisibilit(uiOptions);
 ##4.1以后
 上面的方法设置后，内容还是会因为场景的变化而变化，所以我们需要让我们的内容放在SystemUI的后面
 ```java
-
+View decorView = getWindow().getDecorView();
+int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+decorView.setSystemUiVisibilit(uiOptions);
 ```
-
+值得注意的是，有些控件我们是不希望不覆盖住的，比如toolbar，这个时候需要给它加上FitsSystemWindows属性，保证不会被SystemUI遮住。
+从示例上看，系统会为View设置上Padding，所以，如果要做切换时，可能要考虑还原View的Padding。
 #示例
 <https://github.com/SeniorZhai/SystemUI>
