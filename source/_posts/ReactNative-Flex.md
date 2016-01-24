@@ -4,6 +4,6 @@ categories: ReactNative
 tags: [Flex]
 ---
 <!--more-->
-![](./img/16012301.jpg)
-![](./img/16012301.png)
+![](/img/16012301.png)
+![](/img/16012302.png)
 <https://github.com/SeniorZhai/FlexDemo>
