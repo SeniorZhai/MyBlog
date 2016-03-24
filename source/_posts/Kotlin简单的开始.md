@@ -1,8 +1,9 @@
 title: Kotlin简单的开始
 date: 2016-02-18 17:23:49
 categories: Android
-tags:[Kotlin]
+tags: [Kotlin]
 ---
+<!--more-->
 ##安装Kotlin插件
 - Kotlin 使Android Studio可以识别kotlin代码
 - Kotlin Android Extensions 使Android Studio可以自动地从XML中注入所有的View到Activity
