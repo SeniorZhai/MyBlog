@@ -1,7 +1,7 @@
-title: Google IO 第一份惊喜-ConstraintLayout
+title: GoogleIO第一份惊喜-ConstraintLayout
 date: 2016-05-19 14:03:07
 categories: Android
-tags:[AutoLayout,约束,布局,Layout]
+tags: [AutoLayout,约束,布局,Layout]
 ---
 了解iOS开发的童鞋应该知道，自iPhone6推出后，iOS也进入多屏适配时代，AutoLayout成为了适配的首选，Storyboard+AutoLayout成为了iOS布局的主要流派之一（代码适配也是不错的选择）。
 <!--more-->
@@ -45,6 +45,23 @@ dependencies {
 ![](./img/16051903.png)
 拖拽下方圆角矩形，可以设置组件间的基线对齐
 
+##使用
+当拖动大小约束时，大小会被改变
 ![](./img/16051905.gif)
+当拖动位置约束时，锚点变绿即建立约束成功
+![](./img/16051906.gif)
+当约束建立成功后，再次点击锚点即可删除约束
+![](./img/16051907.gif)
 
-https://codelabs.developers.google.com/codelabs/constraint-layout/index.html#5
+当然拖动并不能准确的设置约束，这个时候我们看看到右边的属性窗口
+![](./img/16051908.jpeg)
+在这里你可以设置组件的相关约束和组件的相关属性
+在属性窗口中，你可以看到约束的UI界面是这样的
+![](./img/16051909.png)
+每个约束是一个`I`型的图标，点击可以切换如下三个状态
+![](./img/16051910.png)
+Fixed：固定尺寸约束，指定组件大小
+![](./img/16051911.png)
+AnySize：占用可用空间
+![](./img/16051912.png)
+Wrap Content：包含组件内容大小
