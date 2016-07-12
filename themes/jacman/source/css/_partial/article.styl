@@ -1,4 +1,4 @@
-.post,.page
+.post,.page,.link,.photo
   background color-section
   a
     color color-blue 
@@ -31,6 +31,7 @@ article
       padding-top 0.5em
       font-size 0.8em
       text-align center
+      margin-bottom -2.7em
       @media mini
         float right
         margin-right 1em
@@ -45,6 +46,10 @@ article
     padding 1.5em 4%
     color color-content
     font-size font-size
+    &:before,&:after
+      content ""
+      display block
+      clear both
     .kb
       padding .1em .6em
       border 1px solid color-gray
@@ -63,7 +68,11 @@ article
       padding-bottom 0.3em
       margin-top 1.5em
       border-bottom 2px solid lighten(color-gray,30%)
-    h3,h4,h5,h6
+    h3
+      font-size font-size+40
+      line-height 1em
+      margin-top 1.3em
+    h4,h5,h6
       font-size font-size+40
     h1,h2,h3,h3,h4,h5,h6
       color color-heading
@@ -84,6 +93,7 @@ article
       padding-left 1%
       line-height line-height
       font-size font-size
+      color color-meta
       footer
         background color-section
         padding 0
@@ -108,7 +118,7 @@ article
       //margin 0.5em 0
     dl dt
       font-weight blod
-    ul li>code,ol li>code,p code,strong code,em code
+    ul li>code,ol li>code,p code,strong code,em code,table th>code,table td>code
       font-family font-mono
       background color-code
       color #D14
@@ -134,11 +144,27 @@ article
       padding-top 0.5em
       @media tablet 
         padding-top 0.7em
+    .img-topic,.img-logo
+      display none
+    .img-center
+      display block 
+      margin auto
+    .img-shadow
+      box-shadow 0 0 2px 3px #ddd
     figcaption,.caption
-      text-align center
       display block
+      margin-top .3em
+      color color-meta
+      position relative
       font-size 0.9em
-      font-weight blod
+      padding-left 1.3em
+      &:before
+        content '\f040'
+        position absolute
+        font 0.9em font-icon-family
+        position absolute
+        left 0
+        top .3em
     .video-container
       position relative;
       padding-top 56%
@@ -152,16 +178,19 @@ article
         height 100%
         margin-top 0
     table
-      width 100%
+      max-width 100%
       border-collapse collapse
       border-spacing 0
+      margin-top: 1em
       th
         font-weight bold
-        border-bottom 3px solid lighten(color-gray,30%)
-        padding-bottom 0.5em
+        border-bottom 2px solid lighten(color-gray,30%)
+        padding 0.5em
+        line-height: 1.3em
       td 
         border-bottom 1px solid lighten(color-gray,30%)
-        padding 10px 0
+        padding 0.5em
+        line-height: 1.3em
     .pullquote
       text-align left
       width 45%

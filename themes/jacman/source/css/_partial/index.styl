@@ -1,5 +1,6 @@
 /*! index layout */
 #container
+  -webkit-flex: 1
   width 95%
   margin 0 auto
   overflow hidden
@@ -40,6 +41,49 @@
         display block
         margin 0.5em 0
         font-size 0.9em
+  article.post-expand
+    background color-section
+    margin-bottom 3.5em
+    //-webkit-box-shadow: 2px 2px 3px darken(color-background,20%)
+    //box-shadow: 2px 2px 3px darken(color-background,20%)
+    //-webkit-border-radius: 3px
+    //border-radius: 3px
+    .img-logo
+      max-width 180px
+      max-height 96px
+      display block !important
+      margin-right .7em
+      margin-left .7em
+      padding 0
+      float right
+      clear right
+    .img-topic
+      max-width 300px
+      max-height 1800px
+      display block !important
+      margin-left .7em
+      margin-right .7em
+      padding 0
+      float right
+      clear right
+    .article-more-link
+      //margin-top: 1.5em
+      //padding-top: 1em
+      //border-top: 2px solid #ddd
+      a
+        display: inline-block
+        line-height: 1em
+        padding: 6px 15px
+        border-radius: 15px
+        background color-background
+        color color-font
+        //text-shadow: 0 1px #fff
+        text-decoration: none
+        &:hover
+          background: color-theme
+          color: #fff
+          text-decoration: none
+          //text-shadow: 0 1px darken(color-theme, 20%)
 #archive-page
   section.post
     a
@@ -53,6 +97,11 @@
 
 .moveMain
   margin-left 10% !important
+
+.unexpand .prev
+  border-left 0.5em solid color-gray
+  &:hover
+    border-left 0.5em solid color-theme
 
 #page-nav
   background color-section
@@ -68,10 +117,7 @@
       color color-theme
   .prev
     float left
-    border-left 0.5em solid color-gray
     transition border-left .5s
-    &:hover
-      border-left 0.5em solid color-theme
     span:before
       font-family font-icon-family
       font-smoothing()
@@ -119,8 +165,7 @@
 
 .archive-title
   margin 1em 0
-  width 97%
-  padding 2em 0 2em 3%
+  padding 2em
   @media tablet
     margin 2em 0
     width 18.5%
@@ -139,13 +184,13 @@
       color color-theme
       transition color .5s
 .current
-  color color-theme !important
+  color color-orange !important
 
 .archive-part
   @media mini
-     min-height 200px
+    min-height 200px
   @media tablet
-    width 78% !important
+    //width 78% !important
     float right
     margin-left 2% !important
   section.post
@@ -155,7 +200,7 @@
       float left
       @media phonemax
         width 100%
-      @media tablet
+      @media phone
         width 20%
 /*    @media mini
       float left

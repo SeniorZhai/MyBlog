@@ -3,11 +3,10 @@
 	<p class="asidetitle"><%= __('categories') %></p>
 		<ul>
 		<% site.categories.sort('name').each(function(item){ %>
+		  <% if(item.posts.length){ %>
 			<li><a href="<%- config.root %><%- item.path %>" title="<%= item.name %>"><%= item.name %><sup><%= item.posts.length %></sup></a></li>
+		  <% } %>
 		<% }); %>
-		</ul>
-		<ul>
-		<script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_wh.js"></script>
 		</ul>
 </div>
 <% } %>

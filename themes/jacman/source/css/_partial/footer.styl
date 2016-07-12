@@ -31,10 +31,7 @@ footer
   width w=(110/16)em
   height w
   margin 0 auto
-  if dataURI
-    background no-repeat url(author-img-data) left top
-  else
-    background no-repeat url(root+author-img) left top 
+  background no-repeat url("../"+author-img) left top 
   background-size w w
   border-radius (w/2)
   transition transform 2s ease-out
@@ -86,7 +83,7 @@ footer
     &:hover:before
       color color-blue
 
-.icon-weibo:before,.icon-github:before,.icon-twitter:before,.icon-facebook:before,.icon-stack-overflow:before,.icon-email:before,.icon-google_plus:before
+.icon-weibo:before,.icon-github:before,.icon-twitter:before,.icon-facebook:before,.icon-stack-overflow:before,.icon-email:before,.icon-google_plus:before,.icon-linkedin:before
   font-family font-icon-family
   font-smoothing()
  
@@ -104,10 +101,17 @@ footer
   content: "\f003"
 .icon-google_plus:before
   content "\f0d5"
+.icon-linkedin:before
+  content "\f08c"
 .icon-douban:before
   font-family font-icon-diao
   font-smoothing()
   content "\f111"
+.icon-zhihu:before
+  font-family font-icon-diao
+  font-smoothing()
+  content "\f142"
+
 
 
 .copyright
@@ -127,3 +131,15 @@ footer
     &:hover
       color color-blue
       text-decoration underline
+
+.cc-license
+  width 100%
+  float left
+  text-align center
+  .cc-opacity 
+    opacity 0.7
+    border-bottom none
+    &:hover
+      opacity 0.9
+  img
+    display inline-block
