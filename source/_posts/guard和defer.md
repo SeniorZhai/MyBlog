@@ -1,7 +1,7 @@
 title: guard和defer
 date: 2016-08-25 19:01:12
 categories: iOS
-tags: [swift,2,关键字]
+tags: [swift,关键字]
 ---
 在看swift的代码的时候，遇见两个新的关键字，语法特性很特别
 <!--more-->
