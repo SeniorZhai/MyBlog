@@ -3,7 +3,7 @@ date: 2014-02-21 14:35:32
 categories: iOS
 tags: [UIImageView,UIAlertView,UIActionSheet.]
 ---
-##UIImageView
+## UIImageView
 - 一个显示图片控件，直接继承了UIView基类，没有继承UIControl，不能接受用户输入，不能与用户交互。
 - 常用属性
 `image`:访问或设置该控件显示的图片
@@ -29,7 +29,7 @@ tags: [UIImageView,UIAlertView,UIActionSheet.]
 `Top Left`:不缩放图片，只显示图片的左上边区域。
 `Bottom Left`:不缩放图片，只显示图片的左下边区域。
 `Bottom Right`:不缩放图片，只显示图片的右下边区域。
-##UIAlertView(警告框)
+## UIAlertView(警告框)
 - UIAlertView
     + 显示在屏幕中央的弹出式警告框。
     + 基本用法
@@ -134,7 +134,7 @@ tags: [UIImageView,UIAlertView,UIActionSheet.]
 }
 ```
 
-##UIActionSheet
+## UIActionSheet
 - 显示在底部的按钮列表，用户通过单击某个按钮来表明自己的态度。
     + 风格(actionSheetStyle)：
        

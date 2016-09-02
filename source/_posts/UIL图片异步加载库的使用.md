@@ -4,7 +4,7 @@ categories: Android
 tags: [UIL,异步加载]
 ---
 <!--more-->
-##使用
+## 使用
 作为图片加载库必须设置网络、SD卡权限
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />  
@@ -17,7 +17,7 @@ File cacheDir = StorageUtils.getOwnCacheDirectory(getApplicationContext(),"image
 .discCache(new UnlimitedDiscCache(cacheDir));
 ```
 
-###配置ImageLoaderConfiguration
+### 配置ImageLoaderConfiguration
 ```java
 ImageLoaderConfiguration config = new ImageLoaderConfiguration
 	.Builder(context)
@@ -40,7 +40,7 @@ ImageLoaderConfiguration config = new ImageLoaderConfiguration
 ImageLoader.getInstance().init(config);	
 ```
 
-###加载
+### 加载
 ```java
 // 获取ImageLoader实例
 ImageLoader imageLoader = ImageLoader.getInstance();
@@ -81,7 +81,7 @@ ImageLoader.getInstance().displayImage(imageUrl, imageView); // imageUrl代表�
 ImageLoader.getInstance().displayImage(imageUrl, imageView，options); // imageUrl代表图片的URL地址，imageView代表承载图片的IMAGEVIEW控件 ， options代表DisplayImageOptions配置文件  
 ```
 
-###加载监听
+### 加载监听
 ```java
 imageLoader.displayImage(imageUrl, imageView, options, new ImageLoadingListener() {  
     @Override  
@@ -103,7 +103,7 @@ imageLoader.displayImage(imageUrl, imageView, options, new ImageLoadingListener(
     }});  
 ```
 
-###加载监听进度
+### 加载监听进度
 ```java
 imageLoader.displayImage(imageUrl, imageView, options, new ImageLoadingListener() {  
     @Override  
@@ -129,7 +129,7 @@ imageLoader.displayImage(imageUrl, imageView, options, new ImageLoadingListener(
     });  
 ```
 
-##注意事项
+## 注意事项
 1. 权限
 2. 必须初始化ImageLoader.getInstance().init(config)
 3. ImageLoader是根据ImageView的height，width确定图片的宽高
@@ -140,7 +140,7 @@ imageLoader.displayImage(imageUrl, imageView, options, new ImageLoadingListener(
    	- ④避免使用`RoundedBitmapDisplayer.`他会创建新的`ARGB_8888`格式的Bitmap对象；
    	- ⑤使用`.memoryCache(new WeakMemoryCache())`，不要使用`.cacheInMemory()`;
 
-##其他
+## 其他
 ```java
 String imageUri = "http://site.com/image.png"; // from Web  
 String imageUri = "file:///mnt/sdcard/image.png"; // from SD card  

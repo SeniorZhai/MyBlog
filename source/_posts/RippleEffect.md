@@ -23,7 +23,7 @@ tags: [MaterialDesign,Animation,波纹,按钮]
 
 </com.andexert.library.RippleView>
 ```
-##定制属性
+## 定制属性
 - app:rv_alpha:波纹的透明度，integer类型，默认为90，范围0-255
 - app:rv_framerate:波纹放大过程中的步进，integer类型，默认10
 - app:rv_rippleDuration:波纹动画的间隔，integer类型，默认400

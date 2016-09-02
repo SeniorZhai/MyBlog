@@ -3,7 +3,7 @@ date: 2014-06-24 13:30:16
 categories: Android
 tags: [Android]
 ---
-##Gradle
+## Gradle
 - 什么是Gradle？
 Gradle 是以 Groovy 语言为基础，面向Java应用为主，基于DSL语法的自动化构建工具。说到Java的自动化构建工具。
 使用Gradle构建Android项目的优点：
@@ -11,7 +11,7 @@ Gradle 是以 Groovy 语言为基础，面向Java应用为主，基于DSL语法�
 - 改进的依赖关系管理
 - 更容易地集成到自动构建系统
 
-##Gradle 基本概念
+## Gradle 基本概念
 如果你用Android Studio新建一个项目的时候，默认生成一大堆关于gradle的东西，其中最重要的是一个build.gradle的文件，内容如下：
 ```Groovy
 buildscript {
@@ -53,7 +53,7 @@ buildscript节点的内容完全不用动，大概意思就是支持maven，声�
 apply plugin节点声明构建的项目类型，这里当然是android了
 android节点设置编译android项目的参数，接下来，我们的构建android项目的所有配置都在这里完成。
 
-##构建一个Gradle Android项目
+## 构建一个Gradle Android项目
 除了最基本的Android Gradle配置文件，项目常常需要引入第三方的jar包，比如依赖一个support_v4的jar包，则完整的build.gradle文件如下：
 ```Groovy
 buildscript {
@@ -103,7 +103,7 @@ gradle build
 ```
 就完成了android 项目的构建了。如果，你是照着以上步骤走的话，你将会在项目目录里面看到一个build 的目录，里面就是用gradle 构建android项目的全部东西了。最终打包的apk 就在build/apk 目录下了。然后，你会发现，两个apk 一个是 [项目名]-debug-unaligned [项目名]-release-unsigned，看名字就猜到一个是调试模式没有进行优化的apk（可直接安装），一个是release模式但没有签名的apk（不可直接安装）。
 
-##打包签名
+## 打包签名
 默认输出 release apk 是没有签名的，那么我们需要签名的很简单，只需要在android{}里面补充加上如下代码即可。
 ```
 // 签名

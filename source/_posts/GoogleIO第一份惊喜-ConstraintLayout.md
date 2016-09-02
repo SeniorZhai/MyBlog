@@ -8,7 +8,7 @@ tags: [AutoLayout,约束,布局,Layout]
 拖拽组件，设定约束，一个界面就基本完成了（当然，还有一堆高级的用法）。而Android开发工程师还在苦逼地将设计稿分割，这部分用一个RelativeLayout，这部分用LinearLayout……然后嵌套一下，或者再套一层。对于很多对几大布局不是很了解的同学，往往几个界面的组成就够头痛一阵了。
 拯救你们的救星来了，ConstraintLayout将解决你的难言之隐，还在等待什么，赶快拿起电话*&……%￥(不好意思出戏了)
 
-##开始
+## 开始
 首先确保你的Android Studio是[2.2 preview](http://tools.android.com/download/studio/canary)或者更高版本，预览拖拽设定约束需要新的布局编辑窗口，低版本AS应该可以用ConstraintLayout，但没用设置约束功能（光手写XML，为什么还用ConstraintLayout）
 
 ConstraintLayout是一个单独的支持包，所以需要在gradle中添加引用
@@ -30,12 +30,12 @@ dependencies {
 </android.support.constraint.ConstraintLayout>
 ```
 
-##使用
+## 使用
 ![](/img/16051900.jpeg)
 在布局编辑窗口中选择`Design`(我几乎是第一次选择他，而不是直接去使用TextV去写XML)
 ![](/img/16051901.png)
 
-###约束Constraints
+### 约束Constraints
 约束可以帮助你设定不同组件之间的位置关系，比如，这个A组件在B组件右边25dp且位于C组件下方8dp的位置。
 
 在布局编辑窗口中，当你选中一个组件可以看到以下情况
@@ -46,7 +46,7 @@ dependencies {
 ![](/img/16051904.png)
 拖拽下方圆角矩形，可以设置组件间的基线对齐
 
-##基本使用
+## 基本使用
 当拖动大小约束时，大小会被改变
 ![](/img/16051905.gif)
 当拖动位置约束时，锚点变绿即建立约束成功
@@ -71,7 +71,7 @@ Wrap Content：包含组件内容大小
 
 以上可以在[官方示例](https://github.com/googlecodelabs/constraint-layout)中查看
 
-##缺点
+## 缺点
 - UI操作并不顺畅，控件经常点击不到
 - 缺少等宽等约束，复杂的需求不一定能实现
 - 当ConstraintLayout不是根布局时， UI操作基本不可用

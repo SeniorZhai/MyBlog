@@ -38,7 +38,7 @@ activity-alias具体属性有：
 ![](https://github.com/zt1991616/blog/raw/master/Image/14041002.png)
 ![](https://github.com/zt1991616/blog/raw/master/Image/14041003.png)
 
-#ExpendableListActivity
+# ExpendableListActivity
 一个具有可展开list，其中的item通过ExpandableListAdapter接口来绑定数据源。当用户选择其中某一项时可以自己去定义处理方法。ExpendableListActivity含有一个ExpandableView对象，用两层的方法来展示数据，第一层是组，第二层是子项。使用自定义的xml来制定布局，则ExpandableListView一定要用"@id/android:list"作为id，另外使用一个id@“@id/android/empty”来表示空的list.
 
 main.xml

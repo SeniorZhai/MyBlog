@@ -5,7 +5,7 @@ tags: [Broadcast]
 ---
 在Android中，Broadcast是一种广泛运用在应用程序之间传输信息的机制，而BroadcastReceiver是对发送出来的Broadcast进行过滤接收并响应的一类组件
 <!--more-->
-##注册BroadcastReceiver
+## 注册BroadcastReceiver
 在AndroidManifest.xml中用标签注册
 - 静态注册过滤器
 ```java
@@ -22,7 +22,7 @@ intentFilter.addAction(String);
 registerReceiver(BroadcastReceiver,intentFilter); // 在BroadCastReceiver的onStart中注册，onStop中unregiterReceiver
 ```
 
-##触发BroadcastReceiver
+## 触发BroadcastReceiver
 ```java
 Intent intent = new Intent("com.zoe.net");
 intent.putExtra("msg","发送消息");

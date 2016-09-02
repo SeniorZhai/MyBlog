@@ -5,16 +5,16 @@ tags: [ndk,mac,AndroidStudio]
 ---
 
 <!--more-->
-##准备工作
+## 准备工作
 1. 下载NDK
 2. 配置环境变量，在`~/.bash_profile`文件下添加
 ```shell
-# 根据自己存放的位置指定
+#  根据自己存放的位置指定
 export NDK_ROOT=/Users/UserName/Documents/Android/android-ndk-r10
 export PATH=$NDK_ROOT:$PATH
 ```
 
-##新建一个项目
+## 新建一个项目
 创建一个`MathKit`类
 ![](/img/15031901.png)
 ```java
@@ -32,7 +32,7 @@ public class MathKit {
 ![](/img/15031903.png)
 根据头文件，编写cpp文件
 ```cpp
-#include <com_zoe_ndkdemo_jni_MathKit.h>
+# include <com_zoe_ndkdemo_jni_MathKit.h>
 
 JNIEXPORT jint JNICALL Java_com_zoe_ndkdemo_jni_MathKit_square
   (JNIEnv * env, jclass cls, jint num)

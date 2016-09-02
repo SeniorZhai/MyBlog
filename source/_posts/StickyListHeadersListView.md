@@ -5,7 +5,7 @@ tags: [HeadersList,带标题的ListView]
 ---
 [StickyListHeaders](https://github.com/emilsjolander/StickyListHeaders)是一个带标题的ListView的带三方库
 <!--more-->
-##使用
+## 使用
 在activity或Fragment的xml文件
 ```xml
 <se.emilsjolander.stickylistheaders.StickyListHeadersListView

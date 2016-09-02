@@ -8,7 +8,7 @@ tags: [iOS]
 	+ UITextView是一个多行文本框，UITextField只是单行文本
 	+ UITextView没有继承UIControl控件
 	+ UITextView继承了UIScrollView，所以它具有UISrollView的功能和行为。
-## UIScrollView支持的属性
+##  UIScrollView支持的属性
 - 控制显示区域的属性
 	+ contentSize:该属性是一个CGSize类型的值，制定显示内容的完整宽度和完整高度。
 	+ contentInset:该属性是一个UIEdgeInsets类型的值，表示所需要内容在上下左右的留白。

@@ -4,7 +4,7 @@ categories: ReactNative
 tags: [样式,Style,Android,iOS]
 ---
 <!--more-->
-##声明
+## 声明
 ```js
 var styles = StyleSheet.create({
 	base: {
@@ -12,11 +12,11 @@ var styles = StyleSheet.create({
 		height:38,
 	},
 	background:{
-		backgroundColor:"#222222",
+		backgroundColor:"# 222222",
 	},
 })
 ```
-##使用
+## 使用
 ```js
 <Text style={styles.base} />
 <View style={styles.background} />

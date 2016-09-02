@@ -5,7 +5,7 @@ tags: [Gson,Json]
 ---
 [Gson](https://code.google.com/p/google-gson/)是Google提供的一个很棒的json解析库。
 <!--more-->
-##解析单个对象
+## 解析单个对象
 比如有个一个Person类
 ```java
 public class Person{
@@ -34,7 +34,7 @@ gsonBuilder.setDateFormat("yyyy-MM-dd HH:mm:ss");
 Gson gson = gsonBuilder.create();
 Person person = gson.fromJson(json,Person.class);
 ```
-##命名
+## 命名
 gson默认需要类的属性名与JSON对应，但也可以通过`@SerializeName`来修改
 ```java
 public class Feed {
@@ -42,7 +42,7 @@ public class Feed {
 	public Date birthDay;
 }
 ```
-##对象的嵌套
+## 对象的嵌套
 比如返回如下的数据
 ```json
 {
@@ -67,7 +67,7 @@ public class Feed {
 	}
 }
 ```
-##对象数组
+## 对象数组
 形如下面的对象数组
 ```
 [{

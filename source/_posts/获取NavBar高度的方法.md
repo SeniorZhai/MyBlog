@@ -4,7 +4,7 @@ categories: Android
 tags: [NavBar,虚拟键,NavtigationBar]
 ---
 <!--more-->
-##判断是否存在虚拟键
+## 判断是否存在虚拟键
 ```java
 private final static String SHOW_NAV_BAR_RES_NAME = "config_showNavigationBar";
 public String getNavBarOverride() {
@@ -39,7 +39,7 @@ private boolean hasNavBar(Context context) {
 	}
 }
 ```
-##获取虚拟键的高度
+## 获取虚拟键的高度
 ```java
 public int getNavigationBarHeight(Context context) {
 	Resources res = context.getResources();

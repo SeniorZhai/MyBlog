@@ -5,14 +5,14 @@ tags: [常用,基础,函数]
 ---
 相信很多Android开发都有自己的函数库，来完成一些常用的操作，比如dpi操作、获取手机信息、文件操作等。[caffeine](https://github.com/percolate/caffeine)是一个Android常用函数库，封装了大量常用但是冗长的函数。
 <!--more-->
-##使用
+## 使用
 - 下载[jar](https://github.com/percolate/caffeine/tree/master/distribution)
 - gradle `compile 'com.percolate:caffeine:0.3.3'`
 
-##常用方法
+## 常用方法
 详情请见<http://percolate.github.io/caffeine/javadoc/>
 
-###ActivityUtils
+### ActivityUtils
 -  launchActivity
 	public static void launchActivity(android.app.Activity context,
 		java.lang.Class<? extends android.app.Activity> activity,
@@ -38,7 +38,7 @@ tags: [常用,基础,函数]
 	public static void turnScreenOn(android.app.Activity context)
 	点亮屏幕
 
-###MiscUtils
+### MiscUtils
 - dpToPx
 	public static int dpToPx(android.content.Context context,int dp)
 	dp转px
@@ -67,7 +67,7 @@ tags: [常用,基础,函数]
 	public static final boolean isValidURL(java.lang.String url)
 	判断是符合WEB_URL
 
-###PhoneUtils
+### PhoneUtils
 - isRotationEnable
 	public static boolean isRotationEnabled(android.content.Context context)
 	检查用户是否关闭了自动旋转

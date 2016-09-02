@@ -3,10 +3,10 @@ date: 2014-05-05 13:21:03
 categories: Android
 tags: [Android]
 ---
-##介绍
+## 介绍
 Android-Universal-Image-Loader是一个开源的图片异步加载库，该项目的目的是提供一个可重复使用的图像异步加载、缓存和显示的工具。该库非常强大，国内外有很多有名的App都在使用。
 
-##特点
+## 特点
 - 多线程的图像加载
 - 尽可能多的配置选项（线程池，加载器，解析器，内存/磁盘缓存，显示参数等等）
 - 可以添加图片加载监听器
@@ -14,7 +14,7 @@ Android-Universal-Image-Loader是一个开源的图片异步加载库，该项�
 - 支持Widget
 - Android 1.5以上支持
 
-##使用方法
+## 使用方法
 1.Android Manifest
 ```xml
 <manifest>
@@ -132,7 +132,7 @@ imageLoader.loadImage(imageUri, targetSize, displayOptions, new     SimpleImageL
 // 同步解码Bitmap
 Bitmap bmp = imageLoader.loadImageSync(imageUri, targetSize, displayOptions);
 ```
-##用户信息
+## 用户信息
 1.缓存默认情况下不启用。如果你想加载的图像会在内存或磁盘上的缓存，那么你应该在DisplayImageOptions启用缓存这种方式：
 ```
 DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()

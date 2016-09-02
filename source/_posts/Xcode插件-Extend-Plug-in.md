@@ -3,7 +3,7 @@ date: 2014-05-26 12:53:46
 categories: iOS
 tags: [iOS]
 ---
-#安装
+# 安装
 - 在线安装
 ```
 ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"

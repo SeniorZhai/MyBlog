@@ -9,7 +9,7 @@ tags:
 - 在Image中必须设置缩放模式时必须是centerCrop、centerInside、center
 - ImageView里必须有尺寸
 
-##导入
+## 导入
 ```
 compile 'com.fmsirvent:parallaxeverywhere:1.0.4'
 ```
@@ -45,7 +45,7 @@ compile 'com.fmsirvent:parallaxeverywhere:1.0.4'
     </FrameLayout>
 ```
 
-##属性
+## 属性
 - `reverse` = ["none","reverseX","reverseY","reverseBoth"] 反向滚动方向
 - `block_parallax_x` and `block_parallax_y` boolean 大块滚动
 - `interpolation` 滚动速率变化 ["linear", "accelerate_decelerate", "accelerate", "anticipate", "anticipate_overshoot", "bounce", "decelerate", "overshoot"] 

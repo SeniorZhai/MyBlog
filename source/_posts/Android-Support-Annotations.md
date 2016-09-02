@@ -14,7 +14,7 @@ compile 'com.android.support:support-annotations:22.2.0'
 - 资源类型注解
 - IntDef和StringDef注解
 
-##Nullness注解
+## Nullness注解
 - 使用`@NonNull`注解修饰的参数不能为null
 ```java
 void say(@NonNull String s){
@@ -31,7 +31,7 @@ String getName(@NonNull String str){
 }
 ```
 
-##资源类型注解
+## 资源类型注解
 - 使用`@StringRes`注解表示函数期望接受一个字符串类型的id，而不是一个普通的int
 ```java
 void show(@StringRes int id) {
@@ -40,7 +40,7 @@ void show(@StringRes int id) {
 ```
 同理可用的注解还有`AnimatorRes`,`AnimRes`,`ArrayRes`,`ColorRes`,`DimenRes`,`DrawableRes`,`IdRes`,`StyleRes`
 
-##IntDef和StringDef注解
+## IntDef和StringDef注解
 很多时候我们用枚举类型来控制一些模式
 这个时候可以使用`@IntDef`来代替
 ```java

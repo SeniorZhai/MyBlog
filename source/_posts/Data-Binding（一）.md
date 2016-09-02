@@ -13,7 +13,7 @@ Binding是Google提供的一个Support库，最低可以支持到Android 2.1(API
 有了`Data Binding`，我们就可以使用使用`MVVM`模式构建我们的APP了。
 在Android的传统模式(MVC)下，Model一般是Json数据，V就是我们的Layout文件生成的View，C作为核心的控制器，一般由Activity、Fragment出任。当时这个模式下，C的责任比较大，所以逻辑最复杂，代码量也最多(而且还有很大部分的findViewById)。
 在MVVM模式下，解决了Android UI编程的一大痛点，只要建立好MVVM之间的联系，我们可以减少很大一部分的setText()、getValue()之类的代码。
-##构建环境
+## 构建环境
 在项目的gradle文件中添加
 ```
 denpendcies {
@@ -35,10 +35,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.android.databinding'
 ```
 
-##基本概念
+## 基本概念
 在基本的使用下，M依旧是Json为主的Java Bean对象，V还是XML为主的Layout布局，但是承当的责任会更多，VM作为中间的桥梁需要建立他们的联系，同时完成自己的本质工作(Acticity和Fragment等)
 
-###静态数据
+### 静态数据
 首先完成Model的定义
 ```java
 public class User {
@@ -108,7 +108,7 @@ public class User {
     }
 ```
 <https://github.com/SeniorZhai/DataBindingDemo/blob/master/app/src/main/java/io/github/seniorzhai/databindingdemo/StaticActivity.java>
-###动态数据
+### 动态数据
 首先需要完成我们的Model，这时候Model需要继承BaseObservable，并且通过制定一个`Bindable`注解给getter以及setter内通知实现属性改变时发出通知。
 ```java
 public class ObservableUser extends BaseObservable {

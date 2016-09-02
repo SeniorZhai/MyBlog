@@ -17,7 +17,7 @@ else{
 	// 创建失败
 }
 
-#pragma mark- NSUrlConnectionDelegate methods
+# pragma mark- NSUrlConnectionDelegate methods
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     //接受一个服务端回话，再次一般初始化接受数据的对象

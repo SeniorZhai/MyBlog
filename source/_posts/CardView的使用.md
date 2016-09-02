@@ -23,7 +23,7 @@ CardView常用属性：
  <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        card_view:cardBackgroundColor="#303069"
+        card_view:cardBackgroundColor="# 303069"
         card_view:cardCornerRadius="10dp"
         card_view:cardPreventCornerOverlap="true"
         card_view:cardUseCompatPadding="true"

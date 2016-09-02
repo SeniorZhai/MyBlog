@@ -7,13 +7,13 @@ tags: [Serializable,Parcelable,序列化]
 <!--more-->
 Android中自定义的对象序列化可以选择`Parcelable`或者`Serializable`来解决。
 
-##区别
+## 区别
 1. 在使用内存时，Parcelable比Serializable的性能高
 2. Serializable在序列化的过程中产生大量的临时变量，从而引起频繁的GC
 3. Parceable不能使用在数据存储在磁盘的情况
 4. Serialzable接口是Java SE支持的，Parcelable是Android特有的功能
 
-##实现
+## 实现
 - Serializable的实现与使用
 ```java
 public class Box implements Serializable

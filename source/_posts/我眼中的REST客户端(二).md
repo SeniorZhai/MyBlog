@@ -7,7 +7,7 @@ tags: [REST]
 <!--more-->
 ![](/img/14091701.png)
 
-##界面实现
+## 界面实现
 根据原型设计(上图)最后实现的效果如下：
 
 ![](/img/14091702.png)
@@ -46,7 +46,7 @@ tags: [REST]
     android:id="@+id/listView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e6000000"
+    android:background="# e6000000"
     android:choiceMode="singleChoice"
     android:divider="@android:color/transparent"
     android:dividerHeight="0dp"

@@ -78,7 +78,7 @@ self.window.rootViewController = tabBarController;
 	+TabBar只能显示5个Tab Item，超过5个则会自动生成个More标签显示剩余的Tab，这些Tab可以通过编辑显示在UITabBar上。如果将视图添加到导航控制器中，默认出现编辑按钮，可以自由移动item实例。
 ![](https://github.com/zt1991616/blog/raw/master/Image/14022404.png)
 
-## 实例代码
+##  实例代码
 - 创建系统自带的TabBarController
 ```Objective-C
 TabBarViewController *tabBarController = [[UITabBarViewController alloc]init];
@@ -91,7 +91,7 @@ NSArray *viewControllers = @[firstItem,secondItem,thirdItem];
 self.window.rootViewController = tabBarController;
 ```
 
-##自定义UITabBarItem
+## 自定义UITabBarItem
 - 图片大小30*30px(视网膜屏60*60)
 - 图片需要使用淡灰色或者半透明效果，选择系统自动填充蓝色
 ```Objective-C
@@ -110,7 +110,7 @@ firstVC.tabBarItem = firstItem;
 // 视图已经被切换后调用，viewController为已经显示的控制器
 }
 ```
-##基层分栏控制器和导航控制器
+## 基层分栏控制器和导航控制器
 - 在Tab Bar控制器中某一个Tab中使用Navigation控制器。
 - 实现代码
 ```Objective-C

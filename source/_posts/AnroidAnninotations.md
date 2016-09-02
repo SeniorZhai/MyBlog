@@ -5,17 +5,17 @@ tags: [AndroidAninotations,动态注入]
 ---
 Android开发中，很多时候，我们都需要写一大段一大段的代码用来初始化控件，设置监听，一点都不简洁，这个时候，我们可以使一些强大的工具来帮助我们。
 <!--more-->
-##简介
+## 简介
 AnroidAnnotaions](https://github.com/excilys/androidannotations/wiki)是一款可以快速实现Android开发动态注入的框架，可以帮助我们实现精简的代码，它的目标就是"Fast Android Development.Easy maintatinance"。
 
-##特点
+## 特点
 - 依赖注入：实现布局、视图、系统服务、资源的注入
 - 简化线程模型：以注释方法来完成UiThread和BackgroudThread
 - 事件绑定：可以不再使用丑陋的匿名监听器
 - REST client：创建客户端接口
 - 简单快速：只需要50kb，没有任何性能上的问题
 
-##导入
+## 导入
 - AnroidStudio在build.gradle文件中添加
 ```
 //Copy Begin---从这里开始复制----
@@ -62,7 +62,7 @@ dependencies {
 
 ![](/img/14121901.jpg)
 
-##使用
+## 使用
 AnroidAninotaions的使用很简单，只需要使用几个自定义注解就可以完成注入
 ```java
 // 布局

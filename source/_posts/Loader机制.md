@@ -12,7 +12,7 @@ tags: [Android]
 - CursorLoader
 	AsyncTaskLoader的子类，用于向ContentResover请求，返回一个Cursor。
 
-##使用LoaderManagerCallbacks
+## 使用LoaderManagerCallbacks
 LoaderManager.LoaderCallbacks是callback接口，包含三个方法：
 - onCreateLoader() --- 实例化和返回一个新创建的给定ID的loader
 - onLoadFinished() --- 当一个创建好的loader完成了load,调用此函数

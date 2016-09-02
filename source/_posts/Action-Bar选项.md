@@ -3,7 +3,7 @@ date: 2014-07-30 13:44:23
 categories: Android
 tags: [Android]
 ---
-##showAsAction
+## showAsAction
 - always:一直显示在Action Bar上
 - isRoom:如果有足够空间，这个值就会显示在Action Bar上
 - nerver:永远不会出现在Action Bar上
@@ -11,12 +11,12 @@ tags: [Android]
 - collapse:声明了这个操作视窗应该被折叠到一个按钮中，当用户选择这个按钮时，这个操作视窗展开。否则，
 这个操作视窗在默认的情况下是可见的，并且即便在用于不适用的时候，也要占据操作栏的有效空间。
 一般要配合ifRoom一起使用才会有效果。
-##隐藏域显示
+## 隐藏域显示
 ```java
 actionBar.hide();
 actionBar.show();
 ```
-##Action 下拉导航、视窗导航、标签导航
+## Action 下拉导航、视窗导航、标签导航
 - 下拉导航
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14073001.png)

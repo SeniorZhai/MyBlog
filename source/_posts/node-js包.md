@@ -35,13 +35,13 @@ var cat = require('/home/user/lib/cat/index');
 
 一般的工程目录就会如下
 ```
--bin/	# 命令行相关代码
+-bin/	#  命令行相关代码
 	node-echo
-+ doc/	# 文档
-- lib/	# 存放API相关代码
++ doc/	#  文档
+- lib/	#  存放API相关代码
 	echo.js
-- node_modules/ 	# 存放第三方包
+- node_modules/ 	#  存放第三方包
 	+ argv/
-package.json 	# 元数据文件
-README.md 	# 说明文件
+package.json 	#  元数据文件
+README.md 	#  说明文件
 ```

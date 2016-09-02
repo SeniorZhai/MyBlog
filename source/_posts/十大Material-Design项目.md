@@ -14,7 +14,7 @@ MaterialDesignLibrary还拥有SnackBar、Dialog、Color selector组件，可非�
                 android:id="@+id/progressBarCircularIndetermininate"    
                 android:layout_width="32dp"    
                 android:layout_height="32dp"    
-                android:background="#1E88E5" />  
+                android:background="# 1E88E5" />  
 ```
 Dialog
 ```java
@@ -49,12 +49,12 @@ AppCompat v21也为开发者提供了Material Design的控件外观支持，其�
 ![](https://github.com/rengwuxian/MaterialEditText/raw/master/images/material_edittext.png)
 自定义Base Color：
 ```xml
-app:baseColor="#0056d3"  
+app:baseColor="# 0056d3"  
 ```
 自定义Error Color：
 ```xml
 app:maxCharacters="10"  
-app:errorColor="#ddaa00"  
+app:errorColor="# ddaa00"  
 ```
 4. [Android-LollipopShowcase](https://github.com/mikepenz/Android-LollipopShowcase)
 Android-LollipopShowcase是由来自奥地利的移动、后端及Web开发者Mike Penz所开发的演示应用，集中演示了新Material Design中所有的UI效果，以及Android Lollipop中其他非常酷炫的特性元素，比如Toolbar、RecyclerView、ActionBarDrawerToggle、Floating Action Button（FAB）、Android Compat Theme等。

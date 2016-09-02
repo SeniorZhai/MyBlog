@@ -5,7 +5,7 @@ tags: [Markdown]
 ---
 作为码农，高效的排版是必不可缺的，作为Markdown的重度依赖者，今天发现了一个插件，可以帮助我在Chrome上任何的使用。
 <!--more-->
-##Markdown here
+## Markdown here
 - [Github地址](https://github.com/adam-p/markdown-here)
 - [Chrome插件地址](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa)
 

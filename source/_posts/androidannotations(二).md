@@ -5,7 +5,7 @@ tags: [注入]
 ---
 [androidannotations](https://github.com/excilys/androidannotations)是一款Android注入框架，可以方便我们编程，减少代码量(变相减少了错误的可能)，让我们可以更多的把精力放在逻辑处理上。
 <!--more-->
-##事件监听
+## 事件监听
 点击事件
 ```java
 @Click(R.id.myButton)

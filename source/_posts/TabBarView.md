@@ -6,7 +6,7 @@ tags: [Android]
 ![](https://github.com/zt1991616/blog/raw/master/Image/14081401.gif)
 ---
 
-##使用
+## 使用
 ```java
 LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 View v = inflator.inflate(R.layout.custom_ab,null);

@@ -4,7 +4,7 @@ categories: iOS
 tags: [iOS]
 ---
 NSUserDefaults类提供了一个与默认系统进行交互的编程接口。
-##使用
+## 使用
 
 创建一个user defaults
 ```objective-c

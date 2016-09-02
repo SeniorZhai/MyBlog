@@ -7,7 +7,7 @@ tags: [Android]
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14081503.png)
 ---
-##用法
+## 用法
 ```java
 ArcMenu menu = (ArcMenu) findViewById(R.id.arc_menu);
 final int itemCount = ITEM_DRAWABLES.length;

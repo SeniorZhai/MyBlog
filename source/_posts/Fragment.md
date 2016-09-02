@@ -5,7 +5,7 @@ tags: [Fragment,动态交互]
 ---
 Fragment用于创建动态的、多窗口的交互体验
 <!--more-->
-##创建一个Fragment
+## 创建一个Fragment
 - 必须重写`onCreateView()`回调方法来定义布局
 ```java
 public class ArticleFragment extends Fragment {
@@ -16,7 +16,7 @@ public class ArticleFragment extends Fragment {
 }
 ```
 - 当activity的onPause()方法被调用时，它里面的所有fragment的onPause()方法都会被触发
-##用XML将fragment添加到Activity
+## 用XML将fragment添加到Activity
 - frament是可以重用的，每一个Fragment的实例都必须与一个FragmentActivity关联
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -40,7 +40,7 @@ public class ArticleFragment extends Fragment {
 - FragmentActivity是Support Library提供的一个特殊的Activity，用来在API11版本以下的系统处理Fragment，如果版本大于11，可以使用普通的Activity
 - 使用V7 appcompat library时，activity应该改为继承ActionBarActivity
 > 注：使用XML布局的方式将Fragment添加到Activity时，Fragment是不能被动态移除的
-##动态添加
+## 动态添加
 FragmentManager类提供了方法，在Activity运行时能够对Fragment进行添加、移除、替换
 - 为了执行Fragement的增加或移除操作，必须使用`FragmentManager`创建一个`FragmentTransaction`对象，它提供了增加、移除、替换以及其他一些操作的APIs
 - 运行Fragment必须有一个容器View，Activity必须提供
@@ -70,7 +70,7 @@ public class MainActivity extends FragmentActivity {
 	}
 }
 ```
-##Fragment替换
+## Fragment替换
 - 使用`replace()`方法来替换Fragment
 - 为了向后导航与撤销，在FragemntTransaction提交前调用`addToBackStack()`方法
 > 当移除或替换一个Fragment并把它放回到返回站中时，被移除的Fragment的生命周期是stopped，当用户返回重新恢复这个Fragment，它的生命周期的restarts。如果没有放入返回栈，移除或替换时，它就被destoryed了
@@ -84,9 +84,9 @@ transaction.replace(R.id.fragment_container,newFragment);
 transaction.commit();
 ```
 - addToBackStack()方法提供了一个可选的String参数为事务指定一个唯一的名字，为了使用`FragmentManager.BackStackEntry`APIs的一些高级Fragment的操作作准备
-##Fragment之间的交互
+## Fragment之间的交互
 为了更好的实现逻辑，Fragmet之间的交互需要通过它们关联的Activity，Fragment之间不能直接交互
-###定义一个接口
+### 定义一个接口
 - 为了让Fragment与Activity交互，可以在Fragment类中定义一个接口，在Activity中实现这个接口，Fragment在透明度生命周期的`onAttach`方法中捕获接口的实现，通过调用接口方法来与Activity交互
 ```java
 public class HeadlinesFragment extends ListFragment {
@@ -112,7 +112,7 @@ public class HeadlinesFragment extends ListFragment {
 	}
 }
 ```
-###实现接口
+### 实现接口
 ```
 public class MainActivity extends FragmentActivity implements HeadlinesFragments.onHeadlineSelectedLinstener {
 	public void onAricleSelected(int postion) {
@@ -120,7 +120,7 @@ public class MainActivity extends FragmentActivity implements HeadlinesFragments
 	}
 }
 ```
-###传递消息给Fragment
+### 传递消息给Fragment
 - 宿主Activity通过`findFragmentById()`方法来获取`Fragment`实例，然后调用Fragment的public方法来向Fragment来传递消息
 ```
 public claa MainActivity extends FragmentActivity implements HeadlinesFragments.onHeadlineSelectedLinstener {

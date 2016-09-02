@@ -11,7 +11,7 @@ Android应用的主线程（UI线程）用作更新UI，不可以让主线程做
 - View.postDelayed(Runnable,long)
 - Handler机制
 
-##runOnUiThread
+## runOnUiThread
 `runOnUiThread`是Activity的内置方法，它先判断当前线程是不是主线程，如果是则执行，不是则使用Handler机制post到消息队列
 ```java
 public final void runOnUiThread(Runnable action){
@@ -23,7 +23,7 @@ public final void runOnUiThread(Runnable action){
 }
 ```
 
-##View.post
+## View.post
 View.post本质上同样是使用Hander来传递Runnable对象
 ```java
 public boolean post(Runnable action) {
@@ -39,7 +39,7 @@ public boolean post(Runnable action) {
 ```
 View.postDelayed同样是使用Handler
 
-##Handler
+## Handler
 Android使用的消息机制为`Handler-Looper`，实现线程的通信，线程通过Looper建立自己的消息循环，MessageQueue是FIFO的消息对列，Looper负责从MessageQueue中取出消息，并且分发到消息指定目标Handler对象，Handler对象绑定到线程的局部变量Looper，封装了发送消息和处理消息的接口。
 ![](/img/14121601.png)
 **Handler类构造方法**
@@ -74,7 +74,7 @@ public Handler(Callback callback,boolean async) {
 ```
 Handler的构造方法通过当前线程唯一的Looper对象来初始化消息队列（共享的Looper的mQueue）
 
-###初始化
+### 初始化
 Android应用程序在启动时，会在进程中加载`ActivityThread`类，并且执行这个类的main函数
 ```java
 public final class ActivityThread {
@@ -90,7 +90,7 @@ public final class ActivityThread {
 }
 ```
 
-###消息的发送和接收
+### 消息的发送和接收
 创建一个`Message对象`使用`setData()`方法或arg参数等方式携带一些数据，借助`Handler`将消息发送出去，主线程创建Handler对象时实现其`handleMessage`方法即可
 ```java
 new Thread(new Runnable() {

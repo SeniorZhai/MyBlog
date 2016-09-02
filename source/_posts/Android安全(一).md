@@ -3,7 +3,7 @@ date: 2014-03-03 19:15:47
 categories: Android
 tags: [Android]
 ---
-##Android安全概述
+## Android安全概述
 - 安全主要解决4类需求：
 	+ 保密(Security/Confidentiality
 	+ 鉴别/认证(Authentication)
@@ -11,7 +11,7 @@ tags: [Android]
 	+ 不可否认性(non-repudiation)
 - 好的密码术应该是**算法公开**，**密钥保密**的。
 
-###对称加密概述
+### 对称加密概述
 - 典型的加密模型
     + 秘钥：分为加密秘钥和解密秘钥。
     + 明文：文友进行机密，能够直接表带原文含义的信息。
@@ -30,7 +30,7 @@ tags: [Android]
     + 秘钥交换的问题
     + 不如RSA的加密安全程度高，但当选择256bit的AES仍然能胜任大多数安全领域。
 
-###非对称加密
+### 非对称加密
 - 非对称加密的模型
 ![](https://github.com/zt1991616/blog/raw/master/Image/14030202.png)
 - 公钥和私钥
@@ -40,6 +40,6 @@ tags: [Android]
     + 安全性足够高
     + 没有密钥交换的问题
     + 效率低，对于大数据加密很慢
-###常见场景
+### 常见场景
 - 保密会话
 ![](https://github.com/zt1991616/blog/raw/master/Image/14030203.png)

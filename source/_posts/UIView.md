@@ -17,13 +17,13 @@ tags: [iOS]
     CGRect rect = CGRectMake(x,y,width,height);//位置和大小
     ```
 
-##Frame和Bounds
+## Frame和Bounds
 - Frame以其父视图为起点，得出它自己的位置信息
 - Bounds以iOS系统的坐标原点为起点，坐标是(0,0)
 - Center表示视图中心所在的位置，设置此属性可改变视图的位置
     + 默认情况下，视图边框并不会被父视图的边框裁剪。如果需要裁剪，将其clipsToBounds属性设置为YES.
     
-##创建UIView
+## 创建UIView
 - 创建UI有两种方式，xib文件和代码创建
 
 ```Objective-c
@@ -40,7 +40,7 @@ tags: [iOS]
     UIView *myView =[[UIView alloc] initWithFrame:viewRect];
 ```
 
-##视图的层次结构
+## 视图的层次结构
 - UIView层次结构可以理解为“视图树”————view hierarychy
 - 一个视图就是一个容器，当一个视图包含其他的视图的时候，两个视图之间就建立了一个父子关系，被包含的视图被称为“姿势图（subView）”，包含的视图称为“父视图（superView）”
 - 从视觉上看，子视图会覆盖父视图的内容，设置透明属性可以看到父视图的内容。
@@ -58,7 +58,7 @@ tags: [iOS]
     removeFromSuperview:            // 把视图从父视图中移除
     ```
 
-##查找视图
+## 查找视图
 - UIView类中有一个tag属性，通过这个属性可以标志一个视图对象（整数）
 - 获取的方法，viewWithTag:方法来检索标志过的子视图
     ```Objective-c
@@ -68,7 +68,7 @@ tags: [iOS]
     UIView *myView = [self.view vieWithTag:100];
     ```
 
-##UIView的常用属性
+## UIView的常用属性
 - alpha                         // 透明度
 - backgroundColor               // 背景颜色
 - subViews                      // 子视图集合
@@ -78,7 +78,7 @@ tags: [iOS]
 - mulitpleTouchEnaled           // 是否开启多点触摸
 - userInteractionEnabled        // 是否响应触摸事件
 
-## 坐标系统变换
+##  坐标系统变换
 - 坐标变换通过transform属性来改变
     + CGAffineTransformScale        对视图比例缩放
     + CGAffineTransformRotae        对视图做变焦旋转
@@ -90,7 +90,7 @@ tags: [iOS]
     CGAffineTransformScale(transform,0.5,0.5);
     rootView.transform = CGAffineTransformTranslate(transform,100,100);
     
-##视图的内容模式
+## 视图的内容模式
 - 视图的contentMode属性决定了边界变化和缩放操作
 ```Objective-c
     UIImageView *imgeView1 = [[UIImageView alloc] initWithFrame:CFRectMake(320/2-200/2,30,200,200)];
@@ -107,7 +107,7 @@ tags: [iOS]
     [imView2 release];
 ```
 
-##UIView属性的动画
+## UIView属性的动画
 - UIView类的很多属性都被设计为动画，动画的属性是指当属性从一个值变为另一个值的时候，可以半自动地支持动画，你仍然必须告诉UIKit希望执行什么类型的动画，但是动画一旦开始，Core Animation就会全权负责。UIView对象中支持动画的属性有如下几个：
     + frame - 动画的改变视图的尺寸和位置
     + bounds - 动画的改变视图的尺寸
@@ -116,7 +116,7 @@ tags: [iOS]
     + alpha - 动画的改变视图的透明度
     + backgroundColor - 改变视图的背景色
     + contentStetch - 改变视图内容如何拉伸
-###配置动画委托
+### 配置动画委托
     - 可以为动画分配一个委托，并通过该委托接受动画开始和结束的消息。当需要在动画开始前和动画结束后极力执行其他任务时，可能就需要设置委托。
     - 通过UIView调用setAnmationDelegate:方法来设置委托，并通过setAnimationWillStartSelector:和setAnimationDidStopSelector:方法来指定接受消息的选择器方法。消息处理方法形式如下:
     `(void)animationWillStart:(NSString *)animationID context:(void *)context;`
@@ -126,7 +126,7 @@ tags: [iOS]
         + context - 应用程序提供的对象，用于向委托对象传递额外的信息
         
     setAnimationDidStopSelector:选择器方法还有一个参数——即一个布尔值。如果动画顺利完成，没有被其他动画取消或停止，则该值为YES。
-    ###配置动画的参数
+    ### 配置动画的参数
     - 用`setAnimationStartDateS`方法来设置动画在`commitAnimations:`方法返回之后的发生日期。
     - 用`setAnimationDelay:`方法来设置实际发生动画和`commitAnimations:`方法返回的时间点之间的间隔
     - 用`setAnimationDuration:`方法来设置动画的持续秒数

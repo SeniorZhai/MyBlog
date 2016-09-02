@@ -10,7 +10,7 @@ tags: [iOS]
 ![](https:github.com/zt1991616/blog/raw/master/Image/14022204.png)
 ![](https:github.com/zt1991616/blog/raw/master/Image/14022205.png)
 
-##定制iOS应用图标
+## 定制iOS应用图标
 
 - 需要57X57、114X114、120X120的图片作为图标。
 - 需要320X480、640X960、640X1136的素材作为启动画面。

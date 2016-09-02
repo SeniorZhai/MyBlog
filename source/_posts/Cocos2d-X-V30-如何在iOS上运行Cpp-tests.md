@@ -3,12 +3,12 @@ date: 2014-03-18 11:29:08
 categories: Cocos2d-X
 tags: [Cocos2d-X,iOS,Demo]
 ---
-##环境要求
+## 环境要求
 - Mac OS X 10.8以上版本
 - iOS 5.0及以上版本
 - Xcode 4.6.2及以上版本
 
-##运行
+## 运行
 - 进入`cocos2d-x/build`双击运行`cocos2d_tests.xcodeproj`
 - 选择`cpp-tests iOS`和模拟器
 

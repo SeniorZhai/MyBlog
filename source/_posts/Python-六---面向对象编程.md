@@ -11,7 +11,7 @@ tags: [Python]
 
 在Python中，所有数据类型都可以视为对象，当然也可以自定义对象，自定义的对象数据类型就是面向对象中的类(Class)的概念。
 
-##类和实例
+## 类和实例
 面向对象最重要的概念就是类（Class）和实例（Instance），必须牢记类是抽象的模板，而实例是根据类创建出来的一个个具体的‘对象’，每个对象都拥有相同的方法，但各自的数据可能不同。
 以Student类为例，在Python中，定义类是通过`class`关键字
 ```Python
@@ -47,7 +47,7 @@ class Student(object):
 >>> jack = Student('jack')
 ```
 
-##数据封装
+## 数据封装
 面向对象编程的一个重要特点就是数据封装。
 类本身就拥有数据，要访问数据，就没有必要从外面的函数去访问，就直接用类内部定义访问数据的函数，这样就把“数据”给封装起来了，这些封装数据的函数是和类本身关联起来的，外面称之为类的方法，要定义一个方法，除了第一个参数是`self`外，其他和普通函数一样。要调用一个方法，只需要在实例变量上直接调用，出了`self`不用传递，其他参数正常传入。
 ```Python
@@ -62,14 +62,14 @@ class Student(object):
 'jack'
 ```
 
-##访问限制
+## 访问限制
 在Class内部，可以有属性和方法，而外部代码可以通过直接调用实例变量的方法来操作数据，这样就可以隐藏内部的复杂逻辑。
 为了内部属性不被外部访问，可以把属性的名称前加上两个下划线`__`，在Python中，实例变量名如果以`__`开头，就变成了一个私有变量(private)，只有内部可以访问，外部不能访问。
 需要注意的是，在Python中变量名类似`__xxx__`的，也就是以双下划线开头，并且以双下划线结尾的，是特殊变量，特殊变量是可以直接访问的，不是private变量，所以不能用__name__这样的变量名。
 双下划线开头的实例变量外部不能直接访问是因为Python解释器对外把`__name`变量改成了`_Student__name`，所以，仍然可以通过`_Student__name`来访问`__name`变量。
 ```Python
-# /usr/bin/env python
-# -*- coding:utf-8 -*-
+#  /usr/bin/env python
+#  -*- coding:utf-8 -*-
 
 class Student(object):
 	def __init__(self,name):
@@ -80,13 +80,13 @@ class Student(object):
 jack = Student('jack')
 jack.print_name()
 print jack._Student__name
-#执行结果
-#jack
-#jack
+# 执行结果
+# jack
+# jack
 ```
 但不同版本的Python解释器可能会把`__name`改成不同的变量名。
 
-##继承和多态
+## 继承和多态
 在OOP程序设计中，定义一个class的时候，可以从某个现有的class继承，新的class称为子类(Subclass)，而被继承的class称为基类、父类或者超类(Base class、Super class)
 ```Python
 class Animal(object):
@@ -105,15 +105,15 @@ dog.run()
 
 cat = Cat()
 cat.run()
-#运行结果
-#Dog is running...
-#Animal is running...
+# 运行结果
+# Dog is running...
+# Animal is running...
 ```
 判断一个变量是否是某个类型可以用`isinstance()`判断：
 ```Python
->>> a = list() # a是list类型
->>> b = Animal() # b是Animal类型
->>> c = Dog() # c是Dog类型
+>>> a = list() #  a是list类型
+>>> b = Animal() #  b是Animal类型
+>>> c = Dog() #  c是Dog类型
 >>> isinstance(a,list)
 True
 >>> isinstance(b,list)
@@ -126,9 +126,9 @@ True
 True
 ```
 
-##获取对象信息
+## 获取对象信息
 
-###使用type()
+### 使用type()
 判断对象类型，使用`type()`函数
 ```python
 >>> type(123)
@@ -153,7 +153,7 @@ True
 True
 ```
 
-###使用isinstance()
+### 使用isinstance()
 对于class的继承关系，可以用`isinstance()`函数判断
 ```Python
 >>> class Animal(object):
@@ -181,11 +181,11 @@ True
 >>> isinstance(d,Animal)
 True
 
->>> isinstance(d,(Animal,Husky))# d是否为Animal,Husky中的一种
+>>> isinstance(d,(Animal,Husky))#  d是否为Animal,Husky中的一种
 True
 ```
 
-###使用dir()
+### 使用dir()
 获取一个对象的所有属性和方法，可以使用`dir()`函数，它返回一个包含字符串的list
 ```Python
 >>> dir('ABC')
@@ -195,22 +195,22 @@ True
 利用`getattr()`、`setattr()`、`hasattr()`函数还可以直接操作一个对象的状态：
 ```Python
 >>> obj = MyObject()
->>> hasattr(obj,'x')# 是否有属性'x'？
+>>> hasattr(obj,'x')#  是否有属性'x'？
 True
->>> hasattr(obj,'y')# 是否有属性'y'？
+>>> hasattr(obj,'y')#  是否有属性'y'？
 False
->>> setattr(obj,'y',19)# 设置一个属性'y'
->>> hasattr(obj,'y')# 是否有属性'y'？
+>>> setattr(obj,'y',19)#  设置一个属性'y'
+>>> hasattr(obj,'y')#  是否有属性'y'？
 True
->>> getattr(obj,'y')# 或属性属性'y'
+>>> getattr(obj,'y')#  或属性属性'y'
 19
 ```
 可以传入一个default参数，如果属性不存在，就返回默认值：
 ```Python
->>> getattr(obj, 'z', 404) # 获取属性'z'，如果不存在，返回默认值404
+>>> getattr(obj, 'z', 404) #  获取属性'z'，如果不存在，返回默认值404
 404
 ```
-##动态绑定属性和方法
+## 动态绑定属性和方法
 正常情况下，当我们定义了一个class，差创建一个class的实例后，我们可以给该实例绑定任何属性和方法，这就是动态语言的灵活性：
 ```Python
 >>> class Student(object):
@@ -220,11 +220,11 @@ True
 >>> s.name = 'Zoe'
 >>> print s.name
 Zoe
->>> def set_age(self,age): #定义一个函数作为实例的方法
+>>> def set_age(self,age): # 定义一个函数作为实例的方法
 ...     self.age = age
 ... 
 >>> from types import MethodType
->>> s.set_age = MethodType(set_age,s,Student) # 给实例绑定一个方法
+>>> s.set_age = MethodType(set_age,s,Student) #  给实例绑定一个方法
 >>> s.set_age(22)
 >>> s.age
 22
@@ -246,7 +246,7 @@ NameError: name 's2' is not defined
 22
 ```
 
-##使用__slots__
+## 使用__slots__
 如果想要限制class的属性怎么办？比如只允许Student实例添加`name`和`age`属性。
 为了达到限制的目的，Python允许在定义class的时候，定义一个特殊的`__slots__`变量，来限制该class能添加的属性：
 ```Python
@@ -260,7 +260,7 @@ AttributeError: 'Student' object has no attribute 'score'
 ```
 注意，`__slots__`定义的属性仅对当前类起作用，对继承的子类是不起作用的
 
-##@property
+## @property
 在绑定属性时，我们直接把属性暴露出来，这样还不安全
 为了限制属性的使用范围，可以使用`@property`装饰器把一个方法变成属性调用：
 ```Python
@@ -312,21 +312,21 @@ class Student(object):
 上面的birth是可读写属性，而age就是一个只读属性，因为age可以根据birth和当前时间计算出来。
 
 
-##多重继承
+## 多重继承
 Python支持同时继承多个父类
 ```Python
 class SubClass(SpuClass1,SpuClass2,...)
 ```
 
-##Mixin
+## Mixin
 在设计类的继承关系时，通常主线是单一继承下来的。为了混入额外的功能，可以通过多继承实现，这种设计称为Mixing。
 为了更好地看出继承关系，可以在添加功能的类后面在Mixin，比如`class Dog(Mammal,RunnableMixin,CarnivorousMixin)`
 Python子弟啊的很多库使用了Mixi,举个例子，Python自带的`TCPServer`和`UDPServer`这两个网络服务，而要同时多个用户就必须使用多进程或多线程模型，这两种模型由`ForkingMixin`和`ThreadingMixin`提供。
 
-##定制类
+## 定制类
 之前，我们知道了一些形如`__xxx__`的变量或方法的特殊作用，如：`__slots__`，`__len__()`
 
-###__Str__
+### __Str__
 类的说明
 ```Python
 ValueError: score must be an integer!
@@ -345,7 +345,7 @@ ValueError: score must be an integer!
 >>> print Student('Jack')
 Student object (name:Jack)
 >>> s
-<__main__.Student object at 0x10e50d790>	# 直接输出还是“不好看”
+<__main__.Student object at 0x10e50d790>	#  直接输出还是“不好看”
 >>> class Student(object):
 ...     def __str__(self):
 ...             return 'Student object (name:%s)' % self.name
@@ -359,7 +359,7 @@ Student object (name:Jakc)
 
 ```
 
-###__iter___
+### __iter___
 如果一个类要呗用于`for...in`循环，就必须实现一个`__iter__()`方法，该方法返回一个迭代对象，然后Python的for循环就会不断调用该迭代对象的`next()`方法拿到循环的下一个值，值得遇到StopIteration错误时退出循环。
 ```Python
 >>> class Fib(object):
@@ -403,7 +403,7 @@ Student object (name:Jakc)
 75025
 ```
 
-###__getitem__
+### __getitem__
 要想像list那样按照下标取元素，需要实现__getitem__()方法
 ```Python
 >>> class Fib(object):
@@ -451,7 +451,7 @@ class Fib(object):
             return L
 ```
 
-###__getattr__
+### __getattr__
 通过`__getattr__()`方法我们可以返回一个不存在的属性
 ```Python
 >>> class SubClass(object):
@@ -464,7 +464,7 @@ class Fib(object):
 22
 ```
 
-###__call__
+### __call__
 设置一个函数，通过实例本身调用
 ```Python
 >>> class Student(object):

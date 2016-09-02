@@ -5,9 +5,9 @@ tags: [Android,iOS,Java,Objective-C,大不同]
 ---
 长夜漫漫，无心睡眠，定一个小目标吧，写一下自己对android、iOS开发区别的见解。
 <!--more-->
-##Java、OC大不同
+## Java、OC大不同
 本人先会的Java，所以比较都会以Java、Android入手开始比较。
-##1. 类的定义
+## 1. 类的定义
 OC的类定义比较特殊分为两个部分，接口部分和实现部分
 比如一个MyClass类，有岁数和名字两个成员变量，一个实例方法jump和一个类方法run
 java是这么定义的
@@ -32,7 +32,7 @@ public class Person {
 OC的定义需要两个部分`MyaClass.h`和`MyClass.m`
     
 ```objective-c
-#import <Foundation/Foundation.h>
+# import <Foundation/Foundation.h>
 
 @interface MyClass : NSObejct
 {
@@ -45,7 +45,7 @@ OC的定义需要两个部分`MyaClass.h`和`MyClass.m`
 ```
 
 ```objective-c
-#import "MyClass.h"
+# import "MyClass.h"
 
 @implementation MyClass
 {
@@ -62,7 +62,7 @@ OC的定义需要两个部分`MyaClass.h`和`MyClass.m`
 @end
 ```
 
-##2.新建对象和使用
+## 2.新建对象和使用
 如果java中的对象是这样的
 ```java
 public class MyClass{

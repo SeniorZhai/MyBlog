@@ -10,10 +10,10 @@ ProGuard包括4各功能：
 - 混淆(Obfuscate) 使用剪短无意义的名称对类、字段、方法重命名
 - 预检(Preveirfy) 在Java平台上对处理后的代码进行预检
 
-##ProGuard的工作原理
+## ProGuard的工作原理
 ProGuard由`Shrink`,`Optimize`,`Obfuscate`,`Preveirfy`四个步骤组成，其中每个步骤都是可选的
 
-##编写ProGuard文件
+## 编写ProGuard文件
 1. 基本指令
 - 代码混淆压缩比，在0~7之间，默认为5，`-optimizationpasses 5`
 - 混淆时不使用大小写混合，混淆的类名为小写 `-dontusemixedcaseclassnames`

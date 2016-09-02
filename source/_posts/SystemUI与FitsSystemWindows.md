@@ -29,7 +29,7 @@ tags:
 因为设置了WindowManager的flag，想要切换只能重置flag，而且因为大小变了，activity的界面也会改变。
 
 在改革春风吹满地的新时代(Android 4.0+)，SDK提供了我们新的选择，使用setSystemUiVisibility()来操控SystemUI，这里不只StatusBar还有NavigationBar
-##4.0可使用的方法
+## 4.0可使用的方法
 ```java
 View decorView = getWindow().getDecorView();
 int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
@@ -39,7 +39,7 @@ decorView.setSystemUiVisibilit(uiOptions);
 - 一旦标志位被清除，需要重新设置
 - 在不用地方UI FLAG是不同的，所有最好在onReasume()和onWindowFocusChaned()中设置
 - 被调用的View显示时才会生效
-##4.1以后
+## 4.1以后
 上面的方法设置后，内容还是会因为场景的变化而变化，所以我们需要让我们的内容放在SystemUI的后面
 ```java
 View decorView = getWindow().getDecorView();
@@ -48,5 +48,5 @@ decorView.setSystemUiVisibilit(uiOptions);
 ```
 值得注意的是，有些控件我们是不希望不覆盖住的，比如toolbar，这个时候需要给它加上FitsSystemWindows属性，保证不会被SystemUI遮住。
 从示例上看，系统会为View设置上Padding，所以，如果要做切换时，可能要考虑还原View的Padding。
-#示例
+# 示例
 <https://github.com/SeniorZhai/SystemUI>

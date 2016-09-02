@@ -5,9 +5,9 @@ tags: [AS,JCenter,Gradle]
 ---
 `JCenter`是Android Studio中repositories的默认节点。
 <!--more-->
-##申请Bintray账号
+## 申请Bintray账号
 需要在[Bintray](https://bintray.com/)注册一个账号
-##生成项目的JavaDoc和source JARs
+## 生成项目的JavaDoc和source JARs
 JCenter需要我上传远程仓库以上两个文件，这一步需要`android-maven-plugin`插件，所以在项目中的`build.gragle`(项目最外层)构建依赖
 ```
 buildscript{
@@ -123,7 +123,7 @@ bitray.apokey=yor_apikey
 ```
 Rebuild一下项目，module里的build文件夹会生成相应文件，项目生成到本地仓库，Android Studio默认在`Android\sdk\extras\android\m2repository`文件夹中
 执行`gradlew install`
-##上传到Bintray
+## 上传到Bintray
 上传需要`gradle-bintray-plugin`的支持
 在`build.gradle`里构建
 ```

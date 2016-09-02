@@ -6,16 +6,16 @@ tags: [Android]
 ```xml
 <shape>
 	<!-- 填充 -->
-	<solid android:color="#ff9d77">
+	<solid android:color="# ff9d77">
 	<!-- 渐变 -->
 	<gradient          
-		android:startColor="#ff8c00"     
-      	android:endColor="#FFFFFF"     
+		android:startColor="# ff8c00"     
+      	android:endColor="# FFFFFF"     
      	android:angle="270" />     
  	<!-- 描边 -->      
  	<stroke     
        android:width="2dp"     
-       android:color="#dcdcdc" />        
+       android:color="# dcdcdc" />        
   	<!-- 圆角 -->     
   	<corners android:radius="2dp" />     
   	<padding     

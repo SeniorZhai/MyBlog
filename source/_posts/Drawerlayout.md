@@ -5,7 +5,7 @@ tags: [Android]
 ---
 ![](https://github.com/zt1991616/blog/raw/master/Image/14070401.png)
 
-##使用
+## 使用
 `DrawerLayout`类在`Support Library`里，有`android-support-v4.jar`这个包即可
 
 ```xml
@@ -31,7 +31,7 @@ tags: [Android]
             android:layout_width="240dp"
             android:layout_height="match_parent"
             android:layout_gravity="left"
-            android:background="#111"
+            android:background="# 111"
             android:choiceMode="singleChoice"
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp" />

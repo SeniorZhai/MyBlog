@@ -25,7 +25,7 @@ UriMathcer matcher = new UriMatcher(UriMatcher.NO_MATCH);
 第二步注册需要的Ur:
 ```java
 matcher.addURI("com.zoe.blog","people",PEOPLE);
-matcher.addURI("com.zoe.blog", "person/#", PEOPLE_ID); 
+matcher.addURI("com.zoe.blog", "person/# ", PEOPLE_ID); 
 ```
 第三部，与已经注册的Uri进行匹配:
 ```java
@@ -43,7 +43,7 @@ switch(match)
 ```
 match方法匹配后会返回一个匹配码Code，即在使用注册方法addURI时传入的第三个参数。
 - 常量`UriMatcher.NO_MATCH`表示不匹配任何路径的返回码
-- `#号`为通配符
+- `# 号`为通配符
 - `*号`为任意字符
 3. CententUris
 ContentUris类用于获取Uri路径后面的ID部分

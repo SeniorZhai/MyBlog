@@ -14,13 +14,13 @@ UIGestureRecognizer的继承关系如下：
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14043001.jpg)
 
-##使用手势的步骤
+## 使用手势的步骤
 1. 创建手势实例，指定一个回调方法，当手势开始，改变或结束时，回调方法被调用。
 2. 添加到需要识别的View中，每个手势只能对应一个View，当屏幕触摸在View的边界内，如果手势和预定的一样，就会回调方法。
 
 ps:一个手势只能对应一个View，但一个View可以对应多个手势。
 
-###Pan拖动手势
+### Pan拖动手势
 ```objective-c
 UIImageView *snakeImageView = [[UIImageView alloc] initWithImage:[UIImage imageName:@"snake.png"]];
 snakeImageView.frame = CGReckMake(50,50,100,160);
@@ -39,7 +39,7 @@ UIPanGestureRecognizer *panGestureRecongnizer = [[UIPanGestureRecoginizer alloc]
 }
 ```
 
-###Pinch缩放手势
+### Pinch缩放手势
 ```objective-c
 UIPinchGestureRecoginzer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:")];
 [snakeImageView addGestureRecognizer:pinchGestureRecognizer];
@@ -51,7 +51,7 @@ UIPinchGestureRecoginzer *pinchGestureRecognizer = [[UIPinchGestureRecognizer al
 }
 ```
 
-###Rotation旋转手势
+### Rotation旋转手势
 
 ```objective-c
 UIRotationGestureRecognizer *rotateRecognizer = [[UIRotationGestureRecognizer alloc]  initWithTarget:self action:@selector(handleRotate:)];  
@@ -64,7 +64,7 @@ UIRotationGestureRecognizer *rotateRecognizer = [[UIRotationGestureRecognizer al
 }
 ```
 
-###多个View添加手势
+### 多个View添加手势
 ```objective-c
 - (void)viewDidLoad  
 {  
@@ -93,7 +93,7 @@ UIRotationGestureRecognizer *rotateRecognizer = [[UIRotationGestureRecognizer al
 }
 ```
 
-###监听手势
+### 监听手势
 ```objective-c
 - (void) handlePan:(UIPanGestureRecognizer*) recognizer  
 {  

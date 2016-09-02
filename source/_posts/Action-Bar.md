@@ -3,8 +3,8 @@ date: 2014-04-14 13:18:52
 categories: Android
 tags: [Android]
 ---
-##添加Action Bar
-###Android 3.0及以上版本
+## 添加Action Bar
+### Android 3.0及以上版本
 Android 3.0（API level 11）开始，所有使用Theme.Holo主题的Activity都内置了action bar，此主题是targetSdkVersion或minSdkVersion属性大于等于11时的默认主题。
 ```xml
 <manifest ...>
@@ -13,7 +13,7 @@ Android 3.0（API level 11）开始，所有使用Theme.Holo主题的Activity都
 ```
 >如果创建一个自定义主题，需呀确保它使用一个`Theme.Holo`主题作为父主题
 
-###支持Android 2.1及以上版本
+### 支持Android 2.1及以上版本
 可以通过天剑`Support库`或者`v7 appcompat`库集成Action Bar到低版本
 1. activity继承ActionBarActivity
 ```java
@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity {...}
 <activity android:theme="@style/Theme.AppCompat.Light" ... >
 ```
 
-##移除action bar
+## 移除action bar
 可以把该Activity的主题设置为`Theme.Holo.NoActionBar`
 ```xml
 <activity android:theme=@"android:style/Theme.Holo.NoActionBar">
@@ -36,7 +36,7 @@ actionBar.hide();
 ```
 也可以用`show()`来重新显示ActionBar。
 
-##添加Action项
+## 添加Action项
 
 当acitivity第一次被启动时，系统会调用activity中的onCreateOptionsMenu()来构建Action和滑动菜单。菜单项通过XML格式的菜单资源来包装。
 在此XML文件中，通过将<item>元素声明为带`android:showAsAction="ifRoom"`属性，你可以让一个菜单项显示为action项。通过这种方式，菜单项将会仅当有空间时才显示在action bar中，便于快速访问。如果没有空间的话，菜单项将会显示在滑动菜单中。
@@ -77,11 +77,11 @@ public boolean onOptionsItemSelected(MenuItem item){
 }
 ```
 
-##使用split action bar
+## 使用split action bar
 Android 4.0(API level 14)及以上版本时，action bar增加一个名为"split action bar"的模式。启用split action bar后，如果在窄屏上（比如纵向显示的手持设备）运行activity，屏幕底部将会显示一个单独的bar，用于显示所有的action项，把action bar拆分开、让多个action项分开显示，可以确保在窄屏上以合理的间隔显示所有的action项，并为顶部的导航条和标题栏留下足够的空间。
 启用split action bar只要把uiOptions="splitActionBarWhenNarrow"加入你的<activity>或<application>manifest元素即可。
 
-##用应用程序图标导航
+## 用应用程序图标导航
 默认情况下，应用程序图标显示在action bar的左侧。如果需要，可以把让图标成为一个action项。作为用户对图标Action的响应，应用程序必须执行以下两件事之一：
 - 返回应用程序的初始`home activity`
 - 应用程序向上回退至上一层
@@ -107,7 +107,7 @@ public boolean onOptionsItemSeleted(MenuItem item) {
 ```
 >如果用图标来返回home activity，请注意自Android 4.0(API level 14)开始，你必须显式地调用`setHomeButtonEnabled(true)`将图标用作action项（之前的版本中，图标默认就是作为action项使用的）。
 
-##向上导航
+## 向上导航
 调用`ActionBar`的setDisplayHomeAsEnabled(true)
 ```java
 protected void onCreate(Bundle savedInstanceState){
@@ -138,7 +138,7 @@ protected void onCreate(Bundle savedInstanceState){
     </activity>
 </application>
 ```
-##ActionBar风格化
+## ActionBar风格化
 Android的基本主题有暗、淡两个
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14072801.png)
@@ -154,7 +154,7 @@ Android的基本主题有暗、淡两个
 - Theme.AppCompat，一个“暗”的主题
 - Theme.AppCompat.Light，一个“淡”的主题
 - Theme.AppCompat.Light.DarkActionBar，一个带有“暗” action bar 的“淡”主题
-###自定义
+### 自定义
 为了自定义主题，通过重写actionBarStyle属性来改变action bar的背景。通过指定一个drawable资源来重写background属性。
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14072804.png)
@@ -209,7 +209,7 @@ res/values/themes.xml
 ```xml
 <application android:theme="@style/CustomActionBarTheme" ... />
 ```
-###自定义本文颜色
+### 自定义本文颜色
 - action bar的标题：指定`textColor属性`
 - action bar的页签：重写 actionBarTabTextStyle
 - action bar按钮：重写 actionMenuTextColor
@@ -285,7 +285,7 @@ Android 2.1
     </style>
 </resources>
 ```
-###自定义Tab Indicator
+### 自定义Tab Indicator
 重写actionBarTabStyrle指定navigation tabs
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -352,7 +352,7 @@ Android 2.1
     </style>
 </resources>
 ```
-##Action Bar 覆盖叠加
+## Action Bar 覆盖叠加
 ![](https://github.com/zt1991616/blog/raw/master/Image/14072805.png)
 - 启动叠加模式
     自定义主题 设置`android:windowActionBarOverlay`的属性为`true`
@@ -386,7 +386,7 @@ Android 2.1
 </RelativeLayout>
 ```
 
-##添加一个Action View
+## 添加一个Action View
 action view是一个显示于action bar中的widget，用于替代某个action项按钮.
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14041501.png)

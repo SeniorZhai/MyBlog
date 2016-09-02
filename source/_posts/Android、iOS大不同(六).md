@@ -5,7 +5,7 @@ tags: [Android,iOS,Java,Objective-C,大不同]
 ---
 协议或者接口，用于多个类应该遵守的规范。不需要提供实现，不关心内部的状态数据，体现了规范和实现分离的设计哲学。
 <!--more-->
-##接口
+## 接口
 在Java中实现此类设计的方法用接口(interface)
 ```java
 // 接口的定义
@@ -27,7 +27,7 @@ public interface Output
 	void getDate(String msg);
 }
 ```
-##协议
+## 协议
 在Objective-C中使用协议(protocol)实现该设计需求
 ```objective-c
 @protocol 协议名 <父协议1,父协议2...>

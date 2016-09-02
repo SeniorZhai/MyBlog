@@ -6,13 +6,13 @@ tags: [注入]
 [androidannotations](https://github.com/excilys/androidannotations)是一款Android注入框架，可以方便我们编程，减少代码量(变相减少了错误的可能)，让我们可以更多的把精力放在逻辑处理上。
 <!--more-->
 本文API介绍取至<https://github.com/excilys/androidannotations/wiki/Cookbook>
-##特征
+## 特征
 - 依赖注入
 - 简单的后台任务模型
 - 事件绑定
 - REST
 
-##配置
+## 配置
 在AS中，需要在项目的`build.gradle`中进行加入如下配置（有注释部分）
 ```
 apply plugin: 'com.android.application'
@@ -48,7 +48,7 @@ apt {
 	}
 }
 ```
-##使用
+## 使用
 - 基本使用示例
 ```java
 @EActivity(R.layout.translate)	// 设置布局文件
@@ -81,7 +81,7 @@ public class TranslateActivity extends Activity {
 
 }
 ```
-###Activity
+### Activity
 - `@EActivity`注入Activity
 ```java
 @EActivity(R.layout.main)
@@ -103,7 +103,7 @@ public class MyListActivity extends ListActivity {
 	
 	注：使用Androidannotations注入的Activity在AndroidManifest.xml中配置时，名字后需要加上_，如MainActivity则为.MainActivity_
 
-###Fragment
+### Fragment
 - `@EFragment`
 ```java
 @EFragment
@@ -155,7 +155,7 @@ public class MyFragmentActivity extends FragmentActivity {
 }
 ```
 
-###自定义控件
+### 自定义控件
 ```java
 @EView
 public class CustomButton extends Button {
@@ -176,7 +176,7 @@ public class CustomButton extends Button {
   android:layout_height="wrap_content"
   />
 ```
-###自定义ViewGroups
+### 自定义ViewGroups
 layout
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -203,7 +203,7 @@ layout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
-        android:textColor="#FFdedede"
+        android:textColor="# FFdedede"
         android:textSize="10pt" />
 
 </merge>
@@ -233,7 +233,7 @@ public class TitleWithSubtitle extends RelativeLayout {
   android:layout_height="wrap_content"
   />
 ```
-###Service
+### Service
 ```java
 @EService
 public class MyService extends IntentService {
@@ -273,7 +273,7 @@ void mySimpleAction(String param) {
 ```
 通过`MyIntentService_.intent(getApplication()).myAction("test").start()`使用
 
-##获取资源
+## 获取资源
 ```java
 // String
 @StringRes(R.string.hello)
@@ -313,7 +313,7 @@ int fontsize;
 - @TextArrayRes
 - @StringArrayRes
 
-###Intent
+### Intent
 ```java
 @EActivity 
 public class MyActivity extends Activity {

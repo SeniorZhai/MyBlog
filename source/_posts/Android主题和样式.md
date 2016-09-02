@@ -4,14 +4,14 @@ categories: Android
 tags: [Holo]
 ---
 <!--more-->
-##位置
+## 位置
 在Android Frameworks/base/core/res/res/values目录下
 - `themes.xml`
 - `themes_device_defaults.xml`
 - `styles.xml`
 - `styles_device_defaults.xml`
 
-##主题Theme
+## 主题Theme
 `theme.xml`定义了Android低版本的theme和Holo theme，`themes_device_defaults.xml`定义了DeviceDefault主题(继承自Holo主题)
 系统如何选择默认主题呢？
 ```java
@@ -41,11 +41,11 @@ public static int selectSystemTheme(int curTheme, int targetSdkVersion,
 ```
 当<11时使用低版本主题，>=11&&<14时使用Holo主题，>14时，使用DeviceDefault主题
 
-##系统主题Theme列表
+## 系统主题Theme列表
 系统默认大的主题是三种：Theme,Theme.Holo,Theme.DeviceDefault, 但是实际上在此基础系统还定义了大量的派生主题，最典型的是对应的Light主题。
 ![](/img/14101601.png)
 
-##详解每个主题item分类
+## 详解每个主题item分类
 1. 颜色
 ```xml
 <item name="colorForeground">@android:color/bright_foreground_dark</item>
@@ -176,7 +176,7 @@ public static int selectSystemTheme(int curTheme, int targetSdkVersion,
 <item name="panelBackground">@android:drawable/menu_background</item>
 <item name="panelFullBackground">@android:drawable/menu_background_fill_parent_width</item>
 <!-- These three attributes do not seems to be used by the framework. Declared public though -->
-<item name="panelColorBackground">#000</item>
+<item name="panelColorBackground"># 000</item>
 <item name="panelColorForeground">?android:attr/textColorPrimary</item>
 <item name="panelTextAppearance">?android:attr/textAppearance</item>
  

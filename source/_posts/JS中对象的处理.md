@@ -4,7 +4,7 @@ categories: node.js
 tags: [对象,继承]
 ---
 <!--more-->
-##单个对象
+## 单个对象
 ```js
 var obj = {
 	name: 'Zoe',
@@ -30,7 +30,7 @@ obj.describe();	// Person named Zhai;
 delete obj.age;
 obj.age;	//undefined
 ```
-##构造函数
+## 构造函数
 除了作为“真正”的函数和方法，函数还在JavaScript中扮演第三种角色：如果通过new操作符调用，他们会变为构造函数，对象的工厂。构造函数是对其他语言中的类的粗略模拟。约定俗成，构造函数的第一个字母大写。例如：
 ```js
 // 设置实例数据

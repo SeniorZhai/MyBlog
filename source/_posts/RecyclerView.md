@@ -11,7 +11,7 @@ RecylerView提供了以下布局管理器:
 - GirdLayoutManager 显示item为网格布局
 - StaggeredGridLayoutManager 显示item为交错的网格布局
 ![](/img/14112601.png)
-##使用
+## 使用
 在布局中定义
 ```xml
  <android.support.v7.widget.RecyclerView

@@ -4,7 +4,7 @@ categories: Android
 tags: [Material]
 ---
 <!--more-->
-##Material Theme
+## Material Theme
 
 ![](/img/14101501.png)
 Material Theme的定义如下
@@ -12,7 +12,7 @@ Material Theme的定义如下
 - @android:style/Theme.Material.Light
 - @android:style/Theme.Material.DarkActionBar
 
-###自定义主题的基础颜色
+### 自定义主题的基础颜色
 ```xml
 <resources>
 	<style name="AppTheme" parent="android:Theme.Material">

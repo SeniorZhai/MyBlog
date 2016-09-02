@@ -5,7 +5,7 @@ tags: [适配,界面,多分辨率]
 ---
 <!--more-->
 ![](/img/14110401.png)
-##显示效果
+## 显示效果
 - 3GS
 ![](/img/14110402.png)
 - iPhone 4/4s
@@ -17,7 +17,7 @@ tags: [适配,界面,多分辨率]
 - iPhone 6 Plus
 ![](/img/14110406.png)
 
-##元素素材
+## 元素素材
 - 3GS
 	+ defult_Head_image.png 97 × 97
 	![](/img/14110407.png)
@@ -44,7 +44,7 @@ tags: [适配,界面,多分辨率]
 	+ default_btn_image_6_@3x.png 1062 × 282
 	![](/img/14110416.png)	
 
-##真机效果
+## 真机效果
 - iPhone 5/5s
 ![](/img/14110417.png)
 - iPhone 6

@@ -5,7 +5,7 @@ tags: [js]
 ---
 typeof和instanceof都可以用来将值分类，typeof主要用于原始值，instanceof主要用于对象。
 <!--more-->
-##typeof使用方法
+## typeof使用方法
 ```js
 typeof <value>
 ```
@@ -32,7 +32,7 @@ typeof []		// 'object'
 |String value|'string'|
 |Function|'function'|
 |All other value|'object'|
-##instanceof
+## instanceof
 判断变量是否属于某个类型
 ```js
 value instanceof <Constr>

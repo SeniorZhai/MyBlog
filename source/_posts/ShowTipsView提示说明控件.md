@@ -5,12 +5,12 @@ tags: [初始化,提示]
 ---
 [ShowTipsView](https://github.com/fredericojssilva/ShowTipsView)是一款用于显示提示说明的控件
 <!--more-->
-##引用
+## 引用
 ```gradle
 compile 'net.fredericosilva:showTipsView:1.0.1'
 ```
 
-##使用
+## 使用
 ```java
 ShowTipsView showtips = new ShowTipsBuilder(this)
     .setTarget(btn_test)
@@ -37,5 +37,5 @@ showtips.setCallback(new ShowTipsInterface(){
 });
 ```
 
-##示例
+## 示例
 <https://github.com/SeniorZhai/ShowTipsView>

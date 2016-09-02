@@ -4,23 +4,23 @@ categories: Android
 tags: [模拟,事件,测试]
 ---
 <!--more-->
-##使用Shell命令
+## 使用Shell命令
 Android中自带一个input工具，使用方法如下
 1. 模拟按键操作
 ```shell
-	adb shell # 进入系统
-	input keyevent KEYCODE_BACK # 模拟返回键
-	input keyevent keyevent 3 # 模拟返回键
+	adb shell #  进入系统
+	input keyevent KEYCODE_BACK #  模拟返回键
+	input keyevent keyevent 3 #  模拟返回键
 ```
 常见的按键可以在<http://developer.android.com/reference/android/view/KeyEvent.html>查看
 2. 对获得焦点的输入框，输入文本
 ```shell
-	input text hello # 输入hello文本
+	input text hello #  输入hello文本
 ```
 输入的文本不能带空格，也不能是中文
 3. 模拟点击屏幕事件
 ```shell
-	input tap 100 200 # 在屏幕坐标(100,200)处点击
+	input tap 100 200 #  在屏幕坐标(100,200)处点击
 ```
 	
 	注：坐标是从左上角开始计算的
@@ -48,7 +48,7 @@ Android中自带一个input工具，使用方法如下
 		- roll <dx> <dy> (默认设备trackball)
 		- tmode <tmode>
 
-##使用Instrumentation
+## 使用Instrumentation
 [Instrumentation是Android](http://developer.android.com/tools/testing/index.html)用来测试的工具，可以监测系统与应用程序之间的交互，可以使用他发送按键或者触屏事件
 
 - 发送按键
@@ -71,10 +71,10 @@ mInst.sendPointerSync(MotionEvent.obtain(SystemClock.uptimeMillis(),
 sendPointerSync("text");
 ```
 
-	注：以上代码都需要权限的支持，需要在AndroidManifast.xml中添加<uses-permission android:name="android.permission.INJECT_EVENTS"/> ，但还有一些复杂的问题，可以参考[这里](http://stackoverflow.com/questions/5383401/android-inject-events-permission/7328055#7328055)
+	注：以上代码都需要权限的支持，需要在AndroidManifast.xml中添加<uses-permission android:name="android.permission.INJECT_EVENTS"/> ，但还有一些复杂的问题，可以参考[这里](http://stackoverflow.com/questions/5383401/android-inject-events-permission/7328055# 7328055)
 
 
-##使用内部API
+## 使用内部API
 在Android系统中，有些内部的API提供注入事件的方法。因为是内部API，在不同版本上可能变化比较大。使用如果想在普通App中使用，可能需要通过反射机制来调用。
 
 在Android API 16之前，WindownManager有相应的方法提供注入事件的方法，如下：

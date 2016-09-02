@@ -6,7 +6,7 @@ tags: [布局,Masonry,自动布局,自适应]
 Masonry是一款轻量级的布局框架，采用优雅的链式语法封装了Apple的自动布局，具有极高的可读性和易用性。
 <!--more-->
 
-#Masonry支持的属性
+# Masonry支持的属性
 ```objective-c
 @property (nonatomic,strong,readonly) MASConstraint *left;
 @property (nonatomic,strong,readonly) MASConstraint *top;
@@ -21,7 +21,7 @@ Masonry是一款轻量级的布局框架，采用优雅的链式语法封装了A
 @property (nonatomic, strong, readonly) MASConstraint *baseline;
 ```
 
-##对应到NSLayoutAttrubute
+## 对应到NSLayoutAttrubute
 |Masonry|NSLayoutAttriubute|说明|
 |:---|:---|:---|
 |left|NSLayoutAttributeLeft|左侧|
@@ -36,7 +36,7 @@ Masonry是一款轻量级的布局框架，采用优雅的链式语法封装了A
 |centerY|NSLyoutAttributteCenterY|纵向中点|
 |baseline|NSLayoutAttributeBaseline|文本基准线|
 
-### 居中显示View
+###  居中显示View
 ```objective-c
 - (void) viewDidLoad
 {
@@ -51,7 +51,7 @@ Masonry是一款轻量级的布局框架，采用优雅的链式语法封装了A
 }
 ```
 
-### 边距
+###  边距
 ```objective-c
 UIView *sv = [UIView new];
 [self.view addSubview:sv];
@@ -68,7 +68,7 @@ UIView *sv = [UIView new];
 	*/
 }];
 ```
-###等宽并存在间隔
+### 等宽并存在间隔
 ```objective-c
 	UIView *sv3         = [UIView new];
     UIView *sv4         = [UIView new];
@@ -91,7 +91,7 @@ UIView *sv = [UIView new];
         make.width.equalTo(sv3);
     }];
 ```
-###UIScrollView顺序排列
+### UIScrollView顺序排列
 ```objective-c
 UIScrollView *scrollView = [UIScrollView new];
     scrollView.backgroundColor = UIColorFromRGB(0xFFCE54);

@@ -6,18 +6,18 @@ tags: [iOS]
 ![](https://raw.githubusercontent.com/SeniorZhai/blog/master/Image/14032601.png)
 AFNetworking是一个非常流行的网络库，适用于iOS以及Mac OS X，具有良好的架构，丰富的api，以及模块化化构建方式，使得使用起来非常轻松。
 
-##使用CocoaPods安装
-###Podfile
+## 使用CocoaPods安装
+### Podfile
 ```
 platform :ios, '7.0'
 pod "AFNetworking", "~> 2.0"
 ```
 
-##环境要求
+## 环境要求
 Xcode 5、iOS 6.0及以上、Mac OS 10.8以上
 
-##用法
-###AFHTTPRequestOperationManager
+## 用法
+### AFHTTPRequestOperationManager
 `AFHTTPRequestOperationManager`封装了Web应用程式HTTP通信的功能，包括编辑请求、响应序列化、网络可达性监控和安全系，以及请求管理的常见模式。
 
 GET请求
@@ -52,7 +52,7 @@ NSURL *filePath = [NSURL fileURLWithPath:@"file://path/to/image.png"];
 	NSLog(@"Error:%@",error);
 }];
 ```
-###AFURLSessionManager
+### AFURLSessionManager
 `AFURLSessionManager`根据指定的`NSURLSessionConfiguration`对象创建、管理`NSURLSession`，实现了`<NSURLSessionTaskDelegate>`，`<NSURLSessionDataDelegate>`，`<NSURLSessionDownloadDelegate>`和`<NSURLSessionDelegate>`委托。
 
 创建下载任务
@@ -127,7 +127,7 @@ NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completion
 [dataTask resume];
 [ dataTask  简历];
 ```
-###请求序列化
+### 请求序列化
 创建序列化URL字符串
 ```Objective-C
 NSString * URLString = @"http://example.com";
@@ -141,7 +141,7 @@ NSDictionary * parmeters = @{@"foo":@"bar",@"baz":@[@1,@2,@3]};
     Content-Type: application/x-www-form-urlencoded
     foo=bar&baz[]=1&baz[]=2&baz[]=3
 
-###JSON参数
+### JSON参数
 ```objective-c
 [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:parameters];
 ```
@@ -152,7 +152,7 @@ NSDictionary * parmeters = @{@"foo":@"bar",@"baz":@[@1,@2,@3]};
     {"foo": "bar", "baz": [1,2,3]}
 
 ---
-###网络可达性管理
+### 网络可达性管理
 `AFNetworkReachabilityManager`监控网络的可达性。
 ```objective-c
 [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {

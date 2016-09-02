@@ -5,7 +5,7 @@ tags: [http,爬虫,cookie,访问]
 ---
 [SuperAgent](https://github.com/visionmedia/superagent)是一个非常方便的客户端请求模块，能方便的发起get、post、put、delete、head请求
 <!--more-->
-##简单使用
+## 简单使用
 ```js
 request
 	.get('/')
@@ -38,7 +38,7 @@ request
 		//
 	});
 ```
-##设置头字段
+## 设置头字段
 只需要调用`.set()`方法即可
 ```js
 request
@@ -54,7 +54,7 @@ request
    .set({ 'API-Key': 'foobar', Accept: 'application/json' })
    .end(callback);
 ```
-##GET请求
+## GET请求
 使用`.query()`方法可以传递一个对象完成请求参数
 ```js
 reques
@@ -93,7 +93,7 @@ request
     	//
     });
 ```
-##POST/PUT请求
+## POST/PUT请求
 - POST Json数据
 ```js
 request.post('/user')
@@ -112,7 +112,7 @@ request.post('/user')
 ```
 > form是form-data和urlencoded的别名
 
-##设置Content-Type
+## 设置Content-Type
 ```js
 request.post('/user')
 	.type('application/json')
@@ -124,7 +124,7 @@ request.post('/user')
 	.type('png')
 ```
 
-##设置接收类型
+## 设置接收类型
 ```js
 request.get('/user')
 	.accept('application/json')
@@ -136,7 +136,7 @@ request.get('/user')
 	.accept('png')
 ```
 
-##查询字符串
+## 查询字符串
 当POST请求并希望传递一些查询字符串时，可以同时使用`.query()`方法
 ```js
 request
@@ -147,32 +147,32 @@ request
   .end(callback);
 ```
 
-##解析响应内容
+## 解析响应内容
 SuperAgent会解析一些常用的格式，当前支持`application/json`，`application/x-www-form-urlencoded`，`multipart/form-data`
 
-###JSON/Urlencoded
+### JSON/Urlencoded
 res.body是解析后的内容对象，比如一个请求响应`'{“user:{"name":"tobi"}}'`字符串，res.body.user.name将会返回tobi
 
-###Multipart
+### Multipart
 res.files属性就可以直接获取文件
 
-##响应属性
+## 响应属性
 返回为response对象
 
-###text
+### text
 res.text为未解析的响应内容，一般只在mime类型能够匹配`text`，`json`，`x-www-form-urlencoding`的情况
 
-###body
+### body
 当Content-Type定义一个解析器后，自动解析，默认解析`application/json`和`application/x-www-form-urlencoding`
 
-###header
+### header
 res.header包含解析之后的响应投数据，键值都是node处理成小写字幕形成，比如`res.header['content-lenth']`
 
-###Content-Type
+### Content-Type
 Content-Type响应头字段的一个特例，服务器提供res.type来访问他，默认res.charset。
 如Content-Type为`text/html;charset=utf-8`则res.type为text/html，res.charset为utf-8
 
-###Status
+### Status
 响应状态标志位
 ```js
 var type = status / 100 | 0;
@@ -198,13 +198,13 @@ var type = status / 100 | 0;
  res.forbidden = 403 == status;
 ```
 
-##中止请求
+## 中止请求
 `req.abort()`可以中止请求
 
-##请求超时
+## 请求超时
 `req.timeout()`来定义超时时间
 
-##基础验证
+## 基础验证
 1. 传递URL
 ```js
 request.get('http://tobi:learnboost[@local](/user/local)').end(callback);
@@ -217,7 +217,7 @@ request
   .end(callback);
 ```
 
-###重定向
+### 重定向
 可以通过调用.res.redirects(n)来设置个数，默认是5个
 ```js
 request
@@ -226,7 +226,7 @@ request
   .end(callback);
 ```
 
-###管道数据
+### 管道数据
 允许使用一个请求流来输送数据,比如请求一个文件作为输出流
 ```js
 var request = require('superagent')
@@ -246,7 +246,7 @@ var req = request.get('/some.json');
 req.pipe(stream);
 ```
 
-###复合请求
+### 复合请求
 ```js
 var req = request.post('/upload');
 
@@ -264,7 +264,7 @@ req.part()
 req.end(callback);
 ```
 
-##附加文件
+## 附加文件
 可以通用.attach(name, [path], [filename])和.field(name, value)这两种形式来调用.添加多个附件也比较简单，只需要给附件提供自定义的文件名称,同样的基础名称也要提供.
 ```js
 request
@@ -275,7 +275,7 @@ request
   .end(callback);
 ```
 
-###字段值
+### 字段值
 跟html的字段很像,你可以调用.field(name,value)方法来设置字段,假设你想上传一个图片的时候带上自己的名称和邮箱，那么你可以像下面写的那样:
 ```js
  request
@@ -286,11 +286,11 @@ request
    .end(callback);
 ```
 
-###缓冲响应
+### 缓冲响应
 为了强迫缓冲res.text这样的响应内容,可以调用req.buffer()方法,想取消默认的文本缓冲响应像text/plain,text/html这样的，可以调用req.buffer(false)方法
 当缓冲res.buffered标识提供了，那么就可以在一个回调函数里处理缓冲和没缓冲的响应.
 
-###跨域资源共享
+### 跨域资源共享
 `.withCredentials()`方法可以激活发送原始cookie的能力,不过只有在Access-Control-Allow-Origin不是一个通配符(*),并且Access-Control-Allow-Credentials为`true`的情况下才行.
 ```js
 request
@@ -303,7 +303,7 @@ request
   })
 ```
 
-###异常处理
+### 异常处理
 当发送错误时，superagent首先会检查回调函数的参数数量,当err参数提供的话，参数就是两个,如下:
 ```js
 request

@@ -5,7 +5,7 @@ tags: [注解]
 ---
 使用`@ViewDebug.ExportedProperty`注解，可以在Monitor的Hierarchy Viewer中的调试View属性，可以直接观察注解过的变量和方法的值，实时观察View的状态变化。
 <!--more-->
-##使用
+## 使用
 - category 指定属性的类别，比如`measurement`,`layout`,`drawing`等。
 - resolveId 当resolveId为true时，变量或方法的值为int数据，那么这个值会被转换成Android对应的资源名称
 - mapping 可以将int值映射成指定的字符串

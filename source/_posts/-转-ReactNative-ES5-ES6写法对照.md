@@ -6,8 +6,8 @@ tags: [SE5,SE6,ReactNative]
 转至<http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8/2>
 很多`React/React Native`的初学者都被ES6的问题迷惑：各路大神都建议我们直接学习ES6的语法(class Foo extends React.Component)，然而网上搜到的很多教程和例子都是ES5版本的，所以很多人在学习的时候连照猫画虎都不知道怎么做。今天在此整理了一些ES5和ES6的写法对照表，希望大家以后读到ES5的代码，也能通过对照，在ES6下实现相同的功能。
 
-##模块
-###引用
+## 模块
+### 引用
 在ES5里，如果使用CommonJS标准，引入React包基本通过require进行，代码类似这样：
 ```js
 //ES5
@@ -29,7 +29,7 @@ import React, {
 ```
 > 注意在React Native里，import直到0.12+才能正常运作。
 
-###导出单个类
+### 导出单个类
 在ES5里，要导出一个类给别的模块用，一般通过module.exports来导出
 ```js
 //ES5
@@ -54,7 +54,7 @@ var MyComponent = require('./MyComponent.js');
 //ES6
 import MyComponent from './MyComponent.js';
 ```
-###定义组件
+### 定义组件
 在ES5里，通常通过React.createClass来定义一个组件类，像这样：
 ```js
 //ES5
@@ -77,7 +77,7 @@ class Photo extends React.Component {
     }
 }
 ```
-###给组件定义方法
+### 给组件定义方法
 从上面的例子里可以看到，给组件定义方法不再用 名字: function()的写法，而是直接用名字()，在方法的最后也不能有逗号了。
 ```js
 //ES5
@@ -105,7 +105,7 @@ class Photo extends React.Component {
     }
 }
 ```
-###定义组件的属性类型和默认属性
+### 定义组件的属性类型和默认属性
 在ES5里，属性类型和默认属性分别通过propTypes成员和getDefaultProps方法来实现
 ```js
 //ES5
@@ -173,7 +173,7 @@ Video.propTypes = {
 ```
 > 注意: 对React开发者而言，static成员在IE10及之前版本不能被继承，而在IE11和其它浏览器上可以，这有时候会带来一些问题。React Native开发者可以不用担心这个问题。
 
-###初始化state
+### 初始化state
 ES5下情况类似，
 ```js
 //ES5
@@ -306,7 +306,7 @@ class PauseMenu extends React.Component{
     }
 }
 ```
-###Mixins
+### Mixins
 在ES5下，我们经常使用mixin来为我们的类添加一些新的方法，譬如PureRenderMixin
 ```js
 var PureRenderMixin = require('react-addons-pure-render-mixin');
@@ -353,8 +353,8 @@ export default Enhance(MyComponent); // Enhanced component
 ```
 用一个“增强函数”，来某个类增加一些方法，并且返回一个新类，这无疑能实现mixin所实现的大部分需求。
 
-##ES6+带来的其它好处
-###解构&属性延展　
+## ES6+带来的其它好处
+### 解构&属性延展　
 结合使用ES6+的解构和属性延展，我们给孩子传递一批属性更为方便了。这个例子把className以外的所有属性传递给div标签：
 ```js
 class AutoloadingPostsGrid extends React.Component {

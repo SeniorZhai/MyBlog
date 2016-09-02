@@ -5,7 +5,7 @@ tags: [iOS]
 ---
 几天前Facebook开源了旗下应用[Paper](https://code.facebook.com/posts/656530327776932/building-paper/)所使用的动画引擎Pop。使用动态动画(dynamic animations)而不是传统的静态动画(static animations)，Pop使常见的滑动(scrolling)、弹跳(bouncing)、折叠(unfolding)等效果充满了活力，也使Paper给人耳目一新的感觉。
 
-##为什么需要Pop
+## 为什么需要Pop
 
 从第一代iPhone开始，iOS系统在对静态动画(static animations)方面的支持就很出色。苹果提供的Core Animation framework，使我们方便的使用线性动画(linear)、淡入效果(ease-in)、淡出效果(ease-out)等动画。
 
@@ -17,7 +17,7 @@ tags: [iOS]
 
 Popular就是这种理念的最新表现，它使你可以使用你熟悉而且强大的Core Animation进行编程，并且它能够捕获手势操作的速度，更好的反应用户的意图。Paper给我们了一个重新定义这种理念和其背后的动画引擎的机会。
 
-##目标
+## 目标
 
 Pop在三个不同的纬度提供了相应的工具。第一，我们想使一些常见动画在使用上更加的简单便利，除了iOS内建的4种静态动画(static animations),Pop增加三种原始的动画类型：弹簧效果(spring)，衰变效果(decay)和自定义效果(custom)。
 

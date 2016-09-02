@@ -6,7 +6,7 @@ tags: [Android]
 SwipRefreshLayout是Google官方推出的一款下拉刷新组件，可以实现Google Now上的下拉刷新效果。
 SwipRefreshLayout只能有一个直接子View，且该组件必须是支持下拉刷新的，比如ListView和ScrollView
 
-##Demo示例
+## Demo示例
 
 activity_main.xml
 ```xml

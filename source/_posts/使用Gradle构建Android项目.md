@@ -4,10 +4,10 @@ categories: Android
 tags: [Gradle,Android Studio]
 ---
 <!--more-->
-##Gradle
+## Gradle
 Gradle以Groovy为基础，面向Java应用，基于DSL语法的自动化构建工具
 
-##Gradle基本结构
+## Gradle基本结构
 ```groovy
 buildscript {
     repositories {
@@ -28,14 +28,14 @@ android{
 - apply plugin: 'android' 设置使用android插件构建项目
 - android{...} 设置编译android项目的参数
 
-##任务task执行
+## 任务task执行
 通常的任务有
 1. 输出一个项目文件，Android就是打包APK
 2. 运行检查，检查程序的错误，语法等
 3. 执行`assemble`和`check`
 4. 清理项目输出文件
 
-##基本的构建定制
+## 基本的构建定制
 支持的配置有
 - minSdkVersion 最小支持sdk版本
 - targetSdkVersion 编译时目标的sdk版本
@@ -58,7 +58,7 @@ android{
 }
 ```
 
-##签名配置
+## 签名配置
 ```groovy
 android{
 	signingConfigs {
@@ -84,7 +84,7 @@ android{
 }
 ```
 
-##设置代码混淆
+## 设置代码混淆
 ```groovy
 android {
 	buildTypes{
@@ -96,7 +96,7 @@ android {
 }
 ```
 
-##依赖配置
+## 依赖配置
 ```groovy
 dependencies{
 	compile files('libs/foo.jar')	// 单个文件

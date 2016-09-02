@@ -4,7 +4,7 @@ categories: Android
 tags: [Dialog]
 ---
 <!--more-->
-##提示
+## 提示
 ![](/img/14110601.png)
 创建代码
 ```java
@@ -28,7 +28,7 @@ protected void dialog(){
 	builder.create().show();
 }
 ```
-##三个按钮
+## 三个按钮
 ![](/img/14110602.png)
 ```java
 Dialog dialog = new AlertDialog.Builder(this).setIcon(
@@ -55,14 +55,14 @@ Dialog dialog = new AlertDialog.Builder(this).setIcon(
 　　   }).create();
 　　   dialog.show();
 ```
-##简单的自定View
+## 简单的自定View
 ![](/img/14110603.png)
 ```java
 new AlerDialog.Builder(mContext).setTitle("请输入").setIcon(android.R.drawable.ic_dialog_info)
 	.setView(new EditText(this)).setPositiveButton("确定",null)
 	.setNegativeButton("取消",null).show()
 ```
-##消息内容一组单选框
+## 消息内容一组单选框
 ![](/img/14110604.png)
 ```java
 new AlerDialog.Builder(mContext).setTitle("单选框")
@@ -71,7 +71,7 @@ new AlerDialog.Builder(mContext).setTitle("单选框")
 			.setPositiveButton("确定",null)
 			.setNegativeButton("取消",null).show();
 ```
-##消息内容是一组多选框
+## 消息内容是一组多选框
 ![](/img/14110605.png)
 ```java
 new AlerDialog.Builder(mContext).setTitle("多选框")
@@ -83,20 +83,20 @@ new AlerDialog.Builder(mContext).setTitle("多选框")
 				}
 			}).setNegativeButton("取消",null).show();
 ```
-##信息内容是一组简单列表项
+## 信息内容是一组简单列表项
 ![](/img/14110606.png)
 ``java
 new AlertDialog.Builder(this).setTitle("列表框").setItems(
 　　     new String[] { "Item1", "Item2" }, null).setNegativeButton(
 　　     "确定", null).show();
 ```
-##信息内容自定义布局
+## 信息内容自定义布局
 ![](/img/14110607.png)
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 　　<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 　　 android:layout_height="wrap_content" android:layout_width="wrap_content"
-　　 android:background="#ffffffff" android:orientation="horizontal"
+　　 android:background="# ffffffff" android:orientation="horizontal"
 　　 android:id="@+id/dialog">
 　　 <TextView android:layout_height="wrap_content"
 　　   android:layout_width="wrap_content"

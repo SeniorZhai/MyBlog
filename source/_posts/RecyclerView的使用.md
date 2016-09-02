@@ -9,5 +9,5 @@ RecylerView作为一个容器，能够有效的重用和滚动
 	- 它为item的定位提供了LayoutManager
 	- 为item提供了一个缺省的animations，方便设置动画
 
-##使用
+## 使用
 使用RecyclerView需要指定adapter和layoutmanager，且Adapter必须继承`RecyclerView.Adapter`

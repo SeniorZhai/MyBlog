@@ -5,14 +5,14 @@ tags: [角标]
 ---
 [LabelView](https://github.com/linger1216/labelview)是一款极其方便的角标视图，可以很容易地加载其他View上。
 <!--more-->
-##导入
+## 导入
 ```
 dependencies {
     compile 'com.lid.labelview:lib:0.1.1'
 }
 ```
 
-##使用
+## 使用
 `LabelView`继承至`TextView`，可以使用所有`TextView`的属性
 ```java
 LabelView label = new LabelView(this);

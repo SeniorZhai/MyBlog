@@ -7,14 +7,14 @@ tags: [Android,Indicator]
 <!--more-->
 [viewflow](https://github.com/pakerfeldt/android-viewflow)
 
-##绑定
+## 绑定
 在java中绑定监听
 ```java
 viewFlow.setAdapter(new ImageAdapter(this),5);
 CircleFlowIndicator indic = (CircleFlowIndicator) findViewById(R.id.viewflowindic);
 viewFlow.setFlowIndicator(indic);
 ```
-##自定义属性
+## 自定义属性
 + activeColor 选中的颜色
 + inactiveColor 未选中的颜色
 + activeType 选中模式(fill填充 or stroke描边)

@@ -5,7 +5,7 @@ tags: [Cocos2d-X]
 ---
 `../cocos2d-x/tools/project-creator`目录下的create_project.py
 输入`./create_project.py -project Name -package PackageName -language cpp`命令，创建一个名为`Name`，包名为`PackageName`，编程语言为c++的一个工程。
-##环境配置
+## 环境配置
 - .bash_profile中加上以下几个路径：
 ```
 export COCOS2DX_ROOT=/Users/zhaitao/Documents/cocos2d-x-2.2.2

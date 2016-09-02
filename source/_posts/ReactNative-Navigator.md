@@ -4,11 +4,11 @@ categories: ReactNative
 tags: [Navigator,路由,切换]
 ---
 <!--more-->
-#基本用法
+# 基本用法
 Navigator可以切换不同场景，导航器通过路由来分辨不同的场景。
 `renderScene`方法用来指定渲染的场景，`configureScene`属性指定路由对象的配置信息，可以指定进场动画或者手势。
 
-#方法
+# 方法
 - `getCurrentRoutes()` 获取当前栈里的路由
 - `jumpBack()` 跳回之前的路由，当前场景保留
 - `jumpForward()` 跳回之后的路由
@@ -21,7 +21,7 @@ Navigator可以切换不同场景，导航器通过路由来分辨不同的场�
 - `immediatelyResetRouteStack(routeStack)`  用新的路由重置路由栈
 - `popToRoute(route)` pop到路由指定的场景，其他的场景将被卸载
 - `popToTp()` pop到栈中单第一个场景，卸载掉所有的其他场景
-#属性
+# 属性
 - `configureScene` 可选函数，用来指定场景动画和手势
 - `initialRoute` 指定启动时加载的路由
 - `initialRouteStack` 指定一个路由集合来初始化

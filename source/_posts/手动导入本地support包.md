@@ -6,7 +6,7 @@ tags: [support,AndroidStudio]
 不知道有多少人和我一样使用support的时候，会去查下`compile`命令（没有补全，每次都记不住）
 <!--more-->
 其实AS早就有导入的方法了
-#步骤
+# 步骤
 ![](/img/15071701.png)
 右击项目选中`Open Module Settings`
 ![](/img/15071702.png)

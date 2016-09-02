@@ -63,7 +63,7 @@ vim插件配置：<https://github.com/spf13/spf13-vim>
 自定义tabbar（3）：<https://github.com/jinthagerman/JBTabBarController>
 类似instagram的tabbar：<https://github.com/boctor/idev-recipes/tree/master/CustomTabBarNotification>
 coretext：<https://github.com/Cocoanetics/DTCoreText>
-图片延时加载：<http://developer.apple.com/library/ios/#samplecode/LazyTableImages>
+图片延时加载：<http://developer.apple.com/library/ios/# samplecode/LazyTableImages>
 网络请求：<https://github.com/pokeb/asi-http-request>
 <https://github.com/AFNetworking/AFNetworking>
 Json解析:<https://github.com/johnezang/JSONKit>
@@ -73,7 +73,7 @@ Json解析:<https://github.com/johnezang/JSONKit>
 瀑布流3）：<https://github.com/chiahsien/CHTCollectionViewWaterfallLayout>
 瀑布流4）：<http://www.cocoachina.com/bbs/read.php?tid=94851&keyword=%C6%D9%B2%BC%C1%F7>
 瀑布流5）：<https://github.com/ptshih/PSCollectionView>
-瀑布流6）：<http://www.cocoachina.com/bbs/search.php?ss=index#submit>  搜索：瀑布流
+瀑布流6）：<http://www.cocoachina.com/bbs/search.php?ss=index# submit>  搜索：瀑布流
 瀑布流7）：<https://github.com/steipete/PSTCollectionView>
 做图书的一个框架：<https://github.com/Simbul/baker>
 项目内文档：<https://github.com/tomaz/appledoc?source=c>
@@ -84,7 +84,7 @@ iOS的url router :<https://github.com/gaosboy/urlmanager>
 照片墙：<https://github.com/gmoledina/GMGridView>
 collectionview:<https://github.com/steipete/PSTCollectionView>
 自动更新类：<https://github.com/lexrus/LTUpdate>
-官网蝴蝶的OpenGL应用：<https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UITabBar_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40007521-CH3-SW4>
+官网蝴蝶的OpenGL应用：<https://developer.apple.com/library/ios/# documentation/UIKit/Reference/UITabBar_Class/Reference/Reference.html# //apple_ref/doc/uid/TP40007521-CH3-SW4>
 开机密码锁：<https://github.com/aporat/KKPasscodeLock>
 视频播放器：<https://github.com/blizzard-op/VideoPlayerKit>
 音频播放完整客户端：<https://github.com/kstenerud/ObjectAL-for-iPhone>
@@ -136,7 +136,7 @@ pagecurl的翻页效果：<http://www.cocoachina.com/bbs/read.php?tid=11856&keyw
 二维码：<http://www.cocoachina.com/applenews/devnews/2013/0104/5462.html>
 自定义的annotation
 1. <https://github.com/applidium/ADClusterMapView>
-2. <http://code4app.com/ios/Customized-Complex-Map-Annotation/4f67f4f86803fa843f000002#osc>
+2. <http://code4app.com/ios/Customized-Complex-Map-Annotation/4f67f4f86803fa843f000002# osc>
 类似国家地理的翻页：<https://github.com/michaelhenry/MHNatGeoViewControllerTransition>
 iOS开发私有库：<https://github.com/kennytm/iphone-private-frameworks>
 viewController的切换（从右边进来）：<https://github.com/steipete/PSStackedView>
@@ -150,7 +150,7 @@ basemodel解析：<https://github.com/andrep/RMModelObject>
 model类比较好的库
 1. <https://github.com/icanzilb/JSONModel>
 2. <https://github.com/github/Mantle>
-原生App的远程调试工具包：<https://github.com/square/PonyDebugger#remote-logging>
+原生App的远程调试工具包：<https://github.com/square/PonyDebugger# remote-logging>
 将缓存存在磁盘：<https://github.com/rs/SDURLCache>
 path的欢迎页实现方式：<https://github.com/icepat/ICETutorial>
 path的左下角菜单栏的同类实现方法：<https://github.com/mattgemmell/MGTileMenu>

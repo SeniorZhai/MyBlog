@@ -4,8 +4,8 @@ categories: node.js
 tags: [js,jQerry,前端]
 ---
 <!--more-->
-##遍历DOM
-###祖先
+## 遍历DOM
+### 祖先
 通过jQuery能够向上遍历DOM数，以查找元素的祖先
 - parent() 	返回所选元素的直接父类
 - parents() 返回所选元素的所有祖先元素，知道根元素(<html>)
@@ -15,11 +15,11 @@ $(function(){
 	$("span").prantsUntil("div");
 })
 ```
-###后代
+### 后代
 jQuery能够向下遍历DOM树
 - children() 返回被选元素的所有子元素
 - find() 返回被选元素的后代元素，一路向下指导最后一个后代
-###同胞
+### 同胞
 jQuery能够在DOM中遍历元素的同胞元素
 - siblings() 返回被选元素的所有同胞元素
 - next() 返回被选元素的下一个同胞元素
@@ -29,10 +29,10 @@ jQuery能够在DOM中遍历元素的同胞元素
 - prevAll() 与nextAll方向相反
 - prevUntil() 与nextUntil方向相反
 
-##jQuery Ajax
+## jQuery Ajax
 AJAX = Asynchronous JavaScript and XML
 简单的说在不重载整个页面的情况下，AJAX通过后台加载数据，并在网页上进行显示
-###AJAX load
+### AJAX load
 load()方法能够从服务器加载数据，并把返回的数据放入元素元素中
 ```js
 $(selector).load(URL,data,callback);
@@ -44,7 +44,7 @@ $(selector).load(URL,data,callback);
 - xhr XMLHttpRequest对象
 ```js
 $("button").click(function(){
-  $("#div1").load("demo_test.txt",function(responseTxt,statusTxt,xhr){
+  $("# div1").load("demo_test.txt",function(responseTxt,statusTxt,xhr){
     if(statusTxt=="success")
       alert("External content loaded successfully!");
     if(statusTxt=="error")

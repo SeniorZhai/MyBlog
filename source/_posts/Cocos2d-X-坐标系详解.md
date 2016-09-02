@@ -5,21 +5,21 @@ tags: [坐标系]
 ---
 Cocos2d-x坐标系和Open GL坐标系相同，都是起源于笛卡尔坐标系。
 
-##笛卡尔坐标系
+## 笛卡尔坐标系
 笛卡尔坐标系中定义右手系原点在左下角，x向右，y向上，z向外
 ![](https://github.com/zt1991616/blog/raw/master/Image/14033101.gif)
 
-##屏幕坐标系和Cocos2d坐标系
+## 屏幕坐标系和Cocos2d坐标系
 iOS、Android、Windows Phone在开发应用时使用的是标准屏幕坐标系，原点为屏幕左上角，x向右，y向下。
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14033102.png)
 
-##世界坐标系(World Coordinate)和本地坐标系(Node Local)
+## 世界坐标系(World Coordinate)和本地坐标系(Node Local)
 世界坐标系也叫绝对坐标系，是游戏开发中建立的概念，因此，“世界”指游戏世界。Cocos2d中的元素是由父子关系的层级结构，我们通过Node的`setPosition`设定元素的位置使用的就是相对与父类节点的本地坐标系而非世界坐标系。
 
 本地坐标系也叫相对坐标系，是和节点相关联的坐标系。每个节点都有独立的坐标系，当节点移动或改变方向时，和该节点关联的坐标系将随之移动或改变方向。
 
-##锚点(Anchor Point)
+## 锚点(Anchor Point)
 
 - Anchor Point的两个参数都在0~1之间。它们表示的并不是像素点，而是乘数因子。(0.5, 0.5)表示Anchor Point位于节点长度乘0.5和宽度乘0.5的地方，即节点的中心
 
@@ -50,7 +50,7 @@ red->addChild(green);
 this->addChild(red, 0);
 ```
 ![](https://github.com/zt1991616/blog/raw/master/Image/14033104.png)
-##忽略锚点(Ignore Anchor Point)
+## 忽略锚点(Ignore Anchor Point)
 
 Ignore Anchor Point全称是ignoreAnchorPointForPosition，作用是将锚点固定在一个地方。
 
@@ -71,7 +71,7 @@ this->addChild(red, 0);
 ```
 ![](https://github.com/zt1991616/blog/raw/master/Image/14033105.png)
 
-##VertexZ，PositionZ和zOrder
+## VertexZ，PositionZ和zOrder
 - VerextZ是OpenGL坐标系中的Z值
 - PositionZ是Cocos2d-x坐标系中Z值
 - zOrder是Cocos2d-x本地坐标系中Z值
@@ -99,7 +99,7 @@ Sets the 'z' coordinate in the position. It is the OpenGL Z vertex value.
 ```
 ![](https://github.com/zt1991616/blog/raw/master/Image/14033106.png)
 
-##触摸点(Touch position)
+## 触摸点(Touch position)
 在处理触摸事件时需要重写以下四个函数：
 ```C++
 virtual bool onTouchBegan(Touch *touch,Event *event);

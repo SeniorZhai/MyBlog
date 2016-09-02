@@ -5,7 +5,7 @@ tags: [Android]
 ---
 Android的体系架构鼓励组建重用，允许开发者发布共享Activity、Service并且访问其他应用程序的数据，还可以根据开发者制定的安全限制进行管理。
 
-##剖析Android体系架构
+## 剖析Android体系架构
 
 第一个列表将向开发者展示应用服务，这些服务是Android的架构基石。你也可以称它为所有的Android应用程序的支柱框架，为所有开发应用提供支持。
 	- Activity Manager:控制界面的生命周期，包括管理活动(Activity)栈
@@ -14,7 +14,7 @@ Android的体系架构鼓励组建重用，允许开发者发布共享Activity�
 	- Content Providers:让开发者在不同应用之间共享数据。
 	- Resource Manager:支持非代码资源，如字符串和图形被外部化。
 
-#Android库
+# Android库
 
 Android也提供了大量的API开发应用程序。
 - android.util:核心工具包种包含底层类，字符串格式化和XML解析工具、底层类
@@ -39,7 +39,7 @@ Android也提供了大量的API开发应用程序。
 - SQLite:用于存储应用程序数据的轻量级的关系数据库引擎
 - SSL:支持使用安全套接字层加密协议进行安全互联网通信
 
-##高级Android开发库
+## 高级Android开发库
 
 - android.location:基于位置的服务的API，使应用程序访问设备的当前物理位置，基于位置的服务提供通的访问使用任何位置固定的硬件或技术设备上可用的位置信息。
 - android.media:没提API提供了用于播放音频和视频没提文件，包括流媒体和录制的支持。

@@ -14,30 +14,30 @@ tags: [Android]
 
 ```c
 //hello-jni.c
-#include <string.h>
-#include <jni.h>
+# include <string.h>
+# include <jni.h>
 // <jni.h>用于java的调用
 jstring
 // 名字即包名加函数名
 Java_com_example_hellojni_HelloJni_stringFromJNI( JNIEnv* env, jobject thiz )
 {
-#if defined(__arm__)
-  #if defined(__ARM_ARCH_7A__)
-    #if defined(__ARM_NEON__)
-      #define ABI "armeabi-v7a/NEON"
-    #else
-      #define ABI "armeabi-v7a"
-    #endif
-  #else
-   #define ABI "armeabi"
-  #endif
-#elif defined(__i386__)
-   #define ABI "x86"
-#elif defined(__mips__)
-   #define ABI "mips"
-#else
-   #define ABI "unknown"
-#endif
+# if defined(__arm__)
+  # if defined(__ARM_ARCH_7A__)
+    # if defined(__ARM_NEON__)
+      # define ABI "armeabi-v7a/NEON"
+    # else
+      # define ABI "armeabi-v7a"
+    # endif
+  # else
+   # define ABI "armeabi"
+  # endif
+# elif defined(__i386__)
+   # define ABI "x86"
+# elif defined(__mips__)
+   # define ABI "mips"
+# else
+   # define ABI "unknown"
+# endif
     // env为java与C交互的结构，返回UTF编码的字符串
     return (*env)->NewStringUTF(env, "Hello from JNI !  Compiled with ABI " ABI ".");
 }
@@ -64,14 +64,14 @@ public class HelloJni extends Activity
 }
 ```
 
-##在adb shell中运行c程序
+## 在adb shell中运行c程序
 - 在`\android-ndk\samples\test-libstdc++`下有这样一个例子，我们进行修改后然后在设备上运行它。
 1. 将jni目录下的`test-libstl.cpp`的文件进行修改
 
 ```C
-#include <cerrno>
-#include <cstddef>
-#include <stdio.h>
+# include <cerrno>
+# include <cstddef>
+# include <stdio.h>
 int main(void)
 {
   printf("Zoe\n");
@@ -88,11 +88,11 @@ int main(void)
 5. 切换到`/data/data`目录，修改`test-libstl`文件的权限，并执行它
 ![](https://github.com/zt1991616/blog/raw/master/Image/14022411.png)
 
-##编写自己的程序
+## 编写自己的程序
 1. 在任意目录下，创建jni文件夹
 2. 创建一个你的程序，如：`MyDemo.c`
 ```C
-#include <stdio.h>
+# include <stdio.h>
 void main()
 {
   int a,b,c;

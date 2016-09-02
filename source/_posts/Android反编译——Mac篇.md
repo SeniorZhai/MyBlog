@@ -5,7 +5,7 @@ tags: [Mac,反编译,OSX,APK]
 ---
 目前Mac上流行的Android反编译工具有两款，分别是Jadx和AndroidDecompiler
 <!--more-->
-#Jadx
+# Jadx
 [Jadx](https://github.com/skylot/jadx)是一款跨平台的反编译工具，有GUI界面
 
 - 使用方法
@@ -17,7 +17,7 @@ tags: [Mac,反编译,OSX,APK]
 
 ![](/img/15080602.png)
 
-#AndroidDecompiler
+# AndroidDecompiler
 [AndroidDecompiler](https://github.com/dirkvranckaert/AndroidDecompiler)是一款命令行工具
 
 - 使用方法

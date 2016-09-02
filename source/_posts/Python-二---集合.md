@@ -3,9 +3,9 @@ date: 2014-06-12 13:13:44
 categories: Python
 tags: [Python]
 ---
-##list 和 tuple
+## list 和 tuple
 
-###list
+### list
 list是Python内置的一种数据类型是列表，为一种有序的集合，可以随时添加和删除其中的元素。
 例如，列出班级中所有同学的名字：
 ```Python
@@ -106,7 +106,7 @@ list元素也可以是另一个list，比如：
 0
 ```
 
-##tuple
+## tuple
 另一种有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改，比如同样是列出同学的名字：
 ```Python
 >>> classmates = ('Michael', 'Bob', 'Tracy')
@@ -158,11 +158,11 @@ Python在显示只有1个元素的tuple时，也会加一个逗号,，以免你�
 ![](https://github.com/zt1991616/blog/raw/Image/14031502.png)
 表面上看，tuple的元素确实变了，但其实变的不是tuple的元素，而是list的元素。tuple一开始指向的list并没有改成别的list，所以，tuple所谓的“不变”是说，tuple的每个元素，指向永远不变。即指向'a'，就不能改成指向'b'，指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的！
 
-###小结
+### 小结
 list和tuple是Python内置的有序集合，一个可变，一个不可变。根据需要来选择使用它们。
 
-##条件判断和循环
-###条件判断
+## 条件判断和循环
+### 条件判断
 根据Python的缩进规则，如果`if`语句判断是`True`,就把缩进的语句执行，否则不执行。
 也可以给`if`添加一个`else`语句，如果`if`判断是`False`，就不执行`if`的内容，而执行`else`的内容
 ```Python
@@ -183,7 +183,7 @@ elif <条件判断3>:
 else:
     <执行4>
 ```
-###循环
+### 循环
 Python的循环有两种，一种是for...in循环，用于遍历list或者tuple
 ```Python
 colors = ['red','blue','green']
@@ -214,9 +214,9 @@ print sum
 ```
 如果死循环了，记得用`Ctrl + C`退出循环
 
-##dict和set
+## dict和set
 
-###dict
+### dict
 dict就是dictionary，在Java里也成为map，使用键值对（key-value）存储，具有极快的查找速度
 例如记录同学们的成绩
 ```Python
@@ -241,7 +241,7 @@ print dic.get("d")
 1. 查找和插入的时间随着元素的增加而增加
 2. 占用空间小，浪费内存很小
 
-###Set
+### Set
 Set和dict类似，但是不存在value，只存一组key,而且key不能重复，所以Set中没有重复的key
 ```Python
 >>> s = set([1,2,3,4,5,1,2,3,4,5])
@@ -271,7 +271,7 @@ set([2, 4])
 set([1, 2, 3, 4, 6, 8])
 ```
 
-##函数
+## 函数
 Python内置了很多很有用的函数，我们可以直接调用。可以在Python的官网上查看[文档](http://docs.python.org/2/library/functions.html)
 可以在命令行通过`help()`查看某个函数的帮助信息
 ```Python
@@ -284,7 +284,7 @@ abs(...)
     Return the absolute value of the argument.
 ```
 
-###数据类型转换
+### 数据类型转换
 Python内置常用的函数，比如int()函数就可以把其他数据类型转换为整数：
 ```Python
 >>> int('123')
@@ -298,22 +298,22 @@ Python内置常用的函数，比如int()函数就可以把其他数据类型转
 ```
 主要使用函数时，一定要传入正确的参数，否则会出错。
 
-###函数的定义
+### 函数的定义
 在Python中，定义一个函数要使用`def`语句，依次写出函数名、括号、括号中的参数和冒号:，然后，在缩进块中编写函数体，函数的返回值用`return`语句返回。
 ```Python
 def fun(x,y):
   return x+y
 ```
-###空函数
+### 空函数
 定义一个什么事也不做的空函数，可以使用`pass`语句
 ```Python
 def nop():
   pass
 ```
-###参数检查
+### 参数检查
 Python会进行参数个数的检查，如果不对会抛出`TypeError`，但是类型并不会进行检查
 
-###默认参数
+### 默认参数
 在定义时为某个参数初始化一个值，若调用时，该参数缺省时，便会使用默认的值
 ```
 def power(x,n = 2):
@@ -323,7 +323,7 @@ def power(x,n = 2):
     s = s * x
   return s
 ```
-###可变参数
+### 可变参数
 函数参数个数可变时，我们可以通过list或者tuple包装参数，传入函数，函数会接收到tuple
 ```
 def add(numbers):
@@ -348,7 +348,7 @@ def calc(*numbers):
 14
 ```
 
-###关键字参数
+### 关键字参数
 关键字参数允许传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装成为一个dict
 ```Python
 def person(name,age,**kw):
@@ -364,7 +364,7 @@ name: Bob age: 35 other: {'city': 'Beijing'}
 name: Adam age: 45 other: {'gender': 'M', 'job': 'Engineer'}
 ```
 
-###参数组合
+### 参数组合
 在Python中定义函数，可以用必选参数、默认参数、可变参数和关键字参数，这4种参数都可以一起使用，或者只用其中的一部分，但定义的顺序必须是：必选参数、默认参数、可变参数和关键字参数。
 比如：
 ```Python
@@ -390,7 +390,7 @@ a = 1 b = 2 c = 3 args = ('a', 'b') kw = {'x': 99}
 a = 1 b = 2 c = 3 args = (4,) kw = {'x': 99}
 ```
 
-###递归函数
+### 递归函数
 如果一个函数在内部调用自身，这个函数就是递归函数。
 在Python中使用递归函数要注意`栈溢出`,在计算机中，函数调用是通过栈（stack）这种数据结构实现的，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧。由于栈的大小不是无限的，所以，递归调用的次数过多，会导致栈溢出。
 解决递归调用栈溢出的方法是通过尾递归优化，事实上尾递归和循环的效果是一样的，所以，把循环看成是一种特殊的尾递归函数也是可以的。

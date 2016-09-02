@@ -7,7 +7,7 @@ Unix/Linux操作系统提供了`fork()`系统调用，`fork()`调用一次，返
 <!--more-->
 子进程永远返回`0`，而父进程返回子进程的ID。一个父进程可以fork出很多子进程，所以父进程要记下每个子进程的ID，而子进程字需要`getppid()`就可以拿出父进程的ID
 ```python
-# multiprocessing.py
+#  multiprocessing.py
 import os
 
 print 'Process (%s) start...' % os.getpid()
@@ -20,7 +20,7 @@ else:
 > 注：Windows没有`fork`调用，所以上面代码在windows无法运行
 有了`fork`调用，一个进程在接到新任务时就可以复制出一个子进程来处理新任务
 
-##multiprocessing
+## multiprocessing
 `multiprocessing`模块是跨平台版本的多进程模块，它提供了一个`Process`类来代表一个进程对象
 ```python
 from multiprocessing import Process
@@ -33,11 +33,11 @@ if __name__=='__main__':
 	print 'Run child process %s .' % os.getpid()
 	p = Process(target=run_proc,args=('test',))
 	print 'Process will start.'
-	p.start()	# 启动`start()`
-	p.join()	# 等待子进程结束再继续往下运行
+	p.start()	#  启动`start()`
+	p.join()	#  等待子进程结束再继续往下运行
 	print 'Process end.'
 ```
-###Pool
+### Pool
 需要启动大量子进程，可以用进程池的方式批量创建子进程:
 ```python
 from multiprocessing import pool
@@ -61,7 +61,7 @@ if __name__=='__main__':
 	print 'All subprocesses done.'
 ```
 `Pool`对象调用`join()`方法会等待所有子进程执行完毕，调用`join()`之前必须先调用`close()`，调用之后就不能继续添加新的`Process`了。`Pool`默认大小是CPU的核数，可以在`Pool()`中设置参数，设置同时进行的任务数
-##进程间通信
+## 进程间通信
 Python提供了`Queue`、`Pipes`等多种方式来交互数据
 ```python
 from multiprocessing import Process,Queue
@@ -84,7 +84,7 @@ if __name__=='__main__':
 	pr = Process(target=read,args=(q,))
 	pw.start()
 	pr.start()
-	pw.join() # 等待pw结束
-	pr.terminate() # pr进程是死循环，无法等待其结束，只能强制终止
+	pw.join() #  等待pw结束
+	pr.terminate() #  pr进程是死循环，无法等待其结束，只能强制终止
 ```
 > 在Unix/Linux下，multiprocessing模块封装了fork()调用，使我们不需要关注fork()的细节。由于Windows没有fork调用，因此，multiprocessing需要“模拟”出fork的效果，父进程所有Python对象都必须通过pickle序列化再传到子进程去，所有，如果multiprocessing在Windows下调用失败了，要先考虑是不是pickle失败了。

@@ -56,7 +56,7 @@ CCDICT_FOREACH(_dict, _elmt)
 ```
 - CREATE_FUNC() 创建构造函数
 ```c++
-#define CREATE_FUNC(__TYPE__)
+# define CREATE_FUNC(__TYPE__)
 static __TYPE__* create()
 {
 	__TYPE__ *pRet = new __TYPE__();

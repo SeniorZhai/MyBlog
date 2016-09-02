@@ -7,7 +7,7 @@ tags: [iOS]
 
 ![](https://raw.github.com/zt1991616/blog/master/Image/14032002.gif)
 
-##安装
+## 安装
 使用Cocoapods来安装FBShimmering库
 1. 命令行里运行`pod search Shimmer`
 
@@ -24,7 +24,7 @@ pod 'Shimmer', '~> 1.0.1'
 
 ![](https://raw.github.com/zt1991616/blog/master/Image/14032001.png)
 
-##用法
+## 用法
 创建一个`FBShimmeringView`或`FBShimmeringLayer`，添加您的内容。要开启闪烁，就设置`shimmering`属性为YES。
 例子：
 ```Objective-C
@@ -40,7 +40,7 @@ shimmeringView.contentView  =  loadingLabel ;
 shimmeringView.shimmering =  YES ;
 ```
 
-##示例链接
+## 示例链接
 [示例](https://github.com/zt1991616/ShimmerDemo)：
 
 ![](https://raw.github.com/zt1991616/blog/master/Image/14032004.gif)

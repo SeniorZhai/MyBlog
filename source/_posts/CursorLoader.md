@@ -5,7 +5,7 @@ tags: [ContentProvider,CursorLoader]
 ---
 从`ContentProvider`查询数据比较耗时，在UI线程中查询可能会ANR，通过`CursorLoader`来实现，异步查询数据。
 <!--more-->
-##使用
+## 使用
 `CursorLoader`依靠`ContentProvider`在后台执行一个异步的查询操作，并且返回数据给调用它的Activity或者Fragment。
 1. 定义使用CursorLoader的Activity
 必须实现`LoaderCallbacks`接口，`CursorLoader`会触发这些回调方法。

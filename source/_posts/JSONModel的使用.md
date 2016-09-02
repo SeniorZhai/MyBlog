@@ -4,7 +4,7 @@ categories: iOS
 tags: [Json,Model,JSON解析]
 ---
 <!--more-->
-## 使用`JSONModel`
+##  使用`JSONModel`
 1. 创建一个新的Ocjective-C的类并继承`JSONModel`
 2. 在头文件中声明Json中Keys同名属性
 ```objective-c
@@ -28,8 +28,8 @@ NSError* error = nil;
 CountryModel* contryModel = [[CountryModel alloc] initWithString:json error:&error];
 ```
 
-##示例
-###基础的例子
+## 示例
+### 基础的例子
 ```json
 {
 	"id":"123",
@@ -46,7 +46,7 @@ CountryModel* contryModel = [[CountryModel alloc] initWithString:json error:&err
 
 @end
 ```
-###嵌套类
+### 嵌套类
 ```json
 {
 	"order_id":104,
@@ -68,7 +68,7 @@ CountryModel* contryModel = [[CountryModel alloc] initWithString:json error:&err
 @end
 ```
 
-###嵌套集合
+### 嵌套集合
 ```json
 {
 	"oder_id":104,
@@ -76,12 +76,12 @@ CountryModel* contryModel = [[CountryModel alloc] initWithString:json error:&err
 	"products" : [
 	{
 		"id":"123",
-		"name":"Product #1",
+		"name":"Product # 1",
 		"price":12.95
 	},
 	{
 		"id":"137",
-		"name":"Product #2",
+		"name":"Product # 2",
 		"price":82.95
 	}
 	]
@@ -115,13 +115,13 @@ CountryModel* contryModel = [[CountryModel alloc] initWithString:json error:&err
 @end
 ```
 
-###修改Key值
+### 修改Key值
 ```json
 {
 	"order_id":104,
 	"order_details" : [
 	{
-		"name":"Product#1",
+		"name":"Product# 1",
 		"price":{
 			"usd":12.95
 		}
@@ -149,7 +149,7 @@ CountryModel* contryModel = [[CountryModel alloc] initWithString:json error:&err
 }
 @end
 ```
-###全局改变Key 
+### 全局改变Key 
 ```objective-c
 [JSONModel setGlobalKeyMapper:[
 	[JSONKeyMapper alloc] initWithDictionary:@{
@@ -158,7 +158,7 @@ CountryModel* contryModel = [[CountryModel alloc] initWithString:json error:&err
 	}]
 ];
 ```
-###使用JSON请求
+### 使用JSON请求
 ```objective-c
 [[JSONHTTPClient requestHeaders] setValue:@"MySecret" forKey:@"AuthorizationToken"];
 [JSONHTTPClient postJSONFromURLWithString:@"http://mydomain.com/api"
@@ -168,7 +168,7 @@ CountryModel* contryModel = [[CountryModel alloc] initWithString:json error:&err
 								}];
 ```
 
-###JSON文本和Dictionary的转换
+### JSON文本和Dictionary的转换
 ```objective-c
 ProductModel* pm = [[ProductModel alloc] initWithString:jsonString error:nil];
 pm.name = @"Changed Name";
@@ -177,7 +177,7 @@ NSDictionary* dict = [pm toDictionary];
 NSString* string = [pm toJSONString];
 ```
 
-##自定义Date格式
+## 自定义Date格式
 ```objective-c
 @implementation JSONValueTransformer (CustomTransformer)
 

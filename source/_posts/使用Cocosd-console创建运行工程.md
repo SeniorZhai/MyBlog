@@ -3,7 +3,7 @@ date: 2014-03-19 11:31:51
 categories: Cocos2d-X
 tags: [console]
 ---
-##运行环境
+## 运行环境
 
 - Android2.3及以上版本
 - iOS 5.0及以上版本
@@ -12,7 +12,7 @@ tags: [console]
 - Ubuntu 12.04及以上版本
 - Cocos2d-X v3.0rc
 
-##软件需求
+## 软件需求
 
 - Xcode 4.6
 - gcc 4.7
@@ -20,7 +20,7 @@ tags: [console]
 - Python 2.7.5
 
 
-##创建新工程
+## 创建新工程
 切换到cocos的根目录
 ```
 cocos new MyGame -p com.zoe.MyGame -l cpp -d ./MyProject
@@ -32,7 +32,7 @@ cocos new MyGame -p com.zoe.MyGame -l cpp -d ./MyProject
 ![](https://github.com/zt1991616/blog/raw/master/Image/13031901.png)
 成的项目的文件夹结构如下：
 ![](https://github.com/zt1991616/blog/raw/master/Image/13031902.png)
-##编译运行新工程
+## 编译运行新工程
 
 ```
 cocos run -s ./MyProject/MyGame -p ios

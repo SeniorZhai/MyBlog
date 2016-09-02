@@ -4,9 +4,9 @@ categories: Python
 tags: [Spider,爬虫]
 ---
 <!--more-->
-##URI和URL
+## URI和URL
 
-###URI(Universal Resource Identifier)是通用资源标志符
+### URI(Universal Resource Identifier)是通用资源标志符
 通常由三部分组成：
 1. 访问资源的命名机制
 2. 存放资源的主机名
@@ -16,19 +16,19 @@ tags: [Spider,爬虫]
 2. 位于主机`www.baidu.com`上
 3. 通过`/img/bdlogo.png`访问
 
-###URL
+### URL
 URL是URI的一个子集，是Uniform Resource Locator的缩写，译为__统一资源定位符__，简而言之URL是Internet上描述信息资源的字符串。
 URL的一般格式为(带方括号[]为可选项)
-`protocol://hostname[:port]/path/[parameters][?query]#fragment`
+`protocol://hostname[:port]/path/[parameters][?query]# fragment`
 1. 第一部分是协议
 2. 第二部分为存有资源的主机IP也可能包括端口号
 3. 第三部分是主机资源的具体地址，如目录和文件名等
 
-###区别
+### 区别
 URI属于URL更低级层次的抽象，一种字符串文本标准
 URI表示请求服务器的路径定义一个资源，而URL同时说明要如何访问这个资源
 
-##抓取网页内容
+## 抓取网页内容
 ```python
 import urllib2
 response = urllib2.urlopen('http://www.baidu.com')
@@ -96,8 +96,8 @@ req = urllib2.Request(url,data,headers)
 response = urllib.urlopen(req)
 the_page = response.read()
 ```
-##异常
-###URLError
+## 异常
+### URLError
 通常，URLError在没用网络连接(没有路由到特定服务器)或者服务器不存在产生
 这种情况下，异常同样会带有`reason`属性，他是一个tuple
 包含了一个错误号和一个错误信息
@@ -111,7 +111,7 @@ try: urllib2.urlopen(req)
 except urllib2.URLError,e:
 	print e.reason
 ```
-###HTTPError
+### HTTPError
 服务器上每个HTTP应答对象response包含一个数字"状态码"
 有时状态码服务器无法完成请求，默认的处理器会为你处理一部分应答
 HTTP状态码分别以1~5开头由3位整数组成：

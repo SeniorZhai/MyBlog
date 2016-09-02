@@ -8,7 +8,7 @@ Handler是一个Android开发中常用的类，主要用于接收子线程发送
 总所周知，Android中非UI线程操作UI时就会Crash，从而保存UI线程的稳定
 
 
-##用法
+## 用法
 ```java
 handler.post(new Runnable() {
 	@Override

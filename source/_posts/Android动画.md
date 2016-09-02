@@ -5,14 +5,14 @@ tags: [动画,Animation]
 ---
 Android 3.0之后的动画框架
 <!--more-->
-##分类
+## 分类
 - Property Animation 属性动画 
 几乎可以让任何对象动起来，它使一个框架，在一个时间内，使用指定的内插技术来影响任何对象的属性
 - View Animation
     + Tween Animation 补间动画 应用于View可以定义一系列位置、大小、旋转和透明度的改变
     + Frame Animation 帧动画 基于单元格的动画，每一帧显示一个不同的Drawable。帧动画可以在一个View中显示，并使用它的Canvas作为投影屏幕
 
-###Property Animation
+### Property Animation
 在Android 3.0(API level 11)引入，通过一个属性动画生成器，在一个给定时间内使用设定的差值算法将属性从一个值转换到另一个值。
 属性动画设定了规定时间内修改对象的属性，比如背景色和alpha值等，从简单的View效果，如移动、缩放、View的淡入淡出，到复杂的动画，如运行时的布局改变、曲线变换。
 可以用xml定义，存放路径为：res/animator/filename.xml
@@ -101,7 +101,7 @@ Animator.AnimatorListener l = new AnimatorListener() {
 }
 anim.addListener(l);
 ```
-#####插值器
+##### 插值器
 默认情况下，在每个动画开始和结束值之间中所用的差值器是一个非线性的插值器`AccelerateDecelerateInterpolator`提供了开始加速和结束时减速的效果，SDK提供的插值器有：
 - AccelerateDecelerateInterpolator 开始和结束时结束变化较慢，在中间的时候加速
 - AccelerateInterpolator 开始的时候向后，然后再向前急冲
@@ -111,9 +111,9 @@ anim.addListener(l);
 - LinearInterpolator 速度的变化是一个常量
 - OvershootInterpolator 开始时向前急冲，超过最终的值，然后再回来
 通过`setInterpolator()`方法设置插值器，也可以实现`TimeInterpolator`类来指定一个自定义的差值算法。
-###View Animation
+### View Animation
 View Animation包含了Tween Animation、Freme Animation
-####Tween Animation
+#### Tween Animation
 - 存放路径：res/anim/filename.xml
 - 引用：R.anim.filename(in java)、@[package:]anim/file
 - 应用：
@@ -185,7 +185,7 @@ myAnimationListener(new AnimationListener(){
 LayoutAnimation可以用来为ViewGroup添加动画，并按照预定的顺序把一个动画(或者动画集合)应用到ViewGroup的每一个子View中。
 - LayoutAniamationController 可以选择每一个View的开始偏移时间(以毫秒为单位)，以及把动画应用到每一个子View中的顺序和起始时间(正向、反向、随机)
 - GridLayoutAnimationController 使用由行和列所映射的网格来向子View分配动画序列
-#####示例：
+##### 示例：
 创建布局动画
 ```xml
 <layoutAnimation
@@ -218,7 +218,7 @@ aViewGroup.setLayoutAnimationListener(new AnimationListener() {
 	public void onAnimationStart(Animation _animation){}
 });
 ```
-####Frame animation
+#### Frame animation
 帧动画是一系列的图片按顺序显示
 - 文件路径res/drawable/filename.xml
 - 引用：R.drawable.filename(in java)、@[package:]drawable/file

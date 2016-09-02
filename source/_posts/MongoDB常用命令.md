@@ -4,14 +4,14 @@ categories: node.js
 tags: [MongoDB]
 ---
 <!--more-->
-##启动MongoDB
+## 启动MongoDB
 指定数据库路径启动
 ```shell
 mongod --dbpath 
 ```
 添加`--port`也可以指定端口
 
-##数据库操作
+## 数据库操作
 ---
 - 切换、创建数据库	`use yourDB`
 - 查询所有数据库	`show dbs`
@@ -24,21 +24,21 @@ mongod --dbpath
 - 当前db版本	`db.version()`
 - 查看当前数据库机器地址	`db.getMongo()`
 
-##集合操作
+## 集合操作
 ---
 - 创建集合	`db.createCollection('collName',{size:20,capped:5,max:100})` 创建成功会显示`{"ok":1}`
 - 得到指定名称的集合	`db.getCollection("account")`
 - 得到当前数据库所有集合	`db.getCollectionNames()`
 - 得到当前数据库所有集合索引的状态	`db.printCollectionStats()`
 
-##用户相关
+## 用户相关
 ---
 - 添加用户	`db.addUser("name")`和`db.addUser("userName","pwd123",true)` 设置密码、是否只读
 - 数据库认证	`db.auth("userName","123123")`
 - 显示当前所用用户	`show users`
 - 删除用户	`db.removeUser("userName")`
 
-##集合查询
+## 集合查询
 ---
 - 查询所用记录	`db.userInfo.find()` 默认每页显示20条记录
 - 查询去掉后的当前集合中的某列的重复数据	`db.userInfo.disinct("name")`

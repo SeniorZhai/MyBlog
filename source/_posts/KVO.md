@@ -4,7 +4,7 @@ categories: iOS
 tags: [iOS]
 ---
 KVO(Key-Value Observing)，Objective-C提供的一种机制，当制定的对象被修改时，对象就会接受到通知。
-##使用捕捉
+## 使用捕捉
 1. 注册，制定被观察者的属性
 2. 实现回调方法
 3. 移除观察

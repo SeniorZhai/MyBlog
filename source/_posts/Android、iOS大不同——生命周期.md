@@ -4,8 +4,8 @@ categories: [iOS]
 tags: [Android,iOS,Java,Objective-C,大不同,生命周期]
 ---
 <!--more-->
-##iOS Application生命周期
-###AppDelegate
+## iOS Application生命周期
+### AppDelegate
 ![](/img/iOS_LifeCycle.png)
 1. `- (BOOL)application:(UIApplication *)applicationwillFinishLaunchingWithOptions:(NSDictionary *)launchOptions`
 	将要启动
@@ -30,7 +30,7 @@ tags: [Android,iOS,Java,Objective-C,大不同,生命周期]
 	应用进入激活状态
 7. `- (void)applicationWillTerminate:(UIApplication *)application`
 	应用兼将要退出时调用
-###UIController
+### UIController
 ![](/img/iOS_LifeCycle_ViewController.png)
 - alloc 创建对象
 - init 初始化对象
@@ -42,7 +42,7 @@ tags: [Android,iOS,Java,Objective-C,大不同,生命周期]
 - viewWillUnload 已经从屏幕移除
 - viewDidUnload 载出之前 
 - dealloc 被销毁
-##Android Activity生命周期
+## Android Activity生命周期
 ![](/img/Android_LifeCycle.png)
 1. `onCreate()`
 	创建Activity
@@ -62,8 +62,8 @@ tags: [Android,iOS,Java,Objective-C,大不同,生命周期]
 	Activity被系统销毁时调用
 9. `onRestoreInstanceState(Budle savedInstanceState)`
 	Activity重建时被调用
-##对比
-###第一次启动
+## 对比
+### 第一次启动
 iOS:
 ```objective-c
 - [AppDelegate application:didFinishLaunchingWithOptions:]
@@ -78,7 +78,7 @@ onCreate()
 onStart()
 onResume()
 ```
-###应用进入后台
+### 应用进入后台
 iOS
 ```objective-c
 - [AppDelegate applicationWillResignActive:]
@@ -89,7 +89,7 @@ Android
 onPause()
 onStop()
 ```
-###应用从后台进入前台
+### 应用从后台进入前台
 iOS
 ```objective-c
 - [AppDelegate applicationWillEnterForeground:]
@@ -100,7 +100,7 @@ Android
 onStart()
 onResume()
 ```
-###完全退出应用
+### 完全退出应用
 iOS
 ```objective-c
 - [AppDelegate applicationDidEnterBackground:]
@@ -114,7 +114,7 @@ onPause()
 onStop()
 onDestroy()
 ```
-##分析
+## 分析
 Android、iOS的生命周期看着大同小异，但是差别还算比较大。
 Android的Activity类似iOS中UIApplication + UIViewController。
 iOS的应用像是一个全屏展开的窗口，UIApplication负责管理运行状态的生命周期，UIController负责管理视图，视图间靠通知传递数据

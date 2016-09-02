@@ -4,13 +4,13 @@ categories: Android
 tags: [图片加载]
 ---
 <!--more-->
-##开始
+## 开始
 ```gradle
 dependencies {
   compile 'com.facebook.fresco:fresco:0.1.0+'
 }
 ```
-##使用
+## 使用
 简单的下载网络图片
 - 在Application中初始化
 ```java
@@ -28,7 +28,7 @@ Fresco.initialize(context);
 ```xml
 draweeView.setImageURL("http://site.com/uri");
 ```
-###URLs
+### URLs
 Fresco不支持相对路径，所有URL必须是绝对路径
 |类型|Scheme|
 |:---|:-----|

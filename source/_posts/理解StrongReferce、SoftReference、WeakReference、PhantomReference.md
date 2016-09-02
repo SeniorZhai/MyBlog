@@ -5,13 +5,13 @@ tags: [引用]
 ---
 JDK 1.2版本引入了强、软、弱、虚引用的概念
 <!--more-->
-#StrongReference
+# StrongReference
 - 修饰的对象，JVM宁愿抛出OOM也不回收对象
  
-#SoftReference
+# SoftReference
 - 内存不足时，才会回收对象
 
-#WeakReference
+# WeakReference
 - 无论内容是否足够，垃圾回收扫描到，他就会被回收
 ```java
 @Test  
@@ -31,5 +31,5 @@ public void weakReference() {
 }   
 ```
 
-#PhantomReference
+# PhantomReference
 - 相对于完全没有引用

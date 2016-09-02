@@ -3,13 +3,13 @@ date: 2014-06-17 13:08:43
 categories: iOS
 tags: [iOS,Swift]
 ---
-##Swift初识
+## Swift初识
 WWDC2014年6月3日苹果开发者大会发布，2010年7约开始开发
 - 基于C语言和Objective-C语言，使用现有的Cocoa和Cocoa Touch框架，无缝兼容C、Objective-C语言
 - 兼具编译语言的高性能(Performance)和脚背语言的交互性(Interactive)
 - 支持Playground，它允许程序实时预览，无需频繁创建和运行App
 - 简洁、安全、容易、灵活、高效
-##值
+## 值
 使用`let`来声明常量，使用`var`来声明变量。常量只能赋一次值。
 
 值声明的类型必须和赋的值一致，声明时类型是可选的，声明的同时赋值，编译器会自动推断类型。也可以在声明时，指定类型。
@@ -50,7 +50,7 @@ let emptyDictionary = Dictionary<String,Float>()
 shoppingList = []
 ```
 
-##控制流
+## 控制流
 使用`if`和`switch`来进行条件操作，使用`for-in`、`for`、`while`和`do-while`来进行循环，包括条件和循环变量的括号可以省略，但是语句体的大括号是必须的。
 
 在`if`语句中，条件必须是一个布尔表达式
@@ -116,7 +116,7 @@ for var i = 0; i < 3; ++i {
 }
 secondForLoop
 ```
-##函数和闭包
+## 函数和闭包
 使用`func`来声明一个函数，使用名字和参数来调用函数，使用`->`来指定函数返回值
 ```swift
 func greet(name:String,day:String) -> String{
@@ -196,7 +196,7 @@ number.map({number in 3 *number})
 ```swift
 sort([1,5,3,12,2]){$0 > $1}
 
-##对象和类
+## 对象和类
 使用`class`和类名来创建一个类，类中属性的声明和常量、变量声明一样，唯一区别的是上下文是类，同样方法和函数声明也一样
 ```swift
 class Shape{
@@ -326,7 +326,7 @@ let optionalSquare:Square ?= Square(sideLength:2.5,name:"optional square")
 let sideLength = optionalSquare?.sideLength
 ```
 
-##枚举和结构体
+## 枚举和结构体
 使用`enum`来创建一个枚举，枚举可以包含方法
 ```swift
 enum Rank:Int {
@@ -391,7 +391,7 @@ struct Card{
 let threeOfSpades = Card(rank: .Three,suit: .Spades)
 let threeOfSpadesDescription = threeOfSpades.simleDescription()
 ```
-##协议和扩展
+## 协议和扩展
 使用`protocol`来声明一个协议
 ```swift
 protocol ExampleProtocol {
@@ -443,7 +443,7 @@ protocolValue.simpleDescription
 // protocolValue.anotherProperty  // Uncomment to see the error
 ```
 
-##泛型
+## 泛型
 在尖括号里写一个名字来创建一个泛型函数或者类型
 ```swift
 func repeat<ItemType>(item: ItemType,times:Int) -> ItemType[]{

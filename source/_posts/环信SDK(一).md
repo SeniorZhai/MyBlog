@@ -5,7 +5,7 @@ tags: [SDK,IM,环信]
 ---
 [环信](http://easemob.com/)提供了一套IM SDK，可以很方便的在App中集成IM功能
 <!--more-->
-##添加权限和App Key
+## 添加权限和App Key
 ```xml
 <!-- 权限 -->
 <uses-permission android:name="android.permission.VIBRATE" />
@@ -23,9 +23,9 @@ tags: [SDK,IM,环信]
 <!-- App Key -->
 <meta-data
     android:name="EASEMOB_APPKEY"
-    android:value="xxxx#mychatdemo" />
+    android:value="xxxx# mychatdemo" />
 ```
-##初始化
+## 初始化
 在自定义的Application中初始化，确保应用程序一开始就得到运行
 ```java
 public class MyApplication extends Application {
@@ -43,12 +43,12 @@ public class MyApplication extends Application {
 	}
 }
 ```
-##注册
+## 注册
 ```java
 String appkey = EMChatConfig.getInstance().APPKEY;
 EMChatManager.getInstance().createAccountOnServer(appkey + "_" + username, pwd); //注意用户名不能有大写字母
 ```
-##登陆
+## 登陆
 ```java
 EMChatManager.getInstance().login(username,password,new EMCallBack() {
 	@Override
@@ -65,7 +65,7 @@ EMChatManager.getInstance().login(username,password,new EMCallBack() {
 	}
 });
 ```
-##监听消息
+## 监听消息
 接收聊天消息，回执消息，好友同意，好友请求等
 - 聊天信息
 ```java
@@ -93,7 +93,7 @@ EMContactManager.getInstance().setContactListener(new MyContactListener());
 ```java
 EMChatManager.getInstance().addConnectionListener(new MyConnectionListener());
 ```
-##发送消息
+## 发送消息
 ```java
 // 创建一个消息
 EMMessage msg = EMMessage.createSendMessage(EMMessage.Type.TXT);
@@ -108,7 +108,7 @@ try {
    e.printStackTrace();
 }
 ```
-##接收消息
+## 接收消息
 ```java
 private class NewMessageBroadcastReceiver extends BroadcastReceiver {
     @Override
@@ -124,7 +124,7 @@ private class NewMessageBroadcastReceiver extends BroadcastReceiver {
     }
 }
 ```
-##消息回执
+## 消息回执
 ```java
 private BroadcastReceiver ackMessageReceiver = new BroadcastReceiver() {
 	
@@ -139,7 +139,7 @@ private BroadcastReceiver ackMessageReceiver = new BroadcastReceiver() {
 	}
 };
 ```
-##联系人变化
+## 联系人变化
 ```java
 private class MyContactListener implements EMContactListener{
      @Override
@@ -150,7 +150,7 @@ private class MyContactListener implements EMContactListener{
      }
 }
 ```
-##连接状态
+## 连接状态
 ```java
 private class MyConnectionListener implements ConnectionListener{
     @Override
@@ -177,7 +177,7 @@ private class MyConnectionListener implements ConnectionListener{
     }
 }
 ```
-##退出登陆
+## 退出登陆
 ```java
 @Override
 protected void onPause() {
@@ -186,9 +186,9 @@ protected void onPause() {
     EMChatManager.getInstance().logout();
 }
 ```
-##设置昵称
+## 设置昵称
 ```java
 EMChatManager.getInstance().updateCurrentUserNick(nickname);
 ```
-##例子
+## 例子
 [ChatDemo](https://github.com/SeniorZhai/ChatDemo)

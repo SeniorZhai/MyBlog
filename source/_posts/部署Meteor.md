@@ -5,7 +5,7 @@ tags: [meteor,node.js,web app]
 ---
 
 <!--more-->
-##部署在Meteor
+## 部署在Meteor
 ```shell
 meteor deploy myapp.meteor.com
 ```

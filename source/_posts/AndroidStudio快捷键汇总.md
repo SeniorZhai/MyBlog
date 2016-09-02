@@ -5,7 +5,7 @@ tags: [keymap,快捷键]
 ---
 最近开始全面转向Android Studio开发了，经常要去查快捷键，索性汇总下，自己方便查找
 <!--more-->
-##IDE
+## IDE
 |按键|说明|
 |:---|:---|
 |F1|帮助|
@@ -26,7 +26,7 @@ tags: [keymap,快捷键]
 |Ctrl(Command)+Shift+F9|debug运行|
 |Ctrl(Command)+Alt(Option)+F12|资源管理器打开文件夹|
 
-##编辑
+## 编辑
 |按键|说明|
 |:---|:---|
 |Ctrl(Command)+C|复制当前行或选中的内容|
@@ -61,7 +61,7 @@ tags: [keymap,快捷键]
 |Ctrl(Command)+Backspace|按单词删除|
 |Ctrl(Command)+Shift+Enter|语句完成|
 |Ctrl(Command)+Alt(Option)+J|用动态模板环绕|
-##文件
+## 文件
 |按键|说明|
 |:---|:---|
 |Ctrl(Command)+F12|显示当前文件的结构|
@@ -86,7 +86,7 @@ tags: [keymap,快捷键]
 |Shift+F1|要打开编辑器光标字符处使用的类或者方法 <code>Java</code> 文档的浏览器|
 |Ctrl(Command)+G|定位行|
 
-##查找
+## 查找
 |按键|说明|
 |:---|:---|
 |Ctrl(Command)+F|在当前窗口查找文本|
@@ -114,7 +114,7 @@ tags: [keymap,快捷键]
 |<em>Ctrl(Command)+Alt(Option)+Up/Down</em>|<em>快速跳转搜索结果</em>|
 |<em>Ctrl(Command)+Shift+S</em>|<em>高级搜索、搜索结构</em>|
 
-##重构
+## 重构
 |按键|说明|
 |:---|:---|
 |F5|复制|
@@ -132,7 +132,7 @@ tags: [keymap,快捷键]
 |Ctrl(Command)+Alt(Option)+F|将局部变量更改为类的成员变量|
 |Ctrl(Command)+Alt(Option)+P|将变量更改为方法的参数|
 
-##调试
+## 调试
 |按键|说明|
 |:---|:---|
 |F8|跳到下一步|
@@ -146,7 +146,7 @@ tags: [keymap,快捷键]
 |Ctrl(Command)+F2|停止运行|
 |Alt(Option)+F8|计算变量值|
 
-##VCS
+## VCS
 |按键|说明|
 |Alt(Option)+ <code>~</code>|
 |<code>VCS</code> 操作菜单|

@@ -13,10 +13,10 @@ tags: [iOS]
 	[self.window makeKeyAndVisible];
 ```
 
-##UIScreen
+## UIScreen
     - UIScreen对象可以充当iOS设备物理屏幕的替代者，通过`[[UIScreen mainScreen] bounds]`可以获得设备的屏幕大小
     
-##UIWindow
+## UIWindow
     - 通过UIApplication获取当前keyWindow，keyWindow是用来管理键盘以及触摸类的消息，并且只能有一个window是keyWindow.
     - UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     - 每个UIWindow对象配置windowLevel属性，大部分时候不应该去改变windowL.

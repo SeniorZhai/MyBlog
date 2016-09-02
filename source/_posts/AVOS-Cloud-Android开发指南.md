@@ -3,36 +3,36 @@ date: 2014-07-10 13:38:39
 categories: Android
 tags: [Android]
 ---
-##模块与SDK包
-###AVOS Cloud基本存储模块
+## 模块与SDK包
+### AVOS Cloud基本存储模块
 - avoscloud- 版本号.jar
 - android-async-http-1.4.4-fix.jar
 - fastjson.jar
 - httpmime-4.2.4.jar
 
-###AVOS Cloud 推送模块
+### AVOS Cloud 推送模块
 - AVOS Cloud 基础存储模块
 - avospush- 版本号.jar
 
-###AVOS Cloud 统计模块
+### AVOS Cloud 统计模块
 - AVOS Cloud 基础存储模块
 - avosstatistics- 版本号.jar
 
-###AVOS Cloud SNS 模块
+### AVOS Cloud SNS 模块
 - AVOS Cloud 基础存储模块
 - weibo.sdk.android.sso.jar
 - qq.sdk.1.6.1.jar
 
-##简介
+## 简介
 AVOSCloud提供了一个完整的后端解决方案
 
-##应用程序
+## 应用程序
 在 AVOS Cloud 平台注册后，您创建的每个应用程序都有其自己的应用程序 ID 和 Key, 在您的应用程序中将凭此 ID 和 Key 使用 AVOS Cloud SDK。您的账户可以创建容纳多个应用程序，这是非常方便和有用的。即使您只有一个应用程序，也可以使用不同的版本进行测试和生产。
 
-###对象
+### 对象
 AVOS Cloud存储的数据是建立在`AVObject`基础上，每个`AVObject`包含键(key)-值(value)对的JSON兼容的数据。
 键必须是字母、数字的字符串，值可以是字符串、数字、布尔值、JSON数组和AVObject对象等。每个`AVObject`有一个类名，你可以用它来区分各种不同的数据。
-####保存对象
+#### 保存对象
 ```java
     AVObject myObj = new AVObject("MyObject");
 	myObj.put("value1",123);
@@ -55,7 +55,7 @@ AVOS Cloud存储的数据是建立在`AVObject`基础上，每个`AVObject`包�
 		}
 	});
 ```
-####检索对象
+#### 检索对象
 使用`AVQuery`通过`ObjectID`检索到一个完整的AVObject
 ```java
 	AVQuery<AVObject> query = new AVQuery<AVObject>("MyObject");
@@ -76,7 +76,7 @@ AVOS Cloud存储的数据是建立在`AVObject`基础上，每个`AVObject`包�
 		}
 	});
 ```
-####更新对象
+#### 更新对象
 获取AVObject对象，然后进行修改值后保存数据
 ```java
     AVQuery<AVObject> query = new AVQuery<AVObject>("MyObject");
@@ -88,12 +88,12 @@ AVOS Cloud存储的数据是建立在`AVObject`基础上，每个`AVObject`包�
 		// e.getMessage();
 	}
 ```
-####计数器
+#### 计数器
 ```java
 myObj.increment("value1");
 // myObj.increment(key,amount);方法可以递增递减任意幅度的数字
 ```
-####更新后获取最新值
+#### 更新后获取最新值
 设置`fetchWhenSave`属性为`true`会使更新后，AVObject获得最新值
 ```java
 myObj.setFetchWhenSave(true);
@@ -105,7 +105,7 @@ myObj.saveInBackground(new SavaCallback(){
     }
 });
 ```
-####删除对象
+#### 删除对象
 从服务器删除对象
 ```java
 myObj.deleteInBackground();
@@ -116,7 +116,7 @@ myObj.saveInBackground();
 List<AVObject> objects = ...
 AVObject.deleteAll(objects);
 ```
-####关联数据
+#### 关联数据
 对象可以与其他对象相联系，就像数据库中的主外键关系一样，数据表A的某一个字段是数据表B的外键，只有表B中存在的数据才插入进A中的字段。
 ```java
 AVObject myWeibo = new AVObject("Post");
@@ -168,11 +168,11 @@ userQuery.findInBackground(new FindCallBack<AVObject>(){
    }
 });
 ```
-####数据类型
+#### 数据类型
 支持的数据类型有`String`、`Int`、`Boolean`、`AVObject`，同时支持`java.util.Date`、`byte[]`、`JSONObject`、`JSONArray`数据类型。
 
-###查询
-####基本查询
+### 查询
+#### 基本查询
 先创建一个`AVQuery`对象，然后通过添加不同的条件，使用`findInBackground`方法结合`FindCallback`回调类来查询与条件匹配的AVObject数据，使用`whereEqualTo`方法来添加条件值
 ```java
 AVQuery<AVObject> query = new AVQuery<AVObject>("MyObject");
@@ -187,7 +187,7 @@ query.findInBackgroud(new FindCallback<AVObject>(){
    } 
 });
 ```
-#####查询条件
+##### 查询条件
 - whereNotEqualTo() 不等于
 - setLimit() 限制结果的个数
 - setSkip() 忽略多少个
@@ -229,7 +229,7 @@ query.whereStartsWith("playerName", "cha");
 AVQuery query = new AVQuery("GameSauce");
 query.whereEndsWith("playerName", "vj");
 ```
-#####数组查询
+##### 数组查询
 如果key对应的值是一个数组，可以查询key的数组包含了数字2的所有对象
 ```java
 query.whereEqualTo("arrayKey",2);
@@ -243,14 +243,14 @@ numbers.add(3);
 numbers.add(4);
 query.whereContainsAll("arrayKey", numbers);
 ```
-#####字符串的查询
+##### 字符串的查询
 使用 whereStartsWith 方法来限制字符串的值以另一个字符串开头。非常类似 MySQL 的 LIKE 查询，这样的查询会走索引，因此对于大数据集也一样高效：
 ```java
 //查找出所有username以avos开头的用户
 AVQuery<AVObject> query = AVQuery.getQuery("_User");
 query.whereStartsWith("username", "avos");
 ```
-#####查询对象个数
+##### 查询对象个数
 query使用count替代find可以统计多少个对象满足查询
 ```java
 query.countInBackgroud(new CountCallback(){

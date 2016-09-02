@@ -5,12 +5,12 @@ tags:
 ---
 [RDVTabBarController](https://github.com/robbdimitrov/RDVTabBarController)是一款高度定制化的TabBarController，可以方便的对每一个TabItem进行配置。
 <!--more-->
-##使用
+## 使用
 在pod中添加
 ```
 pod 'RDVTabBarController', '~> 1.1.9'
 ```
-##初始化
+## 初始化
 ```objective-c
 UIViewController *firstViewController = [[FirstViewController alloc] init];
 UIViewController *firstNavigationController = [[UINaigationController alloc] initWithRootViewController:firstViewController];
@@ -27,7 +27,7 @@ RDVTabBarController *tabBarController = [[EDVTabBarController alloc] init];
 self.viewController = tabBarController;
 ```
 
-##定制化TabItem
+## 定制化TabItem
 ```objective-c
 UIImage *finishedImage = [UIImage imageNamed:@"selected_background"];
 UIImage *unfinishedImage = [UIImage imageNamed:@"normal_background"];

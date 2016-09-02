@@ -5,9 +5,9 @@ tags: [数据库,sqlite]
 ---
 LitePal是一款开源的Android数据库框架，采用了ORM对象关系映射的模式，将常用的数据库功能进行了封装。
 <!--more-->
-##基本用法
+## 基本用法
 1. 引入jar包
- 	可以在[这里](https://github.com/LitePalFramework/LitePal#latest-downloads)下载LitePal的最新版本
+ 	可以在[这里](https://github.com/LitePalFramework/LitePal# latest-downloads)下载LitePal的最新版本
  	也可以在github上下载LitePal的源码，使用Library的方式导入Eclipse中
 2. 配置litepal.xml
 	在`assets`目录下建立litepal.xml文件
@@ -35,7 +35,7 @@ LitePal是一款开源的Android数据库框架，采用了ORM对象关系映射
 	```
 	如果使用了自定义的Application继承LitePalApplication即可
 
-###建表
+### 建表
 根据对象关系映射模式的概念，每一张表应该对应一个模型，比如对应的News模型
 ```java
 public class News{
@@ -65,11 +65,11 @@ public class News{
 SQLiteDatabase db = Connector.getDatabase();
 ```
 
-###升级表
+### 升级表
 增加新的表或者改变表结构，只需要需要对应model的属性，在`litepal.xml`中进行配置，并对`version`进行加1处理
 
-##中级用法
-###建立表关联
+## 中级用法
+### 建立表关联
 1. 一对一关系
 比如相应`News`每一条新闻都有一段`introduction`简介
 可以在introduction中设置一个news_id的外键列，存放具体新闻的id
@@ -81,7 +81,7 @@ SQLiteDatabase db = Connector.getDatabase();
 可以新建一个中间表来存放news和category的关系
 category_news表设置`news_id`和`category_id`两列，分别是news表的外键和category表的外键
 
-###使用LitePal建立关联表
+### 使用LitePal建立关联表
 新建`Introduction`和`Category`两个类
 ```java
 public class Introduction {
@@ -133,7 +133,7 @@ public class Category {
 	...
 }
 ```
-###存储
+### 存储
 要进行`CRUD`操作所有实体类都需要继承自`DataSupport`类
 之后实体类就可以进行`CRUD`操作了
 ```java
@@ -168,7 +168,7 @@ news.save();
 ```
 这样多对一的关系就被建立，而且`Comment`中的`news_id`已经被默默赋值
 如果有一个`List<News> newsList`，可以使用`DataSupport.saveAll(newsList)`来存储集合数据
-###修改数据
+### 修改数据
 比如把`news`表中id为2的记录的标题修改
 ```java
 ContentValues = new ContentValues();
@@ -206,13 +206,13 @@ updateNews.updateAll("title = ? and commentcount > ?", "今日iPhone6发布", "0
 ```
 如果要修改某列数据为默认值，使用`setToDefault()`方法
 
-###删除
+### 删除
 ```java
 DataSupport.delete(News.class,2);	// 删除news表中id为2的记录，news_id为2的记录为外键的数据也会删除，返回值为被输出的记录数
 DataSupport.deleteAll(News.class,"title = ? and commentcount = ? ","title","0"); 	// 批量删除
 DataSupport.deleteAll(News.class);	// 删除所有
 ```
-###查询
+### 查询
 ```java
 News news = DataSupport.find(News.class,1);	// 查询id为1的记录
 News first = DataSupport.findFirst(News.class); // 查询第一条数据
@@ -222,7 +222,7 @@ long[]ids = new long[]{1,3,5,7};
 List<News> newsList2 = DataSupport.findAll(News.class,ids);
 List<News> newsList3 = DataSupport.findAll(News.class);	// 所有数据
 ```
-####连缀查询
+#### 连缀查询
 根据指定查询条件查询
 ```java
 List<News> newsList = DataSupport.where("commentcount > ?","0").find(News.class);
@@ -239,7 +239,7 @@ List<News> newsList = DataSupport.select("title", "content")
         .order("publishdate desc").limit(10).offset(10)  
         .find(News.class);  									// 查询11-20
 ```
-###激进查询
+### 激进查询
 上述的查询无法查询关联表的数据，LitePal默认的模式就是懒查询，如果要一次性将关联表中的数据也一起查询出来，LitePal也支持激进查询的方式。
 ```java
 News news = DataSupport.find(News.class,1,true);		// true参数表示使用激进查询，关联的数据也会一起查出来
@@ -254,12 +254,12 @@ public class News extends DataSupport {
 	}
 }
 ```
-###原生查询
+### 原生查询
 LitaPal也可以使用原生的查询(SQL语句)
 ```java
 Cursor cursor = DataSupport.findBySQL("select * from news where commentcount>?","0");
 ```
-##聚合函数
+## 聚合函数
 LitePal中提供了count()、sum()、average()、max()、min()这五种聚合函数
 
 - count()

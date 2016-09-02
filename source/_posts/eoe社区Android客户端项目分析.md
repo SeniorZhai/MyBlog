@@ -3,7 +3,7 @@ date: 2014-05-07 13:22:50
 categories: Android
 tags: [Android]
 ---
-##**一、工程目录结构**
+## **一、工程目录结构**
 src存放java源文件
 **src**<br>
 >├ cn.eoe.app --存放程序全局性类的包<br>
@@ -35,7 +35,7 @@ libs目录存放项目引用的第三方jar包
 >├ umeng_sdk.jar --友盟的sdk<br>
 >├ zxing-1.6.jar --二维码处理的包<br>
 
-##二、Api接口数据分析
+## 二、Api接口数据分析
 
 http://http://api.eoe.name/client/top
 ```javascript

@@ -3,7 +3,7 @@ date: 2014-07-07 13:37:21
 categories: Android
 tags: [Android]
 ---
-##权限
+## 权限
 ```xml
     <!-- 发送消息 -->
     <uses-permission android:name="android.permission.SEND_SMS" />

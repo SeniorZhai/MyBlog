@@ -6,7 +6,7 @@ tags: [cache,硬盘缓存]
 [DiskLruCache](https://gist.github.com/zt1991616/095f26ea9cf96cecbcd2)是一套非Google官方编写，但是获得官方认证的硬盘缓存解决方案。
 <!--more-->
 通常情况下，应用程序的缓存位置为`/sdcard/Android/data/<application package>/cache`这个路径。当程序被卸载时，此次的数据也会被一并清除。
-##打开缓存
+## 打开缓存
 创建一个DiskLruCache的实例需要调用它的`open()`方法，接口如下
 ```java
 public static DiskLruCache open(File directory,int appVersion,int valueCount,long maxSize)
@@ -50,7 +50,7 @@ try {
 	e.printStackTrace();
 }
 ```
-##写入缓存
+## 写入缓存
 比如写入一张图片，下载图片的方法
 ```java
 private boolean downloadUrlToStream(String urlString,OutputStream outputStream) {
@@ -145,7 +145,7 @@ new Thread(new Runnable(){
 	}
 }).start();
 ```
-##读取缓存
+## 读取缓存
 借助DiskLruCache的get方法可以获取缓存
 ```java
 public synchronized Snapshot get(String key)throws IOException
@@ -165,7 +165,7 @@ try{
 	}
 }
 ```
-##移除缓存
+## 移除缓存
 通过DiskLruCache的remove()方法实现
 ```java
 public synchronized boolean remove(String key) throws IOException
@@ -180,7 +180,7 @@ try{
 	e.printStackTrace();
 }
 ```
-##其他API
+## 其他API
 1. size()
 返回当前缓存路径下所有缓存数据的总字节数，以byte为单位
 2. flush()

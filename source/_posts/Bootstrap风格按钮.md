@@ -3,7 +3,7 @@ date: 2014-04-21 13:06:36
 categories: iOS
 tags: [iOS]
 ---
-###如何使用
+### 如何使用
 - 将`UIButton+Bootstrap`,`NSString+FontAwesome`,`FontAwesome.ttf`文件添加进工程
 - 导入`UIButton+Bootstrap.h`
 - 在`Info.plist`中的`Fonts provided by application`中包含`FontAwesome.ttf`

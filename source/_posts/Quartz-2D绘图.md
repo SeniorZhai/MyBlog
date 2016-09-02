@@ -17,7 +17,7 @@ UIGraphicsBeginImageContext(CGSizeMake(320,480));
 CGContextRef ctx = UIGraphicsGetCurrentContext();
 ```
 
-##Quart2D的绘图相关函数
+## Quart2D的绘图相关函数
 
 |**函数签名**|**简要说明**|
 |---|:---|
@@ -35,7 +35,7 @@ CGContextRef ctx = UIGraphicsGetCurrentContext();
 |void CGContextStokrEllipseInRect(CGContextRef context,CGRect rect)|使用当前CGContextRef设置的线宽绘制rect矩形的内切椭圆|
 |void CGContextStrokeLineSegments(CGContextRef c,const CGPoint points[],size_t count)|使用当前CGContextRef设置的线宽绘制多条线段，其中1、2点组成一个线段，3、4组成一条限度，以此类推|
 
-##设置绘图属性的相关函数
+## 设置绘图属性的相关函数
 |**函数签名**|**简要说明**|
 |---|:---|
 |void CGContextSavaGState(CGContextRef c);|保存CGContextRef当前的绘图状态，以便以后恢复该状态|
@@ -67,10 +67,10 @@ CGContextRef ctx = UIGraphicsGetCurrentContext();
 |void CGContextSetShadow(CGContext context,CGSize offset,CGFloat blur);|设置阴影在X,Y方向上的偏移，以及模糊度（blur值越大，阴影越模糊），默认模糊颜色为RGBA(0,0,0,1/3.0)|
 |void CGContextSetShadowWithColor(CGContextRef context,CGSize offset,CGFloat blur,CGColorRef color);|设置阴影在X、Y方向上的偏移，以及模糊度和阴影颜色|
 
-##点线模式
+## 点线模式
 - Quartz 2D绘制线段或边框时，默认总是使用实线，使用点线进行绘制，可调用CGContextRefLineDash(CGContextRef c,CGFloat phase,const CGFloat lengths[],size_t count)进行设置。
 
-##绘制文本
+## 绘制文本
 - CGContextRef为绘制文字提供了如下函数
 	+ `CGAffineTransform CGContextGetTextMartix(CGContextRef c):`：获取当前对文本执行变换的变换矩阵。
 	+ `CGPoint CGContextGetTextPosition(CGContextRef c):`：获取该CGContextRef中当前绘制文本的位置。
@@ -88,7 +88,7 @@ CGContextRef ctx = UIGraphicsGetCurrentContext();
 2. 设置绘制文本的相关属性
 3. 如果只是绘制不需要进行变换的文本，直接调用NSString的drawAtPoint:withAttributes:、drawInAttrubutes:withFont:等方法绘制即可。如果需要绘制文本进行变换，则需要先调用CGContextSetTextMatrix()函数设置变换矩阵，再调用CGContextShowTextAtPoint()方法绘制文本。
 
-##使用路径
+## 使用路径
 -绘制复杂的图形，需要使用路径
 - 创建路径的相关函数
 |**函数签名**|**简要说明**|
@@ -124,7 +124,7 @@ CGContextRef ctx = UIGraphicsGetCurrentContext();
 		- kCGPathFillStroke:指定既绘制路径，也填充路径
 		- kCGPathEOFillStroke:指定既绘制路径，也采用even-odd模式填充路径
 
-## Core Image滤镜
+##  Core Image滤镜
 - IOS5新增框架，可以对图像进行各种特效处理，包括进行色彩调节、降噪、扭曲等。
 - Core Image的三个核心API：
 	+ CIContext：处理的核心API，所有图片的处理都在它的管理下完成。

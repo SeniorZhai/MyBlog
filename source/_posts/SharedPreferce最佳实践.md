@@ -9,7 +9,7 @@ SharedPreferce作为Android提供的一种保存数据的解决方案，用于�
 - SharedPreferces 获取建立存储数据
 - SharedPreferces.Editor 对数据编辑的接口
 - SharedPreferces.OnSharedPreferenChangeListener 数据变化的监听器
-##SharedPreferces
+## SharedPreferces
 主要用于创建SharedPreferences对象，通过SharedPreference获取数据。常用API有：
 ```java
 // 根据名字创建
@@ -20,7 +20,7 @@ prrferences.get...("key",defaultValue);
 // 获取整个键值Map
 Map<String,?> all = preferences.getAll();
 ```
-##Editor
+## Editor
 SharedPreferences.Editor是用于修改SharedPreferences对象的接口，且Editor做出的修改默认是待处理的，需要使用commit()或者apply()提交修改。
 >commit()会更快一点
 常用的Api有：
@@ -39,7 +39,7 @@ booleanresult = editor.commit();
 // 提交数据，与commit相同，但属于异步操作，无返回值
 editor.apply();
 ```
-##SharedPreferenChangeListener
+## SharedPreferenChangeListener
 用于监听SharedPreferences的数据改变，常用API有
 ```java
 // 注册监听器
@@ -54,7 +54,7 @@ SharedPreferences.OnSharedPreferenceChangeListener mOnSharedPreferenceChangeList
 	}	
 };
 ```
-##性能
+## 性能
 - ShredPreferences是单例对象，第一次打开后，之后获取都无需创建，速度很快。
 - 当第一次获取数据后，数据会被加载到一个缓存的Map中，之后的读取都会非常快。
 - 当由于是XML<->Map的存储方式，所以，数据越大，操作越慢，get、commit、apply、remove、clear都会受影响，所以尽量把数据按功能拆分成若干份。
@@ -80,10 +80,10 @@ public class MigrationManager {
 	}
 }
 ```
-##存放位置
+## 存放位置
 - `/data/data/YOUR_PACKAGE_NAME/shared_prefs/YOUR_PREFS_NAME.xml` 
 - `/data/data/YOUR_PACKAGE_NAME/shared_prefs/YOUR_PACKAGE_NAME_preferences.xml`
-##示例
+## 示例
 ```java
 public class PreferencesManager {
 

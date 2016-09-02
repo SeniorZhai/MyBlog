@@ -49,7 +49,7 @@ UIControlEventAllEditingEvents
 UIControlEventAllEvents
 ```
 
-##导航控制器
+## 导航控制器
 - 基本概念
     +`UINavigationController`用于构建分层应用程序的主要工具，管理着多个内容视图的换入（压入）和换出（弹出）。自身提供了视图切换的动画效果。
     + 它的父类是`UIViewController`，是所有视图控件器的基类。

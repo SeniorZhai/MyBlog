@@ -3,7 +3,7 @@ date: 2014-02-27 12:44:30
 categories: iOS
 tags: [iOS]
 ---
-##NSData与NSMutableData
+## NSData与NSMutableData
 - 代表数据缓存区，作用有两个①对数据读取NSData、②输出NSData的数据
 	+ 初始化方法(类方法以data开头，实例方法以init开头)
 	    - `data:`：创建一个不包含任何数据的、空的NSData对象
@@ -21,7 +21,7 @@ tags: [iOS]
 	    - `writeToFile:atomically:`：将NSData的数据写入文件
 	    - `writeToURL:atomically:`：将NSData的数据写入URL对应的资源
 
-##NSFileManager
+## NSFileManager
 - NSFileManager代表文件管理器，可以执行文件的移动、复制、链接、删除文件或目录，同时提供一个配套的事件委托（NSFileManagerDelegate），确保文件操作后调用相对应的处理方法。文件名作为文件的唯一标识，可使用绝对路径或相对路径。
 - NSFileManager访问属性和内容提供如下方法：
 
@@ -61,6 +61,6 @@ tags: [iOS]
 |enumeratorAtPath:||
 |subpathsOf
 
-##NSURL
+## NSURL
 - URL(Uniform Resource Locator)对象表示同意资源定位器，它是指向互联网“资源”的指针。通常情况下，URL由协议名、主机、端口和资源路径组成，格式如下：
 >scheme://host:port/path

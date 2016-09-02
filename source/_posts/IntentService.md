@@ -8,7 +8,7 @@ IntentService是简单后台任务操作的理想选择。
 - 不可以直接和UI做交互，为了显示他执行的结果，需要发送给Activity
 - 工作任务队列是顺序执行的，如果一个任务正在IntentService中执行，此时发送的请求，会等到上一个任务执行完毕
 - 正在执行的任务无法打断
-##创建IntentService
+## 创建IntentService
 定义一个类继承`IntentService`
 ```java
 public class RSSPullService extends IntentService {
@@ -20,7 +20,7 @@ public class RSSPullService extends IntentService {
 }
 ```
 > 注：在IntentService中要避免重载`onStartCommand()`等回调方法
-##在Manifest文件中定义IntentService
+## 在Manifest文件中定义IntentService
 ```xml
 <application
 	android:icon="@drawable/icon"
@@ -32,7 +32,7 @@ public class RSSPullService extends IntentService {
 	...
 <application/>
 ```
-##发送任务到IntentService
+## 发送任务到IntentService
 可以在Activity或者Fragment的任何时间点执行Intent，触发IntentService执行任务
 ```java
 // 创建一个显式的Intent来启动IntentService
@@ -42,7 +42,7 @@ mServiceIetent.setData(Uri.parse(dataUrl));
 getActivity().startService(mServiceIntent);
 ```
 一旦执行了`startSevice()`，IntentService在自己本身`onHandleIntent()`方法里面开始执行任务
-##报告后台执行状态
+## 报告后台执行状态
 推荐使用`LocalBroadcastManager`(只在自己的App中执行传递的Brocadcast)
 ```java
 public final class Constans {
@@ -55,7 +55,7 @@ public class RSSPullService extends IntentService {
 	LocalBroadcastManager.getInstance(this).sendBroadcast(localIntent);
 }
 ```
-##接收数据
+## 接收数据
 ```java
 private class ResponseReceiver extends BroadcastReceiver {
 	private DownloadStateReceiver() {

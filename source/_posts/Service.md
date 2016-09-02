@@ -19,18 +19,18 @@ tags: [Android]
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14061901.png)
 
-##清单文件的配置
+## 清单文件的配置
 	Service是Android的四大组件之一，所以它必须在AndroidManifest清单文件中进行配置，否则系统将找不到这个服务。Service的配置也是在<application />这个节点下，使用<service />进行配置，其中android:name属性为Service类。
 	如果开发的Service需要被外部操作，还需要配置<intent-filter />节点。
 	如果Service强制仅本应用操作，可以配置<service />节点的android:exported属性为false，这样即使配置了<intent-filter />，外部应用也无法操作这个服务，android:exported属性默认是true。
 
-##Service开发步骤
+## Service开发步骤
 1. 开发一个Service类，需要继承Service或者IntentService
 2. 在AndroidManifest清单文件中注册这个Service组件
 3. 在一个Android组件中启动这个Service
 4. Service使用完成之后，需要停止这个服务
 
-##启动Service
+## 启动Service
 	启动服务必须实现Service.onStartCommond()方法，启动服务使用startService(Intent intent)方法开启一个服务，仅需要传递一个Intent对象即可，在Intent对象中指定需要启动的服务，而使用startService()方法启动的服务，在服务的外部，必须使用stopService()方法停止当前的Service，该Service就会被销毁。
 	对于启动服务，一旦启动将与访问它的组件无任何关联，即使访问它的组件被销毁了，这个服务也一直运行下去，直到被销毁！
 ```java
@@ -93,7 +93,7 @@ public class MainActivity extends Activity{
 }
 ```
 
-##绑定服务
+## 绑定服务
 	如果Service和宿主之间需要进行方法调用或者数据交换，则应该使用Context对象的binService()和unbindSevice()方法来绑定和解除绑定服务。
 	Context的binService()方法的完整方法签名为:binService(Intent service,ServiceConnection conn,int flags)
 	- service:通过Intent指定要绑定的Service

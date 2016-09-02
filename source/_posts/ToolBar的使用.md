@@ -5,14 +5,14 @@ tags: [ToolBar]
 ---
 ToolBar属于ActionBar的升级版，扩展了ActionBar，使得我们可以像使用独立的控件一样使用ToolBar。
 <!--more-->
-##风格(Style)
+## 风格(Style)
 ```xml
 <style name="AppTheme.Base" parent="Theme.AppCompat">
 	<item name="windowActionBar">false</item>
 	<item name="android:windowNoTitle">true</item>
 </style>
 ```
-##界面(Layout)
+## 界面(Layout)
 ```xml
 <android.support.v7.widget.Toolbar
 	android:id="@+id/toolbar"
@@ -32,7 +32,7 @@ ToolBar属于ActionBar的升级版，扩展了ActionBar，使得我们可以像�
 	
 	注：以上在style中设置
 
-##配合DrawerLayout使用
+## 配合DrawerLayout使用
 ```java
 setSupportActionBar(mToolbar);
 mDrawerLayout = (DrawerLayout) findViewId(R.id.drawer);
@@ -41,7 +41,7 @@ mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.strin
 mDrawerLayout.setDrawerListener(mDrawerToggle);
 ```
 
-###示例
+### 示例
 - 布局
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -57,7 +57,7 @@ mDrawerLayout.setDrawerListener(mDrawerToggle);
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="#2196F3"
+        android:background="# 2196F3"
         style="@style/ToolBarStyle"
         android:minHeight="?attr/actionBarSize" />
 
@@ -87,13 +87,13 @@ mDrawerLayout.setDrawerListener(mDrawerToggle);
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <!-- toolbar（actionbar）颜色 -->
-        <item name="colorPrimary">#4876FF</item>
+        <item name="colorPrimary"># 4876FF</item>
         <!-- 状态栏颜色 -->
-        <item name="colorPrimaryDark">#3A5FCD</item>
+        <item name="colorPrimaryDark"># 3A5FCD</item>
         <!-- 窗口的背景颜色 -->
         <item name="android:windowBackground">@color/backgroud</item>
         <!-- 标题颜色 -->
-        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorPrimary"># FFFFFF</item>
         <!-- 箭头 -->
         <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
         <!-- 菜单按钮 -->

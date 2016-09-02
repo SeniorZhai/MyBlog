@@ -3,7 +3,7 @@ date: 2014-02-28 12:46:48
 categories: iOS
 tags: [iOS]
 ---
-##字符串（NSString与NSMutableString）
+## 字符串（NSString与NSMutableString）
 - NSString代表字符串序列不可变的字符串，NSMutableString代表序列可变的字符串
 - NSString常用方法
 ```
@@ -38,7 +38,7 @@ char* cstr = [str UTF8String];//获取字符串对应的C风格字符串
 [str replaceCharactersInRange:NSMakeRange(6,9) withString:@"Objective-C"];//替换6到9位置的字符串
 ```
 
-##日期与时间（NSDate）
+## 日期与时间（NSDate）
 - 常用方法
 ```
 NSDate* date1 = [NSDate date];//获取代表当前日期、时间的NSDate
@@ -63,7 +63,7 @@ switch([date1 compare date2])
 ```
     + NSLocale待遇一个语言、国际环境
 
-##日期格式器（NSDateFormatter）
+## 日期格式器（NSDateFormatter）
 - NSDateFoematter代表一个日期格式器，用来完成NSDate与NSString之间的转换
 1. 创建一个NSDateFormatter对象
 2. 调用NSDateFormatter的`setStyle:`、`setTimeStyle:`方法设置格式化日期、时间的风格，日期、时间风格支持如下的枚举值：
@@ -81,13 +81,13 @@ NSDateFormatter* df = [[NSDateFormatter alloc]init];
 NSLog(@"%@",[df stringFromDate:date]);
 ```
 
-##日历（NSCalendar）与日期组件（NSDateComponents）
+## 日历（NSCalendar）与日期组件（NSDateComponents）
 - NSCalender对象用于处理NSDate对象所包含的各个字段的数据
 - NSCalendar常用方法
     + (NSDateComponents*)components:fromDate:从NSDate提取年、月、日、时、分、秒各时间字段的信息。
     + dateFromComponents:(NSDateComponents*)comps:使用comps对象包含的年、月、日、时、分、秒各时间字段的信息来创建NSDate.
 
-##定时器（NSTimer）
+## 定时器（NSTimer）
 1. 调用NSTimer的scheduledTimerWithTimeInterval:invocation:repeats:或scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:类方法来创建NSTimer对象。
     + timerInterval:指定每个多少秒执行一次任务。
     + invocation或target与selector:指定重复执行的任务。如果指定target和selector参数，则指定用某个对象的特定方法作为重复执行的任务；如果指定invacation参数，该参数需要传入一个NSInvocation对象，其中NSInvocation对象也是封装target和selector的，其中也是指定用某个对象的特定方法作为重复执行的任务。
@@ -96,12 +96,12 @@ NSLog(@"%@",[df stringFromDate:date]);
 2. 为第一步的任务编写方法。
 3. 销毁定时器，调用定时器的invalidate方法即可。
  
-##对象复制
+## 对象复制
 - NSObject类提供了copy和mutableCopy方法，通过这两个方法即可复制已有对象的副本。
 - copy方法总是返回不可修改的副本，及时改对象本身是可修改的。
 - mutableCopy方法用于复制对象的可变副本，即便对象本事是不可修改的，如NSString，返回的是NSMutableString对象。
 
-###NSCopying与NSMutableCopy协议
+### NSCopying与NSMutableCopy协议
 - 为了保证自定义类能够使用copy、mutableCopy方法，需要做如下的事
     + 让该类实现NSCopying（NSMutableCopying）协议
     + 让该类实现copyWithZone:(mutableCopyWithZone:)方法
@@ -122,7 +122,7 @@ NSLog(@"%@",[df stringFromDate:date]);
 }
 ```
 
-###浅复制(shallow copy)与深复制(deep copy)
+### 浅复制(shallow copy)与深复制(deep copy)
 - 当对象的实例变量是指针变量时，程序只是复制该指针的地址，而不是真正复制指针指向的对象，这种方式被称为“浅复制”，对浅复制而言，在内存中复制了两个对象，这两个对象的指针变量将会指向同一个对象，也就是两个对象存在公用的部分。
 - 深复制不仅会复制对象本身，而且会“递归”复制每个指针类型的实例变量，直到两个对象没有任何公用的部分。
 ```Objective-C
@@ -135,5 +135,5 @@ NSLog(@"%@",[df stringFromDate:date]);
 }
 ```
 - 一般来说，Foundation框架中的类大部分只实现了浅复制。
-####setter方法的copy选项
+#### setter方法的copy选项
 - setter的copy只实现copy方法，得到的回事一个不可变的副本。

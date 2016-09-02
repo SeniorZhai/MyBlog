@@ -3,7 +3,7 @@ date: 2014-02-20 22:14:20
 categories: Android
 tags: [Android]
 ---
-##Mac版
+## Mac版
 1. 到Google的官网下载[Andorid NDK]("http://developer.android.com/tools/sdk/ndk/index.html")
 2. 解压到你要存放的位置
 3. 开启终端，输入命令pico .bash_profile
@@ -18,7 +18,7 @@ tags: [Android]
 5. 测试：关闭终端后重启，输入ndk-build,出现以下提示，证明配置成功
 ![](https://github.com/zt1991616/blog/raw/master/Image/14022002.png)
 
-##Windows版
+## Windows版
 1. 到Google的官网下载[Andorid NDK]("http://developer.android.com/tools/sdk/ndk/index.html")
 2. 解压到你要存放的位置
 3. 计算机-属性-高级系统设置-高级-环境变量-系统环境变量-编辑`Path`变量-添加NDK的存放路径

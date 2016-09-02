@@ -4,7 +4,7 @@ categories: node.js
 tags: [express]
 ---
 <!--more-->
-#创建应用
+# 创建应用
 ```js
 var express = require('express');
 var app = express();
@@ -14,8 +14,8 @@ app.get('/',function(req,res){
 
 app.listen(3000);
 ```
-##app设置
-###值设置
+## app设置
+### 值设置
 - app.set(name,value)
 ```js
 app.set('title','My Site');
@@ -25,13 +25,13 @@ app.set('title','My Site');
 app.get('title'); // 'My Site'
 ```
 
-###选项设置
+### 选项设置
 - app.enable(name)	// 设置某项为true
 - app.disable(name)	// 设置某项为false，禁用
 - app.enabled(name)	// 检查某项是否为true
 - app.disabled(name) // 检查某项是否为false
 
-###环境配置
+### 环境配置
 app.configure([env],callback)
 ```js
 // 所有环境
@@ -65,7 +65,7 @@ if ('production' == app.get('env')) {
 }
 ```
 
-###使用中间件
+### 使用中间件
 app.use([path],function) path默认为"/"
 ```js
 var express = require('express')
@@ -83,7 +83,7 @@ app.use(function(req,res,next){
 app.listen(3000);
 ```
 
-###setting
+### setting
 使用内建的方式改变Express行为的设置
 - env 运行时环境，默认为 process.env.NODE_ENV 或者 "development"
 - trust proxy 激活反向代理，默认未激活状态
@@ -96,9 +96,9 @@ app.listen(3000);
 - view engine 模板引擎
 - views 模板的目录, 默认是"process.cwd() + ./views"
 
-##Request
+## Request
 
-##req.params
+## req.params
 命名过的参数会以键值对的形式存放，默认是`{}`
 ```js
 // GET /user/zoe 路由设置为/user/:name

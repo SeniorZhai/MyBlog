@@ -4,7 +4,7 @@ categories: Android
 tags: [Android]
 ---
 Android 3.0(Honeycomb)之前，Android支持两种动画tween animation,frame animation，3.0引入了一个新的动画————property animation。可通过[NineOldAndroids](http://nineoldandroids.com/)实现对低版本的支持。
-##View Animation(Tween Animation)补间动画
+## View Animation(Tween Animation)补间动画
 给出两个关键帧，通过一些算法将给定属性值在给定的时间内在两个关键帧间渐变。View Animation只能应用于View对象，而且只支持一部分属性，如支持缩放旋转不支持背景颜色的改变。
 ViewAnimation就是一系列View形状的变换，如大小的缩放、透明度的改变、位置的改变，动画的定义既可以用代码定义也可以使用XML定义。
 用XML定义的动画在/res/anim/文件夹内，XML文件的根元素可以是<alpha>,<scale>,<translate>,<rotate>和<interpolator>,<set>。默认情况下，所有动画是同时进行的，可以通过startOffset属性设置哥哥动画的开始偏移量来达到动画顺序播放的效果。可以设置<interpolator>属性改变动画的渐变效果，如AccelerateInterpolator，开始时慢，然后逐渐加快。
@@ -12,7 +12,7 @@ ViewAnimation就是一系列View形状的变换，如大小的缩放、透明度
 Animation hyperspaceJumpAnimation=AnimationUtils.loadAnimation(this, R.anim.hyperspace_jump);
 spaceshipImage.startAnimation(hyperspaceJumpAnimation);
 ```
-##Drawable Animation(Frame Animation)
+## Drawable Animation(Frame Animation)
 Drawable Animation(Frame Animation)帧动画，通过一系列Drawable依次显示来模拟动画
 ```xml
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
@@ -30,7 +30,7 @@ anim = (AnimationDrawable) imageView.getBackground();
 anim.stop()
 anim.start()
 ```
-##Property Animation
+## Property Animation
 属性动画
 - Duration:动画的持续时间
 - TimeInterpolation:属性值的计算方式，比如先快后慢
@@ -39,7 +39,7 @@ anim.start()
 - Animation Sets:动画集合，即可以同时对一个对象应用几个动画，这些动画可以同时播放也可以对不同动画设置不同时间开始偏移
 - Frame refreash delay:多少时间刷新一次，即每隔多少时间计算一次属性值，默认是10ms，最终刷新时间还受到系统进程调度与硬件的影响
 
-###Property Animation的工作方式
+### Property Animation的工作方式
 这面的动画该对象在40ms在x轴移动40pixel。默认10ms刷新一次，这个对象移动了4次，每次移动40/4=10pixel
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14072101.png)
@@ -66,7 +66,7 @@ public Float evaluate(float fraction, Number startValue, Number endValue) {
     return startFloat + fraction * (endValue.floatValue() - startFloat);
 }
 ```
-###ValueAnimator
+### ValueAnimator
 ValueAnimator包含Property Animation动画的所有核心功能，如动画时间，开始、结束属性值，相应时间属性值计算方法等。应用Property Animation有两个步聚：
 1. 计算属性值
 2. 根据属性值执行相应的动作，如改变对象的某一属性。
@@ -103,7 +103,7 @@ oa.addListener(new AnimatorListenerAdapter(){
 });
 oa.start();
 ```
-###ObjectAnimator
+### ObjectAnimator
 继承自ValueAnimator，要指定一个对象即带对象的一个属性，当属性值计算完成时，自动设置为该对象的相应属性。使用ObjectAnimator，需要满足下面条件
 - 对象应该有一个setter函数
 - 创建时，使用工厂方法，第一个参数是对象名，第二个为属相名，后面的参数为可变参数，只设置一个值为目的值，属性值的变化范围为当前值到目的值，为了获得当前值，对象必须有相应的getter方法
@@ -127,7 +127,7 @@ View对象属性：
 4. pivotX、pivotY:控制支点的位置，默认为View对象的中心点
 5. x、y:控制View对象在它容器中的最终位置
 6. alpha:View对象的透明度，默认为1(不偷明)，0代表完全透明
-###通过AnimationSet应用多个动画
+### 通过AnimationSet应用多个动画
 AnimationSet提供一个把多个动画组合成一个组合的机制，并可以设置组中动画的时序关系。
 ```java
 // anim1播发完，同时播发anim2、anim3、anim4，之后播发anim5
@@ -138,7 +138,7 @@ bouncer.play(anim2).with(anim4);
 bouncer.play(anim4).with(anim2);
 bouncer.start();
 ```
-###TypeEvalutors
+### TypeEvalutors
 根据属性的开始值、结束值与TimeInterpolation计算出的计算因子计算出当前时间的属性值，Android提供方了以下几个evalutor：
 - IntEvaluator:属性的值为int
 - FloatEvaluator：属性的值为float
@@ -153,7 +153,7 @@ public class FloatEvaluator implements TypeEvaluator {
     }
 }
 ```
-###TimeInterplator
+### TimeInterplator
 Time interplator定义了属性值变化的方式，在Property Animation中是TimeInterplator，在View Animation中是Interplator，这两个是一样的，在3.0之前只有Interplator，3.0之后实现代码转移至了TimeInterplator。Interplator继承自TimeInterplator，内部没有任何其他代码。
 - AccelerateInterpolator　　　　　     加速，开始时慢中间加速
 - DecelerateInterpolator　　　 　　   减速，开始时快然后减速
@@ -165,7 +165,7 @@ Time interplator定义了属性值变化的方式，在Property Animation中是T
 - LinearInterpolator　　　　　　　　 线性，线性均匀改变
 - OvershottInterpolator　　　　　　  回弹，最后超出目的值然后缓慢改变到目的值
 - TimeInterpolator　　　　　　　　   一个接口，允许你自定义interpolator，以上几个都是实现了这个接口
-###Layout改变时应用动画
+### Layout改变时应用动画
 ViewGroup中的子元素可以通过setVisibility使其Visible、Invisible或Gone，当有子元素可见性改变时(VISIBLE、GONE)，可以向其应用动画，通过LayoutTransition类应用此类动画：
 ```java
 transition.setAnimator(LayoutTransition.DISAPPEARING,customDisappearingAnim);
@@ -179,7 +179,7 @@ transition.setAnimator(LayoutTransition.DISAPPEARING,customDisappearingAnim);
 mTransitioner.setStagger(LayoutTransition.CHANGE_APPEARING, 30);
 ```
 此函数设置动画延迟时间，参数分别为类型与时间。
-###Keyframes
+### Keyframes
 keyFrame是一个`时间/值`对，通过它可以定义一个在特定时间的特定状态，即关键帧，而且在两个keyFrame之间可以定义不同的Interpolator，就像多个动画的拼接，第一个动画的结束点是第二个动画的开始点，KeyFrame是一个抽象类，要通过ofInt()、ofFloat()、ofObject()获得适当的KeyFrame，然后通过PropertyValuesHolder.ofKeyframe获得PropertyValueHolder对象，如下例子：
 ```java
 Keyframe kf0 = Keyframe.ofInt(0, 400);
@@ -205,4 +205,4 @@ ObjectAnimator oa = ObjectAnimator.ofInt(btn2,"width",400,200,400,100,500);
 oa.setDuration(2000);
 oa.start();
 ```
-###Animating Views
+### Animating Views

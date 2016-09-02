@@ -11,7 +11,7 @@ EventBus是Android上一个事件发送/接受的解决方案之一
 - 快速、轻便、稳定
 - 拥有先进的功能，如交付线程、用户优先级
 <!--more-->
-##3步使用EventBus
+## 3步使用EventBus
 1. 定义事件Evenets
 `public class MessageEvent{ /* 加入需要的额外字段 */ }`
 2. 准备接受
@@ -19,7 +19,7 @@ EventBus是Android上一个事件发送/接受的解决方案之一
 `public void onEvent(AnyEventType event){ /* Do something */}`
 3. 发送事件
 `eventBus.post(event);`
-##在工程中加入EventBus
+## 在工程中加入EventBus
 Gradle:
 	compile 'de.greenrobot:eventbus:2.2.1'
 Maven:

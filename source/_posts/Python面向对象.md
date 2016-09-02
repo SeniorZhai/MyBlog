@@ -14,25 +14,25 @@ tags: [面向对象]
 - 方法 类中定义的函数
 - 对象 通过类定义的数据结构实例
 
-##创建类
+## 创建类
 ```python
 class ClassName:
-	'Optional class documentation string' # 类文档字符串
-	class_suite # 类体
+	'Optional class documentation string' #  类文档字符串
+	class_suite #  类体
 ```
 - getattr(obj,name[,default]):访问对象的属性
 - hasattr(obj,name):检查是否存在一个属性
 - setattr(obj,name,value):设置一个属性，如果不存在会创建一个新的属性
 - delattr(obj,name):删除属性
 
-##Python内置类属性
+## Python内置类属性
 - `__dict__`:类的属性(包含一个字典)
 - `__doc__`:类的文档字符串
 - `__name__`:类名
 - `__module__`:类定义所在的模块(类的全名是`__main__.className`)
 - `__base__`:类的所有父类构成元素
 
-##Python对象销毁
+## Python对象销毁
 在Python内部记录着所有使用对象各有多少引用，一个内部跟踪变量，称为一个引用计数器
 析构函数`__del__`在对象消逝的时候被调用
 

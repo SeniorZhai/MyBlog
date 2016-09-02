@@ -3,7 +3,7 @@ date: 2014-07-17 13:40:14
 categories: Android
 tags: [Android]
 ---
-##ids.xml
+## ids.xml
 /res/values/ids.xml
 
 `ids.xml`是区别于R文件的一种设置控件ID的方式。使用示例如下：
@@ -36,7 +36,7 @@ bn.setId(R.id.button_ok);	// 区别于 bn.setId(context.getResources().getIntege
 2. 使用代码布局时，不需要转换
 - 注意：在ids.xml中的每一项也会生成到R文件中
 
-##arrays.xml
+## arrays.xml
 用于包装数组
 // 在arrays.xml中定义
 ```xml
@@ -57,7 +57,7 @@ bn.setId(R.id.button_ok);	// 区别于 bn.setId(context.getResources().getIntege
 CharSequence[] items = this.getResources().getStringArray(R.array.reboot_item);
 ```
 
-##attrs.xml
+## attrs.xml
 `attrs.xml`用于设定自定义属性
 1. 在`res/values`文件夹下定义一个`attrs.xml`文件
 ```xml
@@ -109,6 +109,6 @@ public class MyView extends View {
 　　　　android:layout_width="fill_parent"　　　　
 　　　　android:layout_height="fill_parent"　　　　
 　　　　test:textSize="20px"　　
-　　　　test:textColor="#fff"　　
+　　　　test:textColor="# fff"　　
 />　　　
 ```

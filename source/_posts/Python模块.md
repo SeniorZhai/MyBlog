@@ -4,14 +4,14 @@ categories: Python
 tags: [模块]
 ---
 <!--more-->
-##内置方法
+## 内置方法
 - type()	查看数据类型
 - dir()		返回所以属性和方法
 - help() 	返回帮助信息
 - range(x,y)	获取x到y-1的元素
-##列表
+## 列表
 
-###常用方法
+### 常用方法
 - count()	列表含多少元素
 - index(x)	差选下标为x的元素
 - append()	在末尾添加元素
@@ -20,9 +20,9 @@ tags: [模块]
 - remove()	删除元素
 - insert(x,y)	在下边x的位置插入y
 
-##字典
+## 字典
 
-###常用方法
+### 常用方法
 - keys()	返回dict所有键
 - values()	返回dict所有值
 - items()	返回dict所有元素

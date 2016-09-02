@@ -5,7 +5,7 @@ tags: Paint
 ---
 Paint即画笔，在绘图过程中起到了极其重要的作用，画笔主要保存了颜色，样式等绘制信息，指定了如何绘制文本和图形，画笔对象有很多设置方法，大体上可以分为两类，一类与图形绘制相关，一类与文本绘制相关。        
 <!--more-->
-##图形绘制
+## 图形绘制
 - setARGB(int a,int r,int g,int b);
 	设置绘制的颜色，a代表透明度，r，g，b代表颜色值
 - setAlpha(int a);  
@@ -38,7 +38,7 @@ Paint即画笔，在绘图过程中起到了极其重要的作用，画笔主要
 	当画笔样式为`STROKE`或`FILL_OR_STROKE`时，设置笔刷的粗细度  
 - setXfermode(Xfermode xfermode);  
 	设置图形重叠时的处理方式，如合并，取交集或并集，经常用来制作橡皮的擦除效果
-##文本绘制
+## 文本绘制
 - setFakeBoldText(boolean fakeBoldText);
 	模拟实现粗体文字，设置在小字体上效果会非常差
 - setSubpixelText(boolean subpixelText);  

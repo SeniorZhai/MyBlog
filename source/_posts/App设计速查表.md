@@ -5,7 +5,7 @@ tags: [app,设计]
 ---
 应用设计速查表
 <!--more-->
-##Android
+## Android
 ![](/img/Android-Design.png)
-##iOS
+## iOS
 ![](/img/iOS-Design.png)

@@ -43,8 +43,8 @@ public class DemoCollectionPagerAdapter extends FragmentStatePagerAdapter{
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:background="#33b5e5"
-        android:textColor="#fff"
+        android:background="# 33b5e5"
+        android:textColor="# fff"
         android:paddingTop="4dp"
         android:paddingBottom="4dp" />
 </android.support.v4.view.ViewPager>

@@ -4,11 +4,11 @@ categories: Android
 tags: [Kotlin]
 ---
 <!--more-->
-##安装Kotlin插件
+## 安装Kotlin插件
 - Kotlin 使Android Studio可以识别kotlin代码
 - Kotlin Android Extensions 使Android Studio可以自动地从XML中注入所有的View到Activity
 
-##修改Gradle
+## 修改Gradle
 ```Gradle
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
@@ -39,5 +39,5 @@ repositories {
 ```
 PS：未修改处省略
 
-##修改MainActivity
+## 修改MainActivity
 选择MainActivity.java->Code->Convert Java File to Kotlin File

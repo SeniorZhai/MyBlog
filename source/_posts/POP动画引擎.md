@@ -6,8 +6,8 @@ tags: [iOS,Animation,动画]
 POP动画极为流畅，秘密就在于POP通过`CADisplayLink`高达60FPS的特性，打造了一个游戏级的动画引擎。
 `CADisplayLink`是一个类似`NSTimer`的定时器，不同之处在于，`NSTimer`用于定义任务的执行周期，它的执行收到了CPU阻塞影响，而`CADisplayLink`则用于定义画面的重绘，动画的演变，基于帧(frames)的间隔。通过`CADisplayLink`程序的重绘速度设定到和屏幕刷新频率一致，因此可以得到流畅的交互动画。
 
-##基本类型
-###Spring Animation
+## 基本类型
+### Spring Animation
 Spring Animation提供了一个弹簧效果的动画，通过一系列参数的设置，完成风骚的动画
 - Bounciness 反弹，影响动画作用的参数的变化幅度
 - Speed 速度
@@ -28,7 +28,7 @@ anim.completionBlock = ^(POPAnimation *anim,BOOL finished){
 };
 ```
 
-##Decay Animation
+## Decay Animation
 Decay Animation变现为一个衰减效果的动画，设置一个参数`velocity`(速率)
 ```objective-c
 POPDecayAnimation *anim = [POPDecayAnimation animWithPropertyNamed:kPOPLayerPositionX];
@@ -40,7 +40,7 @@ anim.completionBlock = ^(POPAnimation *anim,BOOL finished){
 ```
 设置`deceleration`（负向速度）可以设置一个加速度量
 
-##Property Animation & Basic Animation
+## Property Animation & Basic Animation
 Property Animation为属性动画，是Spring Animation和Decay Animation的父类
 ```objective-c
 POPBasicAnimation *anim = [POPBasicAnimation animation];

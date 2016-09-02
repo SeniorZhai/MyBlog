@@ -4,7 +4,7 @@ categories: Android
 tags: [KVO,数据绑定,MVVM]
 ---
 <!--more-->
-##在Fargment中使用
+## 在Fargment中使用
 ```xml
 <layout>
     <date>
@@ -28,7 +28,7 @@ onCreateView() {
 ```
 <https://github.com/SeniorZhai/DataBindingDemo/blob/master/app/src/main/java/io/github/seniorzhai/databindingdemo/BingdingFragment.java>
 
-##在GridView中使用
+## 在GridView中使用
 主要的实现代码需要在Adapter的getView方法中实现
 ```java
 public View getView(int position,View convertView,ViewGroup parent) {

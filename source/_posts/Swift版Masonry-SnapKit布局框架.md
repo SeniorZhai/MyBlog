@@ -5,14 +5,14 @@ tags:
 ---
 和[Masonry](http://seniorzhai.github.io/2015/04/15/Masonry%E5%B8%83%E5%B1%80%E6%A1%86%E6%9E%B6/)一样，SnapKit是一套轻量级的布局框架，同样适用链式语法封装Apple的自动布局约束。
 <!--more-->
-##导入
+## 导入
 ```
 platform :ios, '7.0'
 use_frameworks!
 
 pod 'SnapKit', '~> 0.12.0'
 ```
-##约束对应的属性
+## 约束对应的属性
 |ViewAttribute|NSLayoutAttriubute|说明|
 |:---|:---|:---|
 |view.snp_left|NSLayoutAttributeLeft|左侧|
@@ -27,7 +27,7 @@ pod 'SnapKit', '~> 0.12.0'
 |view.snp_centerY|NSLyoutAttributteCenterY|纵向中点|
 |view.snp_baseline|NSLayoutAttributeBaseline|文本基准线|
 
-##居中
+## 居中
 ```swift
 	let view1 = UIView()
     view1.backgroundColor = getColor(0x6FBFAC)
@@ -37,7 +37,7 @@ pod 'SnapKit', '~> 0.12.0'
     }
 ```
 
-##等宽
+## 等宽
 ```swift
 let view2 = UIView()
 let view3 = UIView()
@@ -66,7 +66,7 @@ view3.snp_makeConstraints{(make)->Void in
 }
 ```
 
-###相对在下
+### 相对在下
 ```swift
 view4.snp_makeConstraints{(make)->Void in
     make.width.equalTo(view1).offset(-40)

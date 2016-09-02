@@ -5,7 +5,7 @@ tags: [mongo,数据库]
 ---
 
 <!--more-->
-##链接数据库
+## 链接数据库
 ```js
 var MongoClient = require('mongodb').MongoClient,
 	assert = require('assert');	// 断言
@@ -19,7 +19,7 @@ MongoClient.connect(url,function(err,db)){
 }
 ```
 
-##插入文档
+## 插入文档
 ```js
 var insertDocument = function(db,callback) {
 	var collection = db.collection('document');
@@ -49,7 +49,7 @@ MongoClient.connect(url, function(err, db) {
   });
 });
 ```
-##修改文档
+## 修改文档
 ```js
 var updateDocument = function(db, callback) {
   // Get the documents collection
@@ -83,7 +83,7 @@ MongoClient.connect(url, function(err, db) {
   });
 });
 ```
-##删除
+## 删除
 ```js
 var removeDocument = function(db, callback) {
   // Get the documents collection
@@ -117,7 +117,7 @@ MongoClient.connect(url, function(err, db) {
   });
 });
 ```
-##查询
+## 查询
 ```js
 var findDocuments = function(db, callback) {
   // Get the documents collection

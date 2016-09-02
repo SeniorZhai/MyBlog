@@ -5,7 +5,7 @@ tags: [swift,关键字]
 ---
 在看swift的代码的时候，遇见两个新的关键字，语法特性很特别
 <!--more-->
-#guard
+# guard
 guard有点像断言
 ```swift
 if age < 13 {
@@ -31,7 +31,7 @@ if let name = user.name {
 }
 ```
 
-#defer
+# defer
 defer是使代码延后处理的新特性
 ```swift
 // ...

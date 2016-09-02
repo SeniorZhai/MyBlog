@@ -5,7 +5,7 @@ tags: [SDK,IM,环信]
 ---
 环信单聊API
 <!--more-->
-##登陆
+## 登陆
 ```java
 EMChatManager.getInstance().login(userName,password,new EMCallBack(){
 	@Override
@@ -26,11 +26,11 @@ EMChatManager.getInstance().login(userName,password,new EMCallBack(){
 	}
 });
 ```
-##注销
+## 注销
 ```java
 EMChatManager.getInstance().login();
 ```
-##发送文本消息
+## 发送文本消息
 ```java
 // 获取会话
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
@@ -48,7 +48,7 @@ conversation.addMessage(message);
 // 发送消息
 EMChatManager.getInstance().sendMessage(message,new EMCallBack());
 ```
-##发送语音消息
+## 发送语音消息
 ```java
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
 EMMessage message = EMMessage.createSendMessage(EMMessage.Type.VOICE);
@@ -59,7 +59,7 @@ message.setReceipt(username);
 conversation.addMessage(message);
 EMChatManager.getInstance().sendMessage(message, new EMCallBack());
 ```
-##发送图片消息
+## 发送图片消息
 ```java
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
 EMMessage message = EMMessage.createSendMessage(EMMessage.Type.IMAGE);
@@ -73,7 +73,7 @@ message.setReceipt(username);
 conversation.addMessage(message);
 EMChatManager.getInstance().sendMessage(message, new EMCallBack());
 ```
-##发送地理位置消息
+## 发送地理位置消息
 ```java
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
 EMMessage message = EMMessage.createSendMessage(EMMessage.Type.LOCATION);
@@ -85,7 +85,7 @@ message.setReceipt(username);
 conversation.addMessage(message);
 EMChatManager.getInstance().sendMessage(message, new EMCallBack());
 ```
-##发送文件消息
+## 发送文件消息
 ```java
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
 // 创建一个文件消息
@@ -101,7 +101,7 @@ message.addBody(body);
 conversation.addMessage(message);
 EMChatManager.getInstance().sendMessage(message, new EMCallBack());
 ```
-##接收消息
+## 接收消息
 ```java
 NewMessageBroadcastReceiver msgReceiver = new NewMessageBroadcastReceiver();
 IntentFilter intentFilter = new IntentFilter(EMChatManager.getInstance().getNewMessageBroadcastAction());
@@ -128,7 +128,7 @@ private class NewMessageBroadcastReceiver extends BroadcastReceiver {
         }
 }
 ```
-##获取聊天记录
+## 获取聊天记录
 ```java
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
 //获取此会话的所有消息
@@ -139,22 +139,22 @@ List<EMMessage> messages = conversation.loadMoreMsgFromDB(startMsgId, pagesize);
 //如果是群聊，调用下面此方法
 List<EMMessage> messages = conversation.loadMoreGroupMsgFromDB(startMsgId, pagesize);
 ```
-##获取未读消息数量
+## 获取未读消息数量
 ```java
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
 conversation.getUnreadMsgCount();
 ```
-##未读消息清零
+## 未读消息清零
 ```java
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
 conversation.resetUnsetMsgCount();
 ```
-##清空会话记录
+## 清空会话记录
 ```java
 //清空和某个user的聊天记录，不删除整个会话
 EMChatManager.getInstance().clearConversation(username);
 ```
-##删除聊天记录
+## 删除聊天记录
 ```java
 //删除和某个user的整个的聊天记录
 EMChatManager.getInstance().deleteConversation(username);
@@ -162,7 +162,7 @@ EMChatManager.getInstance().deleteConversation(username);
 EMConversation conversation = EMChatManager.getInstance().getConversation(username);
 conversation.removeMessage(deleteMsg.msgId);
 ```
-##设置自定义的消息提示
+## 设置自定义的消息提示
 App在后台时，新消息会通过notification提示，可以把提示的内容换成自定义的内容，在Application中的onCreate()里设置
 ```java
 // 获取到options对象
@@ -179,7 +179,7 @@ options.setNotifyText(new OnMessageNotifyListener() {
 	}
 });
 ```
-##设置notification点击跳转的intent
+## 设置notification点击跳转的intent
 ```java
 EMChatOptions options = EMChatManager.getInstance().getChatOptions();
 options.setOnNotificationClickListener(new OnNotificationClickListener(){
@@ -199,29 +199,29 @@ options.setOnNotificationClickListener(new OnNotificationClickListener(){
 	}
 });
 ```
-##好友列表
+## 好友列表
 ```java
 List<String> usernames = EMChatManager.getInstance().getContactUesrNames();
 ```
-##添加好友
+## 添加好友
 ```java
 //参数为要添加的好友的username和添加理由
 EMContactManager.getInstance().addContact(toAddUsername, reason);
 ```
-##删除好友
+## 删除好友
 ```java
 EMContactManager.getInstance().deleteContact(username);
 ```
-##同意好友请求
+## 同意好友请求
 ```java
 //同意username的好友请求
 EMChatManager.getInstance().acceptInvitation(username);
 ```
-##拒绝好友请求
+## 拒绝好友请求
 ```java
 EMChatManager.getInstance().refuseInvitation(username);
 ```
-##监听好友请求
+## 监听好友请求
 ```java
 EMContactManager.getInstance().setContactListener(new EMContactListener() {
 	
@@ -252,22 +252,22 @@ EMContactManager.getInstance().setContactListener(new EMContactListener() {
 	}
 });
 ```
-##获取黑名单
+## 获取黑名单
 ```java
 //获取黑名单用户的usernames
 EMContactManager.getInstance().getBlackListUsernames();
 ```
-##加入黑名单
+## 加入黑名单
 ```java
 //第二个参数如果为true，则把用户加入到黑名单后双方发消息时对方都收不到；false,则
 //我能给黑名单的中用户发消息，但是对方发给我时我是收不到的
 EMContactManager.getInstance().addUserToBlackList(username,true);
 ```
-##从黑名单中移除
+## 从黑名单中移除
 ```java
 EMContactManager.getInstance().deleteUserFromBlackList(username);
 ```
-##网络异常监听
+## 网络异常监听
 ```java
 //注册一个监听连接状态的listener
 EMChatManager.getInstance().addConnectionListener(new MyConnectionListener());

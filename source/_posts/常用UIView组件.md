@@ -3,7 +3,7 @@ date: 2014-02-18 12:46:08
 categories: iOS
 tags: [iOS]
 ---
-##UIButton
+## UIButton
 - 常用属性
 
 1.Type
@@ -43,7 +43,7 @@ tags: [iOS]
 12. Inset
     - 边界距离
 
-##UIAlert And UIActionSheet
+## UIAlert And UIActionSheet
 ```Objective-C
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"title" message:@"message" delegate:nil cencelButtonTitle:@"cancel" otherButtonTitles:@"other",nil];
     [alertView show];
@@ -55,7 +55,7 @@ tags: [iOS]
     [actionSheet show];
 ```
 
-##UIButton
+## UIButton
 - UIButton
     + 作用：响应用户的点击事件的View
 - 常用方法
@@ -115,7 +115,7 @@ UIControlEventTouchCanel
     button.frame = CGRectMake(90,100,140,40);
     [self.window.addSubview:button];
 ```
-##图片视图
+## 图片视图
 - UIImageView
     + 作用：专用于显示图片的视图
 
@@ -139,7 +139,7 @@ UIControlEventTouchCanel
     imageView.highlightImage = [UIImage imageNamed:@"t1.png"];
     imageView.userInteractionEnabled = YES;
 ```
-##UIActivityIndicatorView
+## UIActivityIndicatorView
 - UIActivityIndicatorView
     + 作用：提示用户当前页面正在加载数据
 - 常用属性和方法
@@ -164,7 +164,7 @@ UIControlEventTouchCanel
     [activityView startAnimating];
 ```
 
-##滑动控件
+## 滑动控件
 - UISlider视图
     + 作用：控制系统声音，或者表示播放进度等等
 - 常用属性
@@ -191,7 +191,7 @@ UIControlEventTouchCanel
     slider.value = 50;
 ```
 
-##分段控件
+## 分段控件
 - UISegmentedControl
     + 作用：分段控件、页面切换等
 - 示例代码
@@ -204,7 +204,7 @@ UIControlEventTouchCanel
     [segmentCtrl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
 ```
 
-##分页控件
+## 分页控件
 - UIPageControl
     + 作用：通常和UIScrollView连用，提示用户当前显示页数
 - 常用属性和方法
@@ -227,7 +227,7 @@ UIControlEventTouchCanel
     [pageControl addTarget:self action:@selector(change:) froControlEvents:UIControlEventValueChanged];
 ```
 
-##UITextField
+## UITextField
 - 常用代理方法
 ```Objective-C
 // 将要开始输入时调用
@@ -248,7 +248,7 @@ UIControlEventTouchCanel
     return YES;
 }
 ```
-##UILabel
+## UILabel
 - UILabel
     + 作用：显示文本
 - 常用属性

@@ -12,8 +12,8 @@ def make_repeater(n):
 
 twice = make_repeater(2)
 
-print twice('word') # wordword
-print twice(5) # 10
+print twice('word') #  wordword
+print twice(5) #  10
 ```
 lambda语句用来创建函数对象，本质上，lambda需要一个参数，后面仅跟单个表达式作为函数体，而表达式的值被这个新建的函数返回。
 主要的作用：

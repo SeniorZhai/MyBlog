@@ -3,7 +3,7 @@ date: 2014-07-07 13:36:43
 categories: Android
 tags: [Android]
 ---
-##工具类
+## 工具类
 - Column
 用于管理字段
 ```java
@@ -121,7 +121,7 @@ public class SQLiteTable {
 }
 ```
 
-##数据库操作类
+## 数据库操作类
 ```java
 public abstract class BaseDataHelper {
 	private Context mContext;

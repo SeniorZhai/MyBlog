@@ -12,10 +12,10 @@ Android Lint是SDK Tools 16(ADT 16)之后Google提供的新工具，它是一个
 5. 图标缺失、重复、错误尺寸
 6. AndroidManifest.xml中的错误
 
-##Lint
+## Lint
 Lint工具在`/AndroidSDK/tools/`文件夹下
 
-###使用
+### 使用
 - `lint <project directory>` lint命令后添加工程目录
 - `lint --html <project directory>` 生成html格式的报告
 - `lint --simplehtml <project directory>` 生成简单html格式的报告

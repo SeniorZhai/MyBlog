@@ -6,7 +6,7 @@ tags: [iOS]
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14032101.png)
 
-##什么是UICollectionView
+## 什么是UICollectionView
 UICollectionView是一种新的数据展示方式，简单来说可以把他理解成多列的UITableView。比如iBooks，一个虚拟的书架上放着各类图书，排列整齐，亦或者iPad的iOS6中的原生时钟中的各个时钟，也是UICollectionView的最简单的一个布局。
 
 ![](https://github.com/zt1991616/blog/raw/master/Image/14032102.png)
@@ -19,11 +19,11 @@ UICollectionView是一种新的数据展示方式，简单来说可以把他理�
 ![](https://github.com/zt1991616/blog/raw/master/Image/14032103.png)
 ![](https://github.com/zt1991616/blog/raw/master/Image/14032104.png)
 
-##实现一个简单的UICollectionView
+## 实现一个简单的UICollectionView
 
 和UITableView一样，UICollectionView同样采用datasource和delegate设计模式：datasource为View提供数据源，告诉View要实现什么及如何显示它们，delegate提供一些样式的小细节以及用户交互的相应。
 
-###UICollectionViewDataSource
+### UICollectionViewDataSource
 - - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section:section的数量
 - - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section:某个section里有多少个item
 - - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath:指定显示什么样的cell
@@ -31,7 +31,7 @@ UICollectionView是一种新的数据展示方式，简单来说可以把他理�
 实现了以上三个委托方法，基本上就可以保证CollectionView工作正常，同时还通过了Supplementary View方法
 - - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 
-####用于重用
+#### 用于重用
 
 在UICollectionView中在请求数据源之前要注册CellView、SupplementaryView，可以通过以下方法进行注册
 -registerClass:forCellWithReuseIdentifier:
@@ -39,7 +39,7 @@ UICollectionView是一种新的数据展示方式，简单来说可以把他理�
 -registerNib:forCellWithReuseIdentifier:
 -registerNib:forSupplementaryViewOfKind:withReuseIdentifier:
 
-###UICollectionViewDelegate
+### UICollectionViewDelegate
 负责交互
 - cell的高亮
 - cell的选中状态
@@ -53,7 +53,7 @@ UICollectionView是一种新的数据展示方式，简单来说可以把他理�
 
 对应的高亮和选中状态分别由highlighted和selected两个属性表示。
 
-###关于cell
+### 关于cell
 
 UICollectionViewCell相比UITableViewCell没有太多的花头，首先不存在格式各样的默认的style。UICollectionViewCell结构上相对比较简单，由下至上：
 1. cell本身作为容器View
@@ -61,7 +61,7 @@ UICollectionViewCell相比UITableViewCell没有太多的花头，首先不存在
 3. selectedBackgroundView，是cell被选中时的背景
 4. contentView，自定义内容应被加载这个View上。
 
-###UICollectionViewLayout
+### UICollectionViewLayout
 负责各个cell、Supplementary View和Decoration Views进行组织，为了它们设定各自的属性，包括但不限于：位置、尺寸、透明度、层级关系、形状、等等...
 
 - Layout决定了UICollectionView是如何显示在界面上的。在展示之前，一般需要生成合适的UICollectionViewLayout子类对象，并将其赋予CollectionView的collectionViewLayout属性。
@@ -85,12 +85,12 @@ UICollectionViewCell相比UITableViewCell没有太多的花头，首先不存在
 - 缩进
 	+ @property UIEdgeInsets sectionInset;
 	+ -collectionView:layout:insetForSectionAtIndex:
-#自定义UICollectionViewLayout
+# 自定义UICollectionViewLayout
 
 **总结**
 一个UICollectionView的实现包括两个必要部分：UICollectionViewDataSource和UICollectionViewLayout，和一个交互部分：UICollectionViewDelegate。而Apple给出的UICollectionViewFlowLayout已经是一个很强力的layout方案了。
 
-#UICollectionViewLayoutAttributes
+# UICollectionViewLayoutAttributes
 property列表：
 - @property (nonatomic) CGRect frame
 - @property (nonatomic) CGPoint center
@@ -102,7 +102,7 @@ property列表：
 
 UICollectionViewLayoutAttributes的实例中包含了诸如边框，中心点，大小，形状，透明度，层次关系和是否隐藏等信息。当UICollectionView在获取布局时将针对每一个indexPath的部件（包括cell，追加视图和装饰视图），向其上的UICollectionViewLayout实例询问该部件的布局信息。这个布局信息，就以UICollectionViewLayoutAttributes的实例的方式给出。
 
-#UICollectionViewLayout
+# UICollectionViewLayout
 UICollectionViewLayout的功能为向UICollectionView提供布局信息，不仅包括cell的布局信息，也包括追加视图和装饰视图的布局信息。实现一个自定义layou的常规做法是继承UICollectionViewLayout类，然后重载下列方法。
 
 - - (CGSize)collectioonViewContentSize
@@ -130,16 +130,16 @@ UICollectionViewLayout的功能为向UICollectionView提供布局信息，不仅
 
 另外，在需要更新layout时，需要给当前layout发送 -invalidateLayout，该消息会立即返回，并且预约在下一个loop的时候刷新当前layout。在-invalidateLayout后的下一个collectionView的刷新loop中，又会从prepareLayout开始，依次再调用-collectionViewContentSize和-layoutAttributesForElementsInRect来生成更新后的布局。
 
-###LineLayout——对于个别UICollectionViewLayoutAttributes的调整
+### LineLayout——对于个别UICollectionViewLayoutAttributes的调整
 
 ```Objective-C
 // LinrLayout.m
-#import "LineLayout.h"
+# import "LineLayout.h"
 
 
-#define ITEM_SIZE 200.0
-#define ACTIVE_DISTANCE 200
-#define ZOOM_FACTOR 0.4
+# define ITEM_SIZE 200.0
+# define ACTIVE_DISTANCE 200
+# define ZOOM_FACTOR 0.4
 
 @implementation LineLayout
 
@@ -207,12 +207,12 @@ UICollectionViewLayout的功能为向UICollectionView提供布局信息，不仅
 ```
 [例子](https://github.com/zt1991616/LineLayout)
 
-###CircleLayout——完全自定义的Layout，添加删除item，以及手势识别
+### CircleLayout——完全自定义的Layout，添加删除item，以及手势识别
 
 ```Objective-C
-#import "CircleLayout.h"
+# import "CircleLayout.h"
 
-#define ITEM_SIZE 70
+# define ITEM_SIZE 70
 
 @implementation CircleLayout
 
@@ -277,8 +277,8 @@ UICollectionViewLayout的功能为向UICollectionView提供布局信息，不仅
 ```
 
 ```Objective-C
-#import "ViewController.h"
-#import "Cell.h"
+# import "ViewController.h"
+# import "Cell.h"
 
 @implementation ViewController
 

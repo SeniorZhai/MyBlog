@@ -4,7 +4,7 @@ categories: Android
 tags: [Meterial]
 ---
 <!--more-->
-##下载及配置
+## 下载及配置
 - 在<https://github.com/kanytu/Android-studio-material-template>下载`MaterialNavigationDrawerActivity`文件夹
 - 把它放到`{Android Studio installation dir}\plugins\android\lib\templates\activities\`目录下(Mac右键进入`显示包内容`)
 - 重启Android Studio

@@ -5,7 +5,7 @@ tags: [网络请求,POST,GET]
 ---
 iOS中的基本网络请求如下
 <!--more-->
-##同步
+## 同步
 同步访问网络不考虑延迟问题
 ```objective-c
 // 同步Get
@@ -40,7 +40,7 @@ NSData *pramData = [parmStr dataUsingEncoding:NSUTF8StringEncoding];
 
 NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
 ```
-##异步
+## 异步
 异步访问网络
 ```objective-c
 NSString *urlStr = [NSString stringWithFormat:@"http://image.zcool.com.cn/56/13/1308200901454.jpg"];
@@ -127,11 +127,11 @@ NSData *data = [parmStr dataUsingEncoding:NSUTF8StringEncoding];
 
 }
 ```
-## GET请求和POST请求的区别
+##  GET请求和POST请求的区别
 1. GET请求的接口会包含参数部分，参数会作为网址的一部分，服务器地址与参数之间通过 ? 来间隔。POST请求会将服务器地址与参数分开，请求接口中只有服务器地址，而参数会作为请求的一部分，提交后台服务器。
 2. GET请求参数会出现在接口中，不安全。而POST请求相对安全。
 3.虽然GET请求和POST请求都可以用来请求和提交数据，但是一般的GET多用于从后台请求数据，POST多用于向后台提交数据。
 
-##同步和异步的区别
+## 同步和异步的区别
 - 同步链接：主线程去请求数据，当数据请求完毕之前，其他线程一律不响应，会造成程序就假死现象。
 - 异步链接：会单独开一个线程去处理网络请求，主线程依然处于可交互状态,程序运行流畅。

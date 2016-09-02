@@ -4,7 +4,7 @@ categories: Android
 tags: [反编译]
 ---
 <!--more-->
-#使用
+# 使用
 将[jadx](https://github.com/skylot/jadx)克隆到本地，进行编译
 ```shell
 git clone https://github.com/skylot/jadx
@@ -13,7 +13,7 @@ cd jadx
 ```
 编译完成后可以在`build/jadx/bin`中找到运行文件
 
-##运行
+## 运行
 GUI界面可以点击运行`jadx-gui`文件
 命令行可以使用`./jadx`
 ```

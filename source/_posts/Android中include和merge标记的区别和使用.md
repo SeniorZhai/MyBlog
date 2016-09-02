@@ -5,7 +5,7 @@ tags: [include,merge,复用,layout]
 ---
 include和merge标记的作用主要是为了解决layout的重用的问题
 <!--more-->
-##include
+## include
 比如多个Activity需要相同的标题layout即可使用include来重用
 ```xml
 <include layout="@layout/titlebar" />
@@ -17,7 +17,7 @@ include和merge标记的作用主要是为了解决layout的重用的问题
 	android:layout_height="math_parent" />
 ```
 
-##merge
+## merge
 include有一个副作用就是它需要套用一层root接点
 如果不需要的话，可以使用merge标记
 ```xml

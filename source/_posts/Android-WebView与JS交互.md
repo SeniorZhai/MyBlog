@@ -22,7 +22,7 @@ tags: [Android]
 	<div id='b'><a onclick="window.zoe.onClick">b.c</a></div>
 ```
 
-##示例
+## 示例
 layout
 ```xml
 <?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

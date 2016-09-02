@@ -12,7 +12,7 @@ Handler把压入消息队列分为Post和sendMessage:
 - Post：Post运行把一个Runnable对象压入消息队列，它的方法有：post(Runnable)、postAtTime(Runnable,long)、postDelayed(Runnable,long)。
 - sendMessage:sendMessage允许把一个包含消息数据的Message对象压入到消息队列中，方法有sendEmptyMessage(int)、sendMessage(Message)、sendMessageAtTime(Message,long)、sendMessageDelayed(Message,long)。
 
-##Post
+## Post
 对于Handler的Post方式来说，它会传递一个Runnable对象到消息队列中，在这个Runnable对象中，重写run()方法。一般在这个run()方法中写入需要在UI线程上的操作。
 
 在Handler中，关于Post方式的方法有：
@@ -21,7 +21,7 @@ Handler把压入消息队列分为Post和sendMessage:
 - boolean postDelayed(Runnable r,long delayMillis)：把一个Runnable入队到消息队列中，UI线程从消息队列中取出这个对象后，延迟delayMills秒执行
 - void removeCallbacks(Runnable r)：从消息队列中移除一个Runnable对象。
 
-##Message
+## Message
 Message是一个final类，所有不可继承，Message封装了线程中传递的消息，对于一般的数据Message提供了`getData()`和`setData()`方法来获取与设置数据，其中操作的数据是一个Bundle对象，这个Bundle对象提供了一系列的`getXxx()`和`setXxx()`方法用于传递基本数据类型的键值对。对于复杂的数据类型，Bundle提供了两个方法，专门用来传递对象，但是这两个方法也有相应的限制，需要实现特定的接口。
 - putParcelable(String key,Parcelable value)：需要传递的对象类实现Parcelable接口。
 - pubSerializable(String key,Serializable value)：需要传递的对象类实现Serializable接口。

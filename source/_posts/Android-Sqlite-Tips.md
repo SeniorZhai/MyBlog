@@ -37,7 +37,7 @@ sqlite3 mydb.db
 ```sql
 vacuum
 ```
-##一些SQLite命令
+## 一些SQLite命令
 - database 列出数据库文件名
 - tables ?PATTERN? 列出?PATTERN?匹配的表名
 - import FILE TABLE 将文件中的数据导入表中

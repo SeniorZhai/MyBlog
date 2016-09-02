@@ -5,7 +5,7 @@ tags: [iOS]
 ---
 `SONFillAnimation`是将一个UIView以指定网格动画显示的类。
 
-##用法
+## 用法
 ```objective-c
 SONFillAnimation *animation = [[SONFillAnimation alloc] initWithNumberOfRows:3 columns:3 animationType:SONFillAnimationTypeDefault];
 animation.direction = SONFillAnimationDirectionLeftToRightAndTopDown;

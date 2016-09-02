@@ -5,7 +5,7 @@ tags: [Android,iOS,Java,Objective-C,大不同]
 ---
 Objective-C特殊的键指编码(KOC)与监值兼听(KVO)
 <!--more-->
-##键值编码(KVC)
+## 键值编码(KVC)
 简直编码用来简化设置对象的属性的方法
 最基本的KVC由NSKeyValueCode协议提供，最基本的操作属性的方法如下
 - `setValue:value forKey:key` 通过属性名来设置值
@@ -44,7 +44,7 @@ Order* order = [[Order alloc] init];
 [order setValue:[[Item alloc] init] forKey:@"item"];
 [order setValue:@"Zoe" forKeyPath:@"item.name"];
 ```
-##键值监听(KVO)
+## 键值监听(KVO)
 键值监听(Key Value Observing)机制由`NSKeyValueObserving`协议提供支持，NSObject遵守了该协议。
 该协议包含如下常用方法可用于注册静听器：
 - addObserver:forKeyPath:optioncontext: 注册一个监听器用于监听指定的key路径
