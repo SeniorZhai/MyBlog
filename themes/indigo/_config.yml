@@ -53,6 +53,25 @@ share: true
 #是否开启搜索
 search: true
 
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
+
 #是否大屏幕下文章页隐藏导航
 hideMenu: true
 
