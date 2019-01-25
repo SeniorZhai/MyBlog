@@ -67,7 +67,7 @@ theme: jacman
 exclude_generator:
 
 sitemap:
-    path: sitemap.xml
+  path: sitemap.xml
 
 feed:
   type: atom
