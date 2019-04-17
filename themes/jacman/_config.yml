@@ -126,19 +126,3 @@ tinysou_search: ## http://tinysou.com/
   enable: false
   id: ## e.g. "4ac092ad8d749fdc6293" for your tiny search id
 
-live2d:
-  enable: true
-  scriptFrom: local
-  pluginRootPath: live2dw/
-  pluginJsPath: lib/
-  pluginModelPath: assets/
-  tagMode: true
-  debug: false
-  model:
-    use: live2d-widget-model-hijiki
-  display:
-    position: right
-    width: 150
-    height: 160
-  mobile:
-    show: true
