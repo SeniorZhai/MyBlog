@@ -21,6 +21,15 @@ Flutter 除了 Android、iOS，也将支持 web、桌面、嵌入式
 flutter doctor
 ```
 
+### in China
+
+如果 _网络条件_ 不好可以在 `bash_profile` 添加以下配置
+
+```
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+```
+
 因为 Flutter desktop 是实验性特性，在稳定版本的 Flutter 暂时是没有的，所有需要切换 Flutter 的版本
 
 ```shell
@@ -46,6 +55,14 @@ Flutter channels:
 > flutter channel # 检测切换是否成功
 > flutter upgrade # 升级
 > flutter doctor # 检测flutter环境
+```
+
+### 开启 desktop
+
+在 `bash_profile` 中添加
+
+```
+export ENABLE_FLUTTER_DESKTOP=true
 ```
 
 ## Flutter desktop
