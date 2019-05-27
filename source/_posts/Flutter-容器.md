@@ -3,11 +3,13 @@ date: 2019-05-26 13:47:36
 categories: Flutter
 tags: [iOS,Android]
 
+---
+
 容器 Widget 通常只接受一个子 Widget，他们直接过着间接的继承 SingleChildRenderObjectWidget
 
 容器 Widget 一般用于包装子 Widget，添加一些修饰、变换、限制等
 
----
+<!--more-->
 
 ## Padding
 

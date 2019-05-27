@@ -3,9 +3,11 @@ date: 2019-05-26 12:37:36
 categories: Flutter
 tags: [iOS,Android]
 
+---
+
 层叠布局，类似 Android 的 FrameLayout，根据父容器的四个角来确定本身的位置
 
----
+<!--more-->
 
 Flutter 中 Stack 实现堆叠，Positioned 实现对 Widget 定位
 

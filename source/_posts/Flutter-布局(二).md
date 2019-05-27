@@ -3,9 +3,11 @@ date: 2019-05-25 23:37:36
 categories: Flutter
 tags: [iOS,Android]
 
+---
+
 弹性布局允许子 Widget 按照比例分配父容器，类似前端的 FlexBox
 
----
+<!--more-->
 
 ## Flex
 
