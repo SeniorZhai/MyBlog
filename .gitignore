@@ -5,5 +5,4 @@ db.json
 public/
 node_modules/
 .deploy*/
-package-lock.json
 yarn.lock
